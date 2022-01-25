@@ -138,42 +138,37 @@ $connection->close();
         </div>
         <div class="pics-cont">
             <a href="https://www.psg.cz" target="_blank" class="pic-link">
-              <img src="img/oddil/oddil_psg.svg" alt="PSG" />
+              <img src="img/oddil/partner_22_psg.svg" alt="PSG" />
             </a>
             <a href="https://www.muchropyne.cz" target="_blank" class="pic-link">
-              <img src="img/oddil/oddil_muchropyne.svg" alt="Město Chropyně" />
+              <img src="img/oddil/partner_22_m_chropyne.svg" alt="Město Chropyně" />
             </a>
             <a href="https://www.optikafenix.cz" target="_blank" class="pic-link">
-              <img src="img/oddil/oddil_oprtikafenix.svg" alt="Optika Fénix" />
+              <img src="img/oddil/partner_22_optikafenix.svg" alt="Optika Fénix" />
             </a>
-            <a href="https://www.kruzik.cz" target="_blank" class="pic-link">
-              <img src="img/oddil/oddil_kruzik.svg" alt="Kružík" />
+            <a href="https://www.cyklosportchropyne.cz" target="_blank" class="pic-link">
+              <img src="img/oddil/partner_22_starcomm.svg" alt="Starcomm" />
             </a>
             <a href="https://www.elmo.cz" target="_blank" class="pic-link">
-              <img src="img/oddil/oddil_elmo.svg" alt="Elmo" />
+              <img src="img/oddil/partner_22_elmo.svg" alt="Elmo" />
             </a>
-            <a href="https://www.krahulik.cz" target="_blank" class="pic-link">
-              <img src="img/oddil/oddil_krahulik.svg" alt="Krahulík" />
+            <a href="https://www.mechanix.com/us-en/" target="_blank" class="pic-link">
+              <img src="img/oddil/partner_22_mechanix.svg" alt="Mechanix" />
             </a>
             <a href="https://www.elins.cz" target="_blank" class="pic-link">
-              <img src="img/oddil/oddil_elins.svg" alt="Elins" />
+              <img src="img/oddil/partner_22_elins.svg" alt="Elins" />
             </a>
             <a href="https://www.kmotr.cz" target="_blank" class="pic-link">
-              <img src="img/oddil/oddil_kmotr.svg" alt="Kmotr" />
+              <img src="img/oddil/partner_22_krahulik_kmotr.svg" alt="Kmotr" />
             </a>
-            <a href="https://www.rockmax.cz" target="_blank" class="pic-link">
-              <img src="img/oddil/oddil_rockmax.svg" alt="Rockmax" />
+            <a href="https://www.cyklosportchropyne.cz" target="_blank" class="pic-link">
+              <img src="img/oddil/partner_22_andyinstal.svg" alt="Andy Instal" />
             </a>
-            <a href="https://www.radiozlin.cz" target="_blank" class="pic-link">
-              <img src="img/oddil/oddil_rz.svg" alt="Radio Zlín" />
+            <a href="https://www.cyklosportchropyne.cz" target="_blank" class="pic-link">
+              <img src="img/oddil/partner_22_esco.svg" alt="Esco" />
             </a>
             <a href="https://www.ktm-bikes.at"target="_blank" class="pic-link">
-              <img src="img/oddil/oddil_ktm.svg" alt="KTM" />
-            </a>
-            <a href="https://www.csttires.com/int/tires/bike/"target="_blank" class="pic-link">
-              <img src="img/oddil/oddil_cst.svg" alt="CST" />
-            </a>
-            
+              <img src="img/oddil/partner_22_ktm.svg" alt="KTM" />
             </a>
           
         </div>
