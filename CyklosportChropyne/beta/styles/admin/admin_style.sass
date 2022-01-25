@@ -1,0 +1,555 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline 
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
+  display: block 
+
+body 
+  line-height: 1 
+
+ol, ul 
+  list-style: none 
+
+blockquote, q 
+  quotes: none 
+
+blockquote 
+  &:before, &:after 
+    content: ''
+    content: none  
+
+q 
+  &:before, &:after 
+    content: ''
+    content: none  
+
+table 
+  border-collapse: collapse
+  border-spacing: 0
+
+=vendor-prefix($name, $value) 
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') 
+    #{$vendor}#{$name}: #{$value}
+=more-vendor-prefix($name, $value1, $value2) 
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') 
+    #{$vendor}#{$name}: #{$value1}, #{$value2}
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+@mixin display($value) 
+  // flex | inline-flex
+  @if $value == "flex" 
+    // 2009
+    display: -webkit-box
+    display: -moz-box
+    display: box
+
+    // 2012
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flexbox // 2011 (IE 10)
+    display: flex
+  @else if $value == "inline-flex" 
+    display: -webkit-inline-box
+    display: -moz-inline-box
+    display: inline-box
+
+    display: -webkit-inline-flex
+    display: -moz-inline-flex
+    display: -ms-inline-flexbox
+    display: inline-flex
+  @else
+    display: $value
+
+// 2011 - flex-item-align (auto | start | end | center | baseline | stretch)
+// 2012 - align-self (auto | flex-start | flex-end | center | baseline | stretch)
+@mixin align-self($value: auto) 
+
+  $value-2011: $value
+  @if $value == "flex-start" 
+    $value-2011: start
+  @else if $value == "flex-end" 
+    $value-2011: end
+  
+
+  // 2012
+  @include prefixer(align-self, $value, webkit moz spec)
+
+  // 2011 (IE 10)
+  -ms-flex-item-align: $value-2011
+
+
+// 2009 - box-align (start | end | center | baseline | stretch)
+// 2011 - flex-align (start | end | center | baseline | stretch)
+// 2012 - align-items (flex-start | flex-end | center | baseline | stretch)
+@mixin align-items($value: stretch) 
+
+  $alt-value: $value
+
+  @if $value == "flex-start" 
+    $alt-value: start
+  @else if $value == "flex-end" 
+    $alt-value: end
+  
+
+  // 2009
+  @include prefixer(box-align, $alt-value, webkit moz spec)
+
+  // 2012
+  @include prefixer(align-items, $value, webkit moz ms o spec)
+
+  // 2011 (IE 10)
+  -ms-flex-align: $alt-value
+
+
+@mixin flex-direction($value: row) 
+
+  // Alt values.
+  $value-2009: $value
+  $value-2011: $value
+  $direction: normal
+
+  @if $value == row 
+    $value-2009: horizontal
+  @else if $value == "row-reverse" 
+    $value-2009: horizontal
+    $direction: reverse
+  @else if $value == column 
+    $value-2009: vertical
+  @else if $value == "column-reverse" 
+    $value-2009: vertical
+    $direction: reverse
+  
+
+  // 2009
+  @include prefixer(box-orient, $value-2009, webkit moz spec)
+  @include prefixer(box-direction, $direction, webkit moz spec)
+
+  // 2012
+  @include prefixer(flex-direction, $value, webkit moz spec)
+
+  // 2011 (IE 10)
+  -ms-flex-direction: $value
+
+
+
+=flex($values) 
+  -webkit-box-flex: $values
+  -moz-box-flex:  $values
+  -webkit-flex:  $values
+  -ms-flex:  $values
+  flex:  $values
+
+
+=order($val) 
+  -webkit-box-ordinal-group: $val 
+  -moz-box-ordinal-group: $val    
+  -ms-flex-order: $val     
+  -webkit-order: $val  
+  order: $val
+
+// use of keyframes mixin
+// +keyframes(bgcolor)
+// 	0%
+// 		background-color: #ffccf2
+// 	50%
+// 		background-color: #ccffcc
+// 	100%
+// 		background-color: #ccffff
+* 
+  +vendor-prefix('box-sizing', 'border-box')
+
+// -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+//        -moz-transition: background-color 0.3s linear, color 0.3s linear;
+//          -o-transition: background-color 0.3s linear, color 0.3s linear;
+//             transition: background-color 0.3s linear, color 0.3s linear;
+
+// use of keyframes mixin
+// 2009 - box-lines (single | multiple)
+// 2011 - flex-wrap (nowrap | wrap | wrap-reverse)
+// 2012 - flex-wrap (nowrap | wrap | wrap-reverse)
+@mixin flex-wrap($value: nowrap) 
+  // Alt values
+  $alt-value: $value
+  @if $value == nowrap 
+    $alt-value: single
+  @else if $value == wrap 
+    $alt-value: multiple
+  @else if $value == "wrap-reverse" 
+    $alt-value: multiple
+  
+
+  @include prefixer(box-lines, $alt-value, webkit moz spec)
+  @include prefixer(flex-wrap, $value, webkit moz ms spec)
+
+// 2009 - box-pack (start | end | center | justify)
+// 2011 - flex-pack (start | end | center | justify)
+// 2012 - justify-content (flex-start | flex-end | center | space-between | space-around)
+@mixin justify-content($value: flex-start) 
+
+  // Alt values.
+  $alt-value: $value
+  @if $value == "flex-start" 
+    $alt-value: start
+  @else if $value == "flex-end"
+    $alt-value: end
+  @else if $value == "space-between" 
+    $alt-value: justify
+  @else if $value == "space-around" 
+    $alt-value: distribute
+  
+
+  // 2009
+  @include prefixer(box-pack, $alt-value, webkit moz spec)
+
+  // 2012
+  @include prefixer(justify-content, $value, webkit moz ms o spec)
+
+  // 2011 (IE 10)
+  -ms-flex-pack: $alt-value
+
+
+// 2011 - flex-line-pack (start | end | center | justify | distribute | stretch)
+// 2012 - align-content (flex-start | flex-end | center | space-between | space-around | stretch)
+@mixin align-content($value: stretch) 
+
+  $value-2011: $value
+  @if $value == "flex-start" 
+    $value-2011: start
+  @else if $value == "flex-end" 
+    $value-2011: end
+  @else if $value == "space-between" 
+    $value-2011: justify
+  @else if $value == "space-around" 
+    $value-2011: distribute
+
+
+  // 2012
+  @include prefixer(align-content, $value, webkit moz spec)
+
+  // 2011 (IE 10)
+  -ms-flex-line-pack: $value-2011
+
+// 2009 - box-ordinal-group (integer)
+// 2011 - flex-order (integer)
+// 2012 - order (integer)
+@mixin order($int: 0) 
+  // 2009
+  @include prefixer(box-ordinal-group, $int, webkit moz spec)
+
+  // 2012
+  @include prefixer(order, $int, webkit moz spec)
+
+  // 2011 (IE 10)
+  -ms-flex-order: $int
+
+
+$prefix-for-webkit:    true !default
+$prefix-for-mozilla:   true !default
+$prefix-for-microsoft: true !default
+$prefix-for-opera:     true !default
+$prefix-for-spec:      true !default
+
+=prefixer($property, $value, $prefixes) 
+  @each $prefix in $prefixes 
+    @if $prefix == webkit 
+      @if $prefix-for-webkit 
+        -webkit-#{$property}: $value
+      
+    @else if $prefix == moz 
+      @if $prefix-for-mozilla 
+        -moz-#{$property}: $value
+      
+    @else if $prefix == ms 
+      @if $prefix-for-microsoft 
+        -ms-#{$property}: $value
+      
+    @else if $prefix == o 
+      @if $prefix-for-opera 
+        -o-#{$property}: $value
+      
+    @else if $prefix == spec 
+      @if $prefix-for-spec 
+        #{$property}: $value
+      
+    @else  
+      @warn "Unrecognized prefix: #{$prefix}"
+@mixin placeholder($value)
+  ::-webkit-input-placeholder 
+    color: $value
+  :-moz-placeholder
+    color: $value
+  ::-moz-placeholder
+    color: $value
+  :-ms-input-placeholder
+    color: $value  
+
+html, body
+  width: 100%
+  height: 100%
+  background-color: #ecf0f1
+  color: #2c3e50
+  font-family: 'Lato', sans-serif
+
+header
+  position: fixed
+  width: 100%
+  height: 100px
+  top: 0px
+  background-color: #556270
+  z-index: 1000
+  ul
+    width: 90%
+    max-width: 1200px
+    margin: 0 auto
+    height: 50%
+    line-height: 50px
+    color: white
+    &.jmeno
+      // background-color: #3498db
+      li
+        padding: 0px 10px
+        text-transform: uppercase
+        font-size: 20px
+        max-width: none
+        +vendor-prefix("transition", "all 0.2s ease")
+        &:hover
+          color: #ff6b6b
+          background-color: #354250
+        // +vendor-prefix("transition", "all 0.2s ease")
+        // &:hover
+          // background-color: #f39c12
+    li
+      height: 100%
+      max-width: 70px
+      float: left
+      &:last-of-type
+        float: right
+      a
+        display: block
+        width: 100%
+        height: 100%
+        padding: 0px 10px
+        text-decoration: none
+        color: inherit
+        background-color: inherit
+        +vendor-prefix("transition", "all 0.2s ease")
+        &:hover
+          color: #ff6b6b
+          background-color: #354250
+// a.logout
+//   position: absolute
+//   top: 0
+//   right: 0
+//   // width: 50px
+//   padding: 0 20px
+//   height: 30px
+//   background-color: #556270
+//   color: white
+//   line-height: 30px
+//   text-align: center
+//   text-decoration: none
+//   +vendor-prefix("transition", "all 0.3s ease")
+//   &:hover
+//     color: #ff6b6b
+div.admin_cont
+  width: 90%
+  max-width: 1200px
+  margin: 130px auto 0px auto
+
+div.aktuality_cont
+  // padding: 10px 0px
+  width: 100%
+  margin: 0 auto
+  background-color: white//#ff6b6b
+  border-radius: 3px
+  margin-bottom: 40px
+  border: 2px solid #95a5a6
+table.seznamAktualit
+  width: 100%
+  thead
+    text-align: center !important
+    *
+      text-align: center !important
+      height: 40px !important
+      line-height: 40px
+  tr
+    border-bottom: 1px solid gray
+    +vendor-prefix("transition", "all 0.2s ease")
+    // padding: 10px
+    &:hover
+      background-color: #cdcdcd  
+
+    td
+      height: 60px
+      vertical-align: middle
+      padding: 10px
+      // border: 1px solid black
+      &:first-child
+        text-align: center
+        width: 20px
+        & + td
+          text-align: center
+          width: 100px
+        & + td + td
+          text-align: left
+          width: 100px
+        & + td + td + td
+          text-align: left
+          width: 400px
+        & + td + td + td + td
+          text-align: left
+          width: 100px
+        & + td + td + td + td + td
+          text-align: center
+          width: 30px
+div.display_overlay
+  width: 100%
+  height: 100%
+  z-index: 3
+  overflow: hidden
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  background-color: rgba(0,0,0,0.5)
+div.upravit_modal
+  width: 90%
+  max-width: 800px
+  // height: 50vh
+  z-index: 4
+  background-color: white//#98ff98
+  position: fixed
+  top: 50%
+  left: 50%
+  border-radius: 3px
+  border: 2px solid #95a5a6//#98ff98
+  +vendor-prefix('transform','translateX(-50%) translateY(-50%)')
+  display: none
+  form
+    width: 100%
+    height: 100%
+    margin: 0 auto
+    border: 2px solid #95a5a6//#98ff98
+    background-color: white //#98ff98
+    input, trix-editor
+      background-color: white //#98ff98
+    div.input_button_cont 
+      width: 100%
+      +display(flex)
+      +justify-content(space-around)
+      input[type=button], input[type=submit]
+        &:hover
+          background-color: #bdc3c7//#ff6b6b
+      input.input_button
+        max-width: 25%
+        // height: 40px
+        +flex(1 1 25%)
+
+
+form
+  background-color: white//#ff6b6b
+  padding: 20px
+  color: #2c3e50
+  max-width: 800px
+  border-radius: 3px
+  border: 2px solid #95a5a6//#ff6b6b
+  +placeholder(#2c3e50)
+  trix-editor
+    border: 2px solid #95a5a6
+    margin: 10px 0
+  input[type=text], input[type=textarea], trix-editor
+    margin-bottom: 10px
+    background-color: white
+    outline: none
+    font-size: 16px
+    font-weight: 400
+    padding: 4px 8px
+    +placeholder(#2c3e50)
+    color: #2c3e50
+    border: 2px solid #95a5a6
+    border-radius: 3px
+  input[type=button], input[type=submit]
+    font-size: 14px
+    border: 2px solid #95a5a6
+    background-color: white
+    color: #2c3e50
+    border-radius: 3px
+    height: 40px
+    +vendor-prefix("transition", "all 0.3s ease")
+    &:hover
+      background-color: #bdc3c7
+      color: black
+
+
+form#upload_aktualita
+  width: 90%
+  margin: 70px auto
+  // background-color: #ff6b6b
+  +display(flex)
+  +flex-direction(column)
+  input[type=submit]
+    margin: 0 auto
+
+
+// STYLES FOR LOGIN PAGE    
+body.login-body
+  text-align: center
++keyframes(intro)
+  0%
+    +vendor-prefix("transform", "translateX(-50%) translateY(-100%)")
+    opacity: 0
+  100%
+    +vendor-prefix("transform", "translateX(-50%) translateY(-50%)")
+    opacity: 1
+div.login-table
+  position: absolute
+  top: 50%
+  left: 50%
+  display: block
+  +vendor-prefix("animation-name", "intro")
+  +vendor-prefix("animation-iteration-count", "1")
+  +vendor-prefix("animation-timing-function", "ease")
+  +vendor-prefix("animation-duration", "0.5s")
+  +vendor-prefix("animation-fill-mode", "forwards")
+  // +vendor-prefix("transform", "translateX(-50%) translateY(-100%)")
+  // +vendor-prefix("transition", "all 0.3s ease")
+  &.visible
+    // +vendor-prefix("transform", "translateX(-50%) translateY(-50%)")
+  form
+    width: 100%
+    padding: 0px
+    border: 1px solid #95a5a6
+    input[type=text], input[type=submit]
+      border: 1px solid #95a5a6
+      padding: none
+    table
+      width: 100%
+      tr
+        width: 100%
+        border-bottom: 1px solid #95a5a6
+        height: 30px
+        &:last-of-type
+          border: none
+        td
+          padding: 5px
+          vertical-align: middle
+          height: 40px
+          line-height: 40px
+
+
+

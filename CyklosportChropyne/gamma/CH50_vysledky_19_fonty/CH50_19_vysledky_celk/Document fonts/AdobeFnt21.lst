@@ -1,0 +1,171 @@
+%!Adobe-FontList 1.20
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:DINPro-Bold
+FamilyName:DIN Pro
+StyleName:Bold
+MenuName:DIN Pro Bold
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:DIN Pro Bold
+WritingScript:Roman
+OutlineFileName:/Users/vit/Documents/work/Cyklosport Chropyne/gamma/CH50_vysledky_19_fonty/CH50_19_vysledky_celk/Document fonts/DINPro-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:143848
+FileModTime:450628978
+NameArray:0,Mac,18,DIN Pro Bold
+NameArray:0,Mac,4,DIN Pro Bold
+NameArray:0,Win,1,DIN Pro Bold
+NameArray:0,Win,16,DIN Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ProximaNova-Semibold
+FamilyName:Proxima Nova
+StyleName:Semibold
+MenuName:Proxima Nova Lt
+StyleBits:2
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Proxima Nova Semibold
+WritingScript:Roman
+OutlineFileName:/Users/vit/Documents/work/Cyklosport Chropyne/gamma/CH50_vysledky_19_fonty/CH50_19_vysledky_celk/Document fonts/ProximaNova-Semibold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:63116
+FileModTime:155823718
+NameArray:0,Mac,4,Proxima Nova Semibold
+NameArray:0,Win,1,Proxima Nova Lt
+NameArray:0,Win,16,Proxima Nova
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ProximaNova-Bold
+FamilyName:Proxima Nova
+StyleName:Bold
+MenuName:Proxima Nova Rg
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Proxima Nova Bold
+WritingScript:Roman
+OutlineFileName:/Users/vit/Documents/work/Cyklosport Chropyne/gamma/CH50_vysledky_19_fonty/CH50_19_vysledky_celk/Document fonts/ProximaNova-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:63808
+FileModTime:207074220
+NameArray:0,Mac,4,Proxima Nova Bold
+NameArray:0,Win,1,Proxima Nova Rg
+NameArray:0,Win,16,Proxima Nova
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/vit/Documents/work/Cyklosport Chropyne/gamma/CH50_vysledky_19_fonty/CH50_19_vysledky_celk/Document fonts/AdobeFnt21.lst
+FileLength:4163
+FileModTime:581775489
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:DINPro-Black
+FamilyName:DIN Pro
+StyleName:Black
+MenuName:DIN Pro Black
+StyleBits:0
+WeightClass:900
+WidthClass:5
+AngleClass:0
+FullName:DIN Pro Black
+WritingScript:Roman
+OutlineFileName:/Users/vit/Documents/work/Cyklosport Chropyne/gamma/CH50_vysledky_19_fonty/CH50_19_vysledky_celk/Document fonts/DINPro-Black.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:144904
+FileModTime:450628978
+NameArray:0,Mac,18,DIN Pro Black
+NameArray:0,Mac,4,DIN Pro Black
+NameArray:0,Win,1,DIN Pro Black
+NameArray:0,Win,16,DIN Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:DINPro
+FamilyName:DIN Pro
+StyleName:Regular
+MenuName:DIN Pro Regular
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:DIN Pro
+WritingScript:Roman
+OutlineFileName:/Users/vit/Documents/work/Cyklosport Chropyne/gamma/CH50_vysledky_19_fonty/CH50_19_vysledky_celk/Document fonts/DINPro.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:139444
+FileModTime:450628978
+NameArray:0,Mac,18,DIN Pro
+NameArray:0,Mac,4,DIN Pro
+NameArray:0,Win,1,DIN Pro Regular
+NameArray:0,Win,16,DIN Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ProximaNova-Regular
+FamilyName:Proxima Nova
+StyleName:Regular
+MenuName:Proxima Nova Rg
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Proxima Nova
+WritingScript:Roman
+OutlineFileName:/Users/vit/Documents/work/Cyklosport Chropyne/gamma/CH50_vysledky_19_fonty/CH50_19_vysledky_celk/Document fonts/ProximaNova-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:62892
+FileModTime:155823584
+NameArray:0,Mac,18,Proxima Nova Regular
+NameArray:0,Mac,4,Proxima Nova
+NameArray:0,Win,1,Proxima Nova Rg
+NameArray:0,Win,16,Proxima Nova
+%EndFont
+

@@ -1,0 +1,295 @@
+.no-touch body.chribska section.content {
+
+/*	min-height: 100%;
+	min-height: 1000px;*/
+
+	/*background-color: #272727;*/
+	background-color: rgba(255,255,255,0.8);
+
+}
+.touch body.chribska section.content {
+
+	min-height: 100vh;
+	/*min-height: 1000px;*/
+
+	background-color: #ecf0f1;
+	/*background-color: rgba(0,0,0,0.8);*/
+
+}
+.no-touch div.aktualita:first-of-type {
+
+	margin-top: 50px;
+	padding-bottom: 120px;
+
+}
+.powered {
+	position: absolute;
+	bottom: 20%;
+	right: 0;
+	/*height: 45px;*/
+	width: 450px;
+	/*padding-bottom: 30px;*/
+	max-width: 30vw;
+}
+.chribskaFotogalerie ul {
+	list-style: none;
+}
+.chribskaFotogalerie ul a {
+	color: #ef2c1d;
+}
+.no-touch body.chribska div.textPropozic {
+	font-weight: 400;
+}
+.chribska section div.propozice div.textPropozic a:hover {
+	color: inherit;
+}
+.chribska section div.propozice div.textPropozic ul li a {
+	color: black;
+}
+.chribska section div.propozice div.textPropozic ul li a:hover {
+	color: #ef2c1d;
+}
+.podtrzene {
+
+	border-bottom: 1px solid #ef2c1d;
+
+}
+.touch section.content div.aktualita div.podtrzene h1 {
+	line-height: 30katepx;
+	font-size: 20px;
+}
+.no-touch #kategorie-trate {
+	font-size: 12px;	
+}
+.touch #kategorie-trate {
+	font-size: 11px;	
+}
+.touch #kategorie-trate td {
+	height: 15px;
+	vertical-align: middle;
+}
+#prvni,#v2015 {
+	font-weight: 700;
+	color: rgba(239, 44, 29, 1);
+}
+#prvniv,#druhyv,#tretiv,#ctvrtyv,#patyv,#sestyv,#sedmyv,#osmyv {
+	font-size: 16px;
+}
+#r4,#r5,#r6,#r7,#r8{
+	visibility: hidden;
+}
+.no-touch div.textPropozic h2 {
+
+	font-size:  26px;
+	text-transform: uppercase;
+	line-height: 20px;
+	color: inherit;
+
+}
+.no-touch div.textPropozic h3 {
+
+	font-size:  18px;
+	/*text-transform: uppercase;*/
+	line-height: 20px;
+	color: inherit;
+
+}
+.no-touch div.textPropozic h4 {
+
+	font-size:  14px;
+	/*text-transform: uppercase;*/
+	line-height: 20px;
+	color: inherit;
+
+}
+.no-touch div.textPropozic p {
+
+	font-size:  12px;
+	/*text-transform: uppercase;*/
+	line-height: 20px;
+	font-weight: 400;
+	color: inherit;
+
+}
+.no-touch div.textPropozic iframe {
+		/*display: none;*/
+	}
+	.no-touch div.textPropozic #odkaz {
+		display: none;
+	}
+div.textPropozic p.ubytovani-odrazky {
+
+	line-height: 15px;
+	text-indent: 5vw;
+
+
+}
+.no-touch .chribska nav ul li ul li {
+	color: black;
+}
+.touch div.aktualita:first-of-type {
+
+	/*margin-top: 50px;*/
+	padding-bottom: 40px;
+
+}
+.touch div.textPropozic {
+	font-weight: 400;
+}
+.touch div.textPropozic:first-of-type {
+
+	border-bottom: 1px solid #ef2c1d;
+
+}
+section.content div.aktualita img.force {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	width: 80%;
+	max-width: 1000px;
+
+}section.content div.aktualita div.textPropozic {
+	width: 100%;
+	max-width: 980px;
+	position: relative;
+	margin: 30px auto;
+	text-align: left;
+	
+	font-size: 14px;
+	color: black;
+	letter-spacing: 1px;
+	font-weight: 300;
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+	.touch div.textPropozic h2 {
+
+		font-size:  26px;
+		text-transform: uppercase;
+		line-height: 26px;
+		color: inherit;
+
+	}
+	.touch div.textPropozic h3 {
+
+		font-size:  22px;
+		/*text-transform: uppercase;*/
+		line-height: 22px;
+		color: inherit;
+
+	}
+	.touch div.textPropozic h4 {
+
+		font-size:  18px;
+		/*text-transform: uppercase;*/
+		line-height: 24px;
+		color: inherit;
+
+	}
+	.touch div.textPropozic p {
+
+		font-size:  14px;
+		/*text-transform: uppercase;*/
+		line-height: 18px;
+		font-weight: 400;
+		color: inherit;
+
+	}
+	.touch div.textPropozic iframe {
+		
+	}
+	.touch div.textPropozic #odkaz {
+		display: none;	}
+
+}
+
+@media only screen  and (max-device-width : 767px)  {
+
+	.touch div.textPropozic h2 {
+
+		font-size:  5vw;
+		text-transform: uppercase;
+		line-height: 5.5vw;
+		color: inherit;
+
+	}
+	.touch div.textPropozic h3 {
+
+		font-size:  4vw;
+		/*text-transform: uppercase;*/
+		line-height: 4vw;
+		color: inherit;
+
+	}
+	.touch div.textPropozic h4 {
+
+		font-size:  3vw;
+		/*text-transform: uppercase;*/
+		line-height: 3.5vw;
+		color: inherit;
+
+	}
+	.touch div.textPropozic p {
+
+		font-size:  2.5vw;
+		/*text-transform: uppercase;*/
+		line-height: 3vw;
+		font-weight: 400;
+		color: inherit;
+
+	}
+	.touch div.textPropozic iframe.centerIframe {
+		display: none;
+	}
+	.touch div.textPropozic #odkaz {
+		display: block;
+		text-align: center;
+		width: 100%;
+	}
+	.touch div.textPropozic #odkaz a {
+		text-align: center;
+	}
+
+}
+
+
+@media only screen and (max-device-width: 640px) {
+
+	.powered {
+		display: none;
+	}
+
+	@media only screen and (orientation: landscape) {
+		.touch section.content div.aktualita div.textPropozic { 
+		font-size: 2vw;
+	}
+}
+	@media only screen and (orientation: portrait) {
+		.touch section.content div.aktualita div.textPropozic { 
+	font-size: 3.4vw;
+	}
+	
+}
+
+}
+.textPropozic h3 {
+	color: #ef2c1d;
+}
+ul.ch-vysledek-ul {
+	list-style: none;
+}
+ul.ch-vysledek-ul li.ch-vysledek-li{
+	line-height: 22px;
+	list-style: none;
+
+}
+ul.ch-vysledek-ul li.ch-vysledek-li h3{
+	color: black;
+
+}
+ul.ch-vysledek-ul li.ch-vysledek-li ul{
+	list-style: none;
+}
+

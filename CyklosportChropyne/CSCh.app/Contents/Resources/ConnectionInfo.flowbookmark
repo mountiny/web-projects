@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AutomaticallyCopiesWebURLAfterUpload</key>
+	<false/>
+	<key>ClassName</key>
+	<string>Bookmark</string>
+	<key>InitialPath</key>
+	<string></string>
+	<key>Name</key>
+	<string>CSCh</string>
+	<key>PreferredFTPDataConnectionType</key>
+	<string>Passive</string>
+	<key>Protocol</key>
+	<integer>0</integer>
+	<key>Server</key>
+	<string>cyklosportchropyne.cz</string>
+	<key>UUID</key>
+	<string>542559AF-C7DA-4F0A-A194-496BE6E520E0</string>
+	<key>Username</key>
+	<string>hw013875</string>
+</dict>
+</plist>

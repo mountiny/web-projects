@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html class="js">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cyklosport Chropyně</title>
+
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'> -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="script/jquery.shorten.js"></script>
+	<script src="script/modernizr.js"></script>
+	<script type="text/javascript" src="script/jquery.unveil.js"></script>
+		
+	<script type="text/javascript" src="script/background.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-58921066-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<script type="text/javascript" src="script/main.js"></script>
+
+<script>
+$(document).ready(function() {
+	function smoothScroll(target) {
+        $('body,html').animate(
+        	{'scrollTop':target.offset().top},
+        	600
+        );
+	};
+	$('.arrowDown').on('click', function(event){
+        event.preventDefault();
+        smoothScroll($(this.hash));
+    });
+});
+</script>
+
+</head>
+<body class="nav-is-fixed" style="background-image: url('images/festive_bg.jpg');"> <!-- nav-is-fixed -->
+	<div class="js-is-not-working">
+		Bohužel, Váš prohlížeč nepodporuje Javascript. Prosíme, navštivte stránku pomocí jiného prohlížeče.
+	</div>
+	<nav class="menu cd-nav">
+		<ul id="cd-primary-nav" class="is-fixed menuFirstLayer cd-primary-nav">  <!-- is-fixed -->
+			<li class="menuAktuality">
+				<a style="font-weight: bold" href="index.html">
+					Aktuality
+				</a>
+			</li>
+			<li class="menuCyklooddil has-children">
+				<a href="cyklooddil/cyklooddil.html">
+					Cyklooddíl
+				</a>
+				<ul class="menuSecondLayerCyklooddil hidden-submenu cd-secondary-nav is-hidden">
+					<li class="go-back">
+						<a href="#cd-primary-nav">Zpět</a>
+					</li>
+					<li class="submenuClenove cyklooddilMob">
+						<a class="cd-nav-item" href="cyklooddil/cyklooddil.html">
+							Výsledky
+						</a>
+					</li>
+					<li class="submenuClenove">
+						<a class="cd-nav-item" href="cyklooddil/cyklooddil_clenove.html">
+							Členové
+						</a>
+					</li>
+					<li class="submenuKalendar">
+						<a class="cd-nav-item" href="cyklooddil/cyklooddil_kalendar.html">
+							Kalendář
+						</a>
+					</li>
+					<li class="submenuArchiv">
+						<a class="cd-nav-item" href="cyklooddil/s2014.html">
+							Archiv akt.
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menuChribska has-children">
+				<a href="chribska/chribska_propozice.html">
+					FORCE Chřibská 50 MTB
+				</a>
+				<ul class="menuSecondLayerChribska hidden-submenu cd-secondary-nav is-hidden">
+					<li class="go-back">
+						<a href="#cd-primary-nav">Zpět</a>
+					</li>
+					<li class="submenuPropozice">
+						<a href="chribska/chribska_propozice.html">Propozice</a>
+					</li>
+					<li  class="submenuPrihlaska">
+						<a href="chribska/chribska_prihlaska.php">Přihláška</a>
+					</li>
+					<li class="submenuSeznam">
+						<a href="chribska/chribska_seznam.php">
+							Seznam přihlášených
+						</a>
+					</li>
+					<li class="submenuMapa">
+						<a href="chribska/chribska_mapa.html">
+							Mapa
+						</a>
+					</li>
+					<li class="submenuVysledky">
+						<a href="chribska/chribska_vysledky.html">
+							Výsledky
+						</a>
+					</li>
+					<li class="submenuFotogalerie">
+						<a href="chribska/chribska_foto.html">
+							Fotogalerie
+						</a>
+					</li>
+
+				</ul>
+			</li>
+			<li class="menuDetske has-children">
+				<a href="detske_zavody/detske_zavody.html">
+								Dětské závody
+							</a>
+				<ul class="menuSecondLayerDetske hidden-submenu cd-secondary-nav is-hidden">
+					<li class="go-back">
+						<a href="#cd-primary-nav">Zpět</a>
+					</li>
+					<li class="detskeMobile">
+						<a href="detske_zavody/detske_zavody.html">Propozice</a>
+					</li>
+					<li class="submenuPrihlaskaD">
+						<a href="detske_zavody/detske_zavody_prihlaska.php">Přihláška</a>
+					</li>
+					<li class="submenuVysledkyD">
+						<a href="detske_zavody/detske_zavody_vysledky.html">
+							Výsledky
+						</a>
+					</li>
+					<li class="submenuFotogalerieD">
+						<a href="https://www.flickr.com/photos/vilemeliv/albums">
+							Fotogalerie
+						</a>
+					</li>
+
+				</ul>
+			</li>
+			<li class="menuFotogalerie">
+				<a href="https://www.flickr.com/photos/cschropyne/" target="_blank">
+								Fotogalerie
+							</a>
+			</li>
+			<li class="menuProdejna">
+				<a href="prodejna/prodejna.html">
+							Prodejna
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<nav class="trigger cd-main-header">
+		<ul class="cd-header-buttons">
+			<li>
+				<a class="cd-nav-trigger" href="#cd-primary-nav">
+					Menu
+					<span></span>
+				</a>
+				<a class="desktop-nav" href="http://www.cyklosportchropyne.cz/">
+					<div class="burger-cont">
+						<img src="images/ramS2.png" class="ram">
+						<img src="images/ramW.png" class="ramForeground">
+					</div>
+				</a>
+
+			</li>
+		</ul>
+	</nav>
+	<section id="intro" class="intro">
+		<!-- <img src="images/logo.png" class="logo">
+		<img src="images/logo.png" class="logoMob"> -->
+		<div class="fixed-intro-bg" id="mobileBg">
+
+		</div>
+		<div class="motto">
+			<div class="mottoRed" id="mottoRedId">
+				<!-- PF2017 -->
+			</div>
+			<div class="mottoBlack" id="mottoBlackId">
+				<!-- PŘEJEME VÁM RADOSTNÉ VÁNOCE<br>
+				A ÚSPĚŠNÝ NOVÝ ROK<br><br>
+				CYKLOSPORT<br>
+				CHROPYNĚ<br>
+				<span style="color:red;">1997-2017</span> -->
+			</div>
+			<!-- <a href="#section2" class="arrowDown cd-img-replace">scroll down</a> -->
+		</div>
+		<a href="#section2" class="arrowDown cd-img-replace">scroll down</a>
+		<a href="https://cs-cz.facebook.com/pages/CYKLOSPORT-CHROPYNĚ/108473619247419" target="_blank">
+			<img src="images/fb.png" style="width:40px; max-width:10vw;position:absolute;bottom:10px; right:70px;">
+		</a>
+		<a href="https://www.flickr.com/photos/cschropyne/" target="_blank">
+			<img src="images/flickr.png" style="width:40px; max-width:10vw;position:absolute;bottom:10px; right:20px;">
+		</a>
+		<!-- OVERLAY MOBILE -->
+		<div class="cd-overlay"></div>
+	</section>
+
+	<section id="section2" class="content cd-main-content">
+		<div class="aktualita">
+			<img src="images/30ser2016.jpg">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 30</p>
+				<p class="datumVlozeniAktuality">02/08/16 14:35</p>
+				<p class="">
+				Rozhýbat tělo přejeté "parním válcem" je počin plný bolesti. I&nbsppřes všudypřítomnou notnou dávku brufenu v&nbsppodobě sytého, čerstvého a&nbsphřibů plodného šumavského povětří, s&nbspní nepřetržitě na bedrech vyrazil oddílový kapitán na steč s&nbsptrasou KPŽ, vytyčenou v&nbspokolí Zadova a&nbspBorové Lady. Tentokrát to v&nbspmístních hvozdech a&nbsplukách na vavříny nebylo. Bramborovou natí se ověnčila Kateřina Nábělková (357/4). Medaile tedy žádná, ale někteří s&nbspprázdnou domů nejeli.<br>
+Na ostatních frontách si naši oddíloví borci připsali pátá místa v&nbspkategoriích a&nbsptím i&nbspLipánek na Holešovmanu nahradil svůj nejlepší výkon desetiletí z&nbspminulého týdne novým nejlepším výkonem za 3660 dní. 
+<br><br>
+Přehled výsledků je <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>.<br>
+Přehled výsledků týmu KPŽ je <a href="http://www.cyklosportchropyne.cz/files/kpz2016.pdf">zde</a>.
+			
+			</div>
+		</div>
+	<div class="aktualita">
+			<img src="images/29ser2016.jpg">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 29</p>
+				<p class="datumVlozeniAktuality">25/07/16 23:07</p>
+				<p class="">
+				Minulý víkend všichni kompletně pověsili závodní tretry mimo zraku dosah. Čímž vysvětluji i&nbspmalou mezeru v posloupnosti číslování tohoto servisu. Mnozí však nevydrželi ponechat klid nohám a&nbsphýčkané bikové technice na delší dobu, čehož důkazem je i&nbsptento text.<br>
+Nejpočetněji jsme obsadili závod ze seriálu KPŽ -&nbspKarlštejn Tour s&nbsp trochu zavádějícím názvem neb z&nbsphradu závodníci nezahlédnou ni věžičku, maximálně projedou pár metrů po katastru stejnojmenné obce. Možná, díky pekelnému pařáku, byl některý ze závodníků obdarován fatou morgánou Karlštejna.<br>
+Několik méně početných výprav se rozjelo po moravských lokacích. Holky Nábělkovic řádily na Moravskotřebovském cyklomaratonu. Kateřina svoji kategorii vyhrála (šampáňo) a&nbspAdélka byla jen o&nbspstupínek níže (pouze nealko). Na Okruhu luhačovickým Zálesím si oddílový novic Jaromír Fuksa s&nbsppřehledem dojel v&nbspkategorii pro vavřín nejcennější. Na triatlonovém Hulmenu byl Lipánek vybičován k&nbspnejlepšímu výkonu za posledních deset let.<br><br>
+
+Přehled výsledků je <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>.<br>
+Přehled výsledků týmu KPŽ je <a href="http://www.cyklosportchropyne.cz/files/kpz2016.pdf">zde</a>.<br>
+Výběr fotek z&nbsp„Karlštejna” od Jana Reinera a&nbspHonzy Blažka najdete na oddílové <a href="https://www.flickr.com/photos/cschropyne/">fotogalerii</a>, jsou tam také fotky neznámých autorů z&nbspvýše citovaných akcí.
+			
+			</div>
+		</div>
+		<div class="aktualita">
+			<img src="images/27ser2016.jpg">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 27</p>
+				<p class="datumVlozeniAktuality">11/07/16 19:25</p>
+				<p class="">
+				Duše se k&nbspmajitelce navrátila. I&nbspto je ve zkratce příběh, který se v&nbspsobotu odehrál na Karpatském pedálu. Masivní účastí našeho oddílu se vyznačoval tento závod, kde jsme uháněli s&nbspvětrem a&nbspsluncem v zádech malebnou krajinou vůkol Javorníku nad Veličkou o&nbspstošest za metami vyššími než Velká Javořina. Jednu se nám podařilo získat. Tým ve složení Vladimír Kučera, Jan Procházka a&nbspMartin Piruch obhájil první místo z&nbsppředešlých ročníků. O&nbspstupínek níže se v&nbspkategorii umístil kapitán oddílu (14/2). V&nbsprámci pětidílného seriálu MAXBIKE Karpaty MTB Tour, jehož poslední součástí Karpatský pedál byl, jsme zůstali před branami vedoucími ke stupňům pro nejlepší.<br>
+Ve vrchlabském závodu ze seriálu KPŽ se z trojice našich kmotrovských zástupců nejlépe vedlo Kateřině Nábělkové (256/3), když cílovou páskou prosvištěla na třetím místě v&nbspkategorii.<br>
+Symbolická účast oddílu na dlouhém silničním Beskydu v&nbsppodání Milana Mosazného (76/3) byla jeho úsilím přetavena v&nbsppravou, nefalšovanou bronzovou medaili za třetí místo v&nbspkategorii.<br><br>
+Přehled výsledků najdete <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>.<br>
+Výběr fotek od Viléma z&nbspKarpatského pedálu je <a href="https://www.flickr.com/photos/vilemeliv/albums">zde</a> a&nbspvýběr fotek od Míše Jurásové je na oddílové <a href="https://www.flickr.com/photos/cschropyne/">fotogalerii</a>.
+			
+			</div>
+		</div>
+		<div class="aktualita">
+			<img data-src="images/26ser2016.jpg" class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 26</p>
+				<p class="datumVlozeniAktuality">04/07/16 11:59</p>
+				<p class="">
+				Neobvykle, už v&nbsppátek, zahájili naši bikeři v&nbspNovém Městě na Moravě soupeření mimo jiné pocty i&nbspo&nbsptitul akademického mistra ČR. Obhajoba titulu akademického vícemistra z&nbsploňského roku se nepovedla. Tři sestry v&nbsppředvečer klání vysály z&nbspJana Procházky všechnu zbylou energii po úspěchu na Drásalovi.<br>
+Lépe si vedli v&nbspsobotu Vladimír Kučera a&nbspzvláště pak Kateřina Nábělková. Kateřina (206/1) vyhrála svoji kategorii na oblíbené rodinné lokaci - Vinařské padesátce v&nbspŠatově a&nbspVladimír (5/2) se pro druhé místo v&nbspkategorii vypravil do zahraničí na Oravský cyklomaraton.<br><br>
+				Přehled výsledků najdete <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>.<br>
+Výběr fotek z&nbspBirell biku od Viléma a&nbspVíti je <a href="https://www.flickr.com/photos/vilemeliv/albums">zde</a>
+			</div>
+		</div>
+		<div class="aktualita">
+			<img data-src="images/25ser2016.jpg" class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 25</p>
+				<p class="datumVlozeniAktuality">28/06/16 23:28</p>
+				<p class="">
+				Drásal bolí. Letošní, s&nbspnovými náročnějšími trasami, obšťastněný nadměrnou přízní Slunce, se mnohým z&nbspnás vryje nesmazatelně do paměti. Z&nbspnašich oddílových členů to jistě budou Jan Peza, Radomír Gregor a&nbspPetr Kučera, kteří budou vzpomínat na útrapy, jež se jim přihodily. Na druhém pólu to budou ti úspěšní - Jan Procházka (3/1), který předvedl životní výkon na drásalovské klasice, když dojel celkově třetí a&nbspvyhrál svoji kategorii, na krátkém Drásalovi si pro vavříny v&nbspkategoriích dojeli Vladimír Kučera (26/2) a&nbspKateřina Nábělková (195/3).<br>
+Rosťa Ryplů (88/1) si pro svoji sobotní dávku slunečních paprsků zajel do Životských hor. Zatímco domácí Rocco s&nbsptetou Johanou hledali útěchu u&nbspSpasitele, tak si Rosťa dojel pro první místo v&nbspkategorii.<br><br>
+				Přehled výsledků najdete <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>.<br>
+Výběr fotek z&nbspDrásala od Viléma a&nbspVíti je <a href="https://www.flickr.com/photos/vilemeliv/albums">zde</a> a&nbsppár fotek z&nbspŽivotských hor na oddílové <a href="https://www.flickr.com/photos/cschropyne/">fotogalerii</a>.<br><br>
+Neodpustím si malou poznámku. V&nbsp<a href="http://www.kolopro.cz/clanky/aktualni-informace/10762-jobankuv-obri-hattrick" target="_blank">článku</a> o&nbspDrásalovi na stránkách KPŽ jsem se dozvěděl, že Holešov je v&nbspČechách, že tradiční termín závodu (první červencový víkend) byl změněn o&nbsp14 dní dopředu a&nbspže Pavel Skalický je neznámý amatér???!!!
+
+			</div>
+		</div>
+		<div class="aktualita">
+			<img data-src="images/24ser2016.jpg" class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 24</p>
+				<p class="datumVlozeniAktuality">20/06/16 07:30</p>
+				<p class="">
+				Příprava na Drásala bolí. Kapitán oddílu by mohl po nedělní cvičné seznamovací vyjížďce s&nbspnovou trasou vyprávět. Obdobně i&nbspMarek Julina po dvoudenních galejích na Kotárech Tůr.<br>
+V&nbspsobotu na Rampušáku, okleštěném o&nbspsilniční část, zopakoval Vladimír Kučera zlaté umístění v&nbspkategorii na 60-ti kilometrové distanci bikové trasy. Na její kratší sestře se z&nbsptřetího místa v&nbspkategorii radoval Petr Procházka. Potěšilo nás i&nbsppotvrzení stoupající výkonnosti po úspěšném zdolání záludností zkouškového období našeho černého koně na Drásala -&nbspMartina Pirucha.<br>
+Druhou víkendovou akcí bylo nevyhlášené mistrovství Valašska ve dvouetapovém bikovém závodu dvojic -&nbspKotáry Tůr. Letošní jubilejní 20. ročník vedl jako obvykle snad přes všechny kopce Javorníků ze Zlína do Velkých Karlovic a&nbspna druhý den zpět přes ty obzvláště vybrané v&nbspHostýnsko -&nbspvsetínské hornatině, bratru cca 170 km. Zásluhou Filipa Chovance (s&nbspparťákem Andrejem) jsme obhájili loňské vítězství dvojice Marek Julina a&nbspRadim Horáček, kteří letos zůstali těsně pod stupni pro vítěze.<br><br>
+Přehled výsledků oddílu najdete <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>. <br> 
+Výběr fotek z&nbspKotárů z&nbsplokality Na Písečné od Viléma jsou <a href="https://www.flickr.com/photos/vilemeliv/albums">zde</a> a&nbsppár fotek z&nbspRampušáka na oddílové <a href="https://www.flickr.com/photos/cschropyne/">fotogalerii</a>.
+
+
+			</div>
+		</div>
+		<div class="aktualita">
+			<img data-src="images/23ser2016.jpg" class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 23</p>
+				<p class="datumVlozeniAktuality">15/06/16 01:10</p>
+				<p class="">
+				Jeden z&nbspvíkendů, kdy jsme se vypravili na závodní kolbiště v&nbspsobotu i&nbspv&nbspneděli. Sobotní výprava se jala dobývati horu zvanou Ještěd na závodech ze seriálu KPŽ. Do vzdálené lokace se vypravila část race týmu posílená o&nbsp„kmotrovskou” skupinu. A&nbspjako je již poslední dobou zvykem, třetí místa v&nbspkategoriích neunikla Vladimíru Kučerovi (48/3) a&nbspKateřině Nábělkové (327/3). V&nbspten samý den se k&nbspvýbornému výkonu vzepjal Michal Straka (3/2), když na 70 kilometrovém Kaktus biku (SVK) dojel celkově třetí a&nbspdruhý v&nbspkategorii.<br>
+Nedělní oddílový výkon na Nivnické padesátce by si měli všichni zapsat do památníčku. Z&nbspprvního tuctu v&nbspcelkovém pořadí na 50 kilometrové trase byl rovný půltucet oděn v&nbspnašich dresech. Nejintenzivněji šlapal do pedálů Jan Procházka (4/3), v&nbspkategorii pokořil Vladimír Kučera (8/1) prokletí třetích míst z&nbspposledních akcí a&nbspbral rovnou první. Na kratší trase se vytáhli mladíci Petr Procházka (2/1) a&nbspLukáš Kučera (7/3) prvním a&nbsptřetím místem v&nbspkategorii, přičemž Petr dojel v&nbspcelkovém pořadí druhý.<br><br>
+				
+Přehled výsledků oddílu najdete <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>. <br>
+Přehled výkonů týmu KPŽ je <a href="http://www.cyklosportchropyne.cz/files/kpz2016.pdf">zde</a>.<br>
+Výběr fotek od Jana Reinera z&nbspJeštědu je <a href="https://www.flickr.com/photos/cschropyne/">zde</a>.<br>
+Výběr fotek z Nivnice od Viléma Horáčka je <a href="https://www.flickr.com/photos/vilemeliv/albums/">zde</a>.<br>
+Výběr fotek z Nivnice od Jana Junaštíka a Petra Smutného je <a href="https://www.flickr.com/photos/cschropyne/">zde</a>.
+
+			</div>
+		</div>
+		<div class="aktualita">
+			<img data-src="images/22ser2016.jpg" class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 22</p>
+				<p class="datumVlozeniAktuality">07/06/16 00:00</p>
+				<p class="">
+				3 x 3. Ne, to vás nechci zkoušet z&nbsppočtů. To je jen stručný zápis nejlepších výkonů našich oddílových členů v tomto víkendu a&nbspznamená tři třetí místa ve svých kategoriích. Vyzdvihnout musím historicky první individuální pódiové umístění Jaroslava Zemana (50/3) v&nbspnašich barvách, na které dosáhl na olomouckém řetězu a&nbspto věru (zůstali-li pořadatelé věrni svým ideám) nebyla lehká projížďka lesem. Na Orlíku si pláž z&nbsppódia prohlédli osvědčení sběratelé drahých kovů - Adélka Nábělková (113/3) a&nbspVladimír Kučera (29/3).<br>
+Dnes tj. 7. 6. 2016 vstoupí náš oddíl do historie Pražských schodů první účastí v&nbsphlavním závodě  v&nbsposobě Jana Procházky. Držíme mu pěsti s&nbspvírou, že štěstí přeje připraveným. <br><br>
+				
+Přehled výsledků oddílu najdete <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>. <br>
+Přehled výkonů týmu KPŽ je <a href="http://www.cyklosportchropyne.cz/files/kpz2016.pdf">zde</a>.<br>
+Výběr fotek od Jana Reinera z&nbspOrlíku je <a href="https://www.flickr.com/photos/cschropyne/">zde</a>.
+
+
+			</div>
+		</div>
+		<div class="aktualita">
+			<img data-src="images/dz_2016.jpg"  class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Bikové závody dětí</p>
+				<p class="datumVlozeniAktuality">01/06/16 21:45</p>
+				<p class="">
+				Byl 29. květen, neděle ráno, bouřkové mraky kvapně opouštěly oblohu nad chropyňským rybníkem a nadvládu nad celým zbývajícím dnem převzal Slunce svit. S kalužemi na závodní trase si však ještě nedokázal do startu první kategorie poradit. Pro žádného závodníka nebyly louže nepřekonatelnou překážkou, ba mohu říct, že pro některé to byl super hit.<br>
+Ve všech sedmi věkových kategoriích jsme na startu přivítali 207 dětí ve věku od jednoho do patnácti let. Jejich měření sil bylo urputné, vedené v duchu fair play.<br><br>
+			
+Kompletní výsledky najdete <a href="http://www.cyklosportchropyne.cz/detske_zavody/detske_zavody_vysledky.html">zde</a>. <br>
+Výběr fotografií od Viléma najdete <a href="https://www.flickr.com/photos/vilemeliv/albums/with/72157668346768546">zde</a>.
+
+			</div>
+		</div>
+		<div class="aktualita">
+			<img data-src="images/20ser2016.jpg"  class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 20</p>
+				<p class="datumVlozeniAktuality">23/05/16 21:45</p>
+				<p class="">
+				Dalším závodem seriálu Kolo pro život byl oblíbený díl v Jestřebích horách, který si nenechali utécti i naši. Čtyřčlenná sestava bojující o body do týmové soutěže podporovaná třemi Kmotry a jednou osamocenou bikerkou Kateřinou Nábělkovou (336/2) zkontrolovali organizační kvality pořadatelů a její zásluhou dovezli domů alespoň jeden drahý kov.<br>
+Zbývající část členů až na Rosťu Rypla (272/4) na Silesii a Jardu Zemana (48/5) na hradě Broumově sbírala síly na další klání jinými vhodnými postupy.<br><br>
+				
+Přehled výsledků <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>. <br>
+Výběr fotek od Jana Reinera a Miloše Lubase z Úpice najdete <a href="https://www.flickr.com/photos/cschropyne/">zde</a>.
+
+
+			</div>
+		</div>
+		<div class="aktualita">
+			<img data-src="images/19ser2016.jpg"  class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 19</p>
+				<p class="datumVlozeniAktuality">16/05/16 12:45</p>
+				<p class="">
+				„Jedeme na Mamuta”, zavelel před časem kapitán oddílu. Povel byl jasný a&nbsptak účast na letošním Mamut Tour & Bike byla po několika letech z&nbspnaší strany velmi početná. Závodníky jsme obsadili všech pět nabízených distancí, tři na silniční části a&nbspdvě bikové trasy.<br>
+Na nejdelší silniční , 212 kilometrů dlouhé královské trase, jsme nasadili ocelového muže Milana Mosazného (53/9), který však kvůli tajtrlíkujícím fotografům v&nbsptrase závodu, zvolil strategii dojetí do cíle ve zdraví. Na střední si z&nbspnaší trojice nejlépe vedla Kateřina Nábělková (112/2), když obsadila druhé místo v&nbspkategorii. Zlatým stupínkem v kategorii nás na nejkratší trase potěšila Adélka Nábělková (92/1).<br>
+Vynikajících výsledků dosáhla početná ekipa našich členů na delší bikové trati.<br> V&nbspelitní jedenáctce se umístila hned čtveřice z nich. Nejvýše se probojoval Jan Procházka (2/2), celkově i&nbspv&nbspkategorii druhý, vítězstvím v kategorii podpořil úspěšné působení na Mamutu Vladimír Kučera (7/1). A&nbspani na kratší bikové trati jsme neodešli bez kovu na hrudi. Bronzovou placku si na ni pověsil za umístění v&nbspkategorii Lukáš Kučera (13/3).<br><br>
+				
+Přehled výsledků <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>. <br>
+Výběr fotek ze stoupání na Hadovnu od Viléma je <a href="https://www.flickr.com/photos/vilemeliv/albums/with/72157668346768546">zde</a>.
+
+
+			</div>
+		</div>
+		<div class="aktualita">
+
+			<img data-src="images/18ser2016.jpg"  class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 18</p>
+				<p class="datumVlozeniAktuality">09/05/16 07:35</p>
+				<p class="">
+				Krasný slunečný den čekal hordu našich oddílových členů v okolí hradu Helfštýna na letošní Šele. Vytáhl do terénu dokonce i Kamila s Luďkem. Závodníky jsme obsadili všechny nabízené distance. Na nejdelší, 97 kilometrové mistrovské trase, kterou jsme měli i dobře pokrytou pomocným personálem podavačů povoleného dopingu (ale ne jenom ji) si nejlépe vedl v celkovém pořadí Jan Procházka (27/16), v kategorii o kousek, co by se párkrát kamenem hodilo, unikl bronz Vladimíru Kučerovi (63/4).<br>
+Janem Blažkem dobře rozjetou střední distanci, s ambicí umístění v první desítce celkového pořadí, zhatila krátká letecká vložka na cca 18 kilometru s tvrdým přistáním bez zjevných následků na těle, ale s totální destrukcí ráfku předního kola.<br><br>
+
+Přehled výsledků najdete <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>.<br>
+Výběr fotek od Viléma je ke zhlédnutí <a href="https://www.flickr.com/photos/vilemeliv/albums/with/72157667227377926">zde</a>.<br> 
+
+
+			</div>
+		</div>
+		<div class="aktualita">
+			<img data-src="images/17ser2016.jpg" class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 17</p>
+				<p class="datumVlozeniAktuality">04/05/16 19:35</p>
+				<p class="">
+				Druhý závod seriálu Kolo pro život byl pro zúčastněné členy našeho oddílu ve znamení číslice tři. Trojice Jan Procházka (9/3), Vladimír Kučera 38/3) a&nbspKateřina Nábělková (237/3) vybojovali krásná třetí místa ve svých kategoriích. Třešničkou na dortu, potvrzující výše citované, je třetí místo našeho race týmu ze stránek KPŽ nezjistitelného složení.<br>
+Další akcí u&nbspnás za kopcem a&nbsptím pádem s&nbspnaší početnou účastí byla bondovská jarní srdcovka v Prusinovicích - Rohálovská padesátka. Na pódium jsme letos nedosáhli. Nejlépe si s&nbspnástrahami trati poradil Filip Chovanec (25/21).<br><br>
+
+Přehled výsledků najdete <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>.<br>
+Fotky od Jana Reinera a&nbspJiřího Blažka z&nbspHustopečí <a href="https://www.flickr.com/photos/cschropyne/">zde</a>.<br>
+Fotka z&nbspR50 od Viléma <a href="https://www.flickr.com/photos/vilemeliv/albums/with/72157667227377926">zde</a>.<br>
+
+			</div>
+		</div>
+		<div class="aktualita">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Víkendový výsledkový servis 16</p>
+				<p class="datumVlozeniAktuality">26/04/16 17:05</p>
+				<p class="">
+				Nejvýznamnější událostí tohoto víkendu je to, že jsme spustili přihlašování na dětské závody v Chropyni, které se uskuteční 29.&nbspkvětna. Přihlašovat se můžete <a href="http://www.cyklosportchropyne.cz/detske_zavody/detske_zavody_prihlaska.php">zde</a>.<br><br>
+
+Začalo Kolo pro život obvyklým úvodním závodem Trans Brdy. Z naší strany prozatím vlažně, a i proto musel Jarda studovat naše sponzory, vymalované na našich dresech, ve zpětném zrcátku. Nejlépe si je mohl prohlížet na dresu Jana Procházky (30/5), který byl z našich účastníků nejlepší. I web pořadatele ještě nešlape na 100%. Najít bodovací tabulku, jak je uvedeno v pravidlech, na stránkách seriálu, je úkol minimálně pro Horatia z CSI Miami.<br>
+Třetím závodem na Záhoří pokračoval i seriál Maxbike Karpaty Tour. Ten jsme obsadili převážně početnou skupinou Kučerovců. Z nich si nejlépe vedl Petr (37/7). Za zmínku stojí to, že výborně natrénováno má náš emeritní člen Vladimír Kučera st., a to až tak, že výsledkové listině omládl minimálně o osm let.<br><br>
+
+Přehled výsledků najdete <a href="http://www.cyklosportchropyne.cz/files/csch2016.pdf">zde</a>.<br>
+Jednu fotku od Jana Reinera z Brd a pár párů fotek ze Záhoří najdete<a href="https://www.flickr.com/photos/cschropyne/">zde</a>.
+
+
+			</div>
+		</div>
+		<div class="aktualita">
+			<img data-src="images/ch502016.jpg" class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Chřibská 50 2016</p>
+				<p class="datumVlozeniAktuality">19/04/16 23:01</p>
+				<p class="">
+				Už je to uděláno, už je to hotovo. Touto větou, notoricky známou nám dětem všeho věku, se dá nejvýstižněji charakterizovat pocit úlevy organizátorů 14. ročníku FORCE Chřibské padesátky z kroku do nové podoby závodu. Nové úplně z gruntu. Zázemím v hanáckých Athénách, městě Kroměříži, v areálu výstaviště Floria, z toho vyplývající novou trasou tradiční distance a přídavkem kratší trasy s délkou cca poloviční, vstupem do seriálu pěti bikových závodů Maxbike Karpaty MTB Tour.<br><br>
+Úleva je na místě. Upgrade 3.0 závodu se povedl. Vyčnívá v něm především zázemí na výstavišti s parkovištěm takřka na dosah ruky, nadstandardním vybavením pro osobní hygienu (určitě i našich mechanických domin), krytým prostorem s dostatečnou kapacitou pro všechny zúčastněné lidičky, aby mohli v klidu znovu nabýt vydanou energii fyzickou i duševní, vydanou na trase klasické distance, kterou Foja charakterizoval slovy: "Rychlá, ale na úvod sezóny i dostatečně obtížná”, ale i na krátké trase, která na své hodnocení ještě čeká.<br><br>
+A k tomu se přidalo i počasí. Do žluta rozžhavené aprílové Slunce nabíjelo blankytně modrou oblohu snad jenom pozitivní energií se selektivním přenosem na zúčastněné.<br><br>
+Jako novinku lze zařadit i jméno vítězky dlouhé trasy Terezy Němcové (familiérně nazývané TeHu) mezi něžným pokolením a také Marka Rauchfusse z řad ogarů. Na krátké trase vstoupí do historie závodu jako první vítězové sexy Denisa Knapková a snad sexy Tomáš Petříček.<br><br>
+Na závěr tohoto nezvykle dlouhého textu musím vyslovit jménem našeho trojjedinného (ředitel závodu, kapitán oddílu, biker) poděkování všem participujícím členům oddílu a jeho sympatizantům za nadstandardně zvládnutý upgrade 3.0 závodu včetně jeho vlastního průběhu a závodníkům v obou pelotonech, že závodili s rozumem v hrsti. Dík.<br><br>
+				Výsledky závodu najdete <a href="http://www.cyklosportchropyne.cz/chribska/chribska_vysledky.html">zde</a>.<br>
+Výsledky seriálu MKmtbT <a href="http://www.karpatymtbtour.eu/vysledky/">zde</a>.<br>
+Výběr fotek od Viléma <a href="https://www.flickr.com/photos/vilemeliv/albums/with/72157667227377926">zde</a>.
+			</div>
+		</div>
+		<div class="aktualita">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Výsledky FORCE Chřibské 50 2016</p>
+				<p class="datumVlozeniAktuality">16/04/16 20:58</p>
+				<p class="">
+				Za jak dlouho jste proletěli trať letošní Chřibské? Kolik jste naložili svému odvěkému sokovi, či o kolik se budete muset do příštího roku zlepšit, abyste jej zdolali? Výsledky <a href="chribska/chribska_vysledky.html">zde</a>.
+
+
+			</div>
+		</div>
+		<div class="aktualita">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">The latest news</p>
+				<p class="datumVlozeniAktuality">14/04/16 21:18</p>
+				<p class="">
+				V posledním víkendovém výsledkovém servisu jsem již nastínil účast výborných bikerek a&nbspbikerů na letošní CH50. Možná i&nbsptento text zviklal k&nbsppřihlášení další jedince z&nbsptop sféry. Džobra, Adlíka a TeHu (alias Terezka Němcová), hochy z&nbspKellys Bikeranch Teamu, ČS-Accolade a&nbspSymbio+Cannondale. Na 99% se na startu objeví "amatér" Foja. A&nbsptaky je možné, že se v&nbspsobotu v&nbspbikerském světě našich luhů, hájů a&nbsplesů objeví úplně nové, nezapomenutelné jméno. Loňskou CH50 nám počasí osvěžilo krátkou, intenzívní, sněhovou přeháňkou. To letos podle oblíbených norských meteorologických jasnovidců nehrozí a&nbspvypadá to na krátké krátké. Prášit se taky nebude, trať i&nbspjejí okolí bylo příjemně zvlhčeno a&nbsppro mladší ročníky jsme kaluže ponechali v&nbspaktuálním stavu.
+
+
+			</div>
+		</div>
+
+		<div class="aktualita">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">CH50 LIVE</p>
+				<p class="datumVlozeniAktuality">11/04/16 21:18</p>
+				<p class="">
+				 Jelikož se trať line přes železnici, vybízíme k obezřetnosti a upozorňujeme, že závodníci, kteří přes koleje přejedou po spuštění výstražných zařízení, budou <b>diskvalifikování</b>.<br><br>
+
+				 Na výstavišti můžete očekávat atrakce pro děti mj. skákací hrad. <b>Avšak dětské závody zde nejsou pořádány.</b> Ty se budou jako každý rok konat na konci května (29.5.) v Chropyni v okolí tamějšího zámku. <a href="detske_zavody/detske_zavody.html">Jste srdečně zváni</a>.
+				 <br><br>
+				 <h3>Stravování</h3>
+				 Na stravenku si závodníci budou moci vybrat:
+				 <ul>
+				 	<li>Těstoviny s grilovanou zeleninou v tomatové omáčce</li>
+				 	<li>Boloňské těstoviny</li>
+				 	<li>Rizoto s kuřecím masem, zeleninou a sýrem</li>
+				 	<li>Hovězí guláš, pečivo</li>
+				 	<li>Pivo alko a nealko / s příchutí</li>
+				 	<li>Neperlivá / jemně perlivá voda</li>
+				 </ul>
+				 Ve stejné restauraci, kde bude jídlo připraveno pro závodníky, si bude moci psychická podpora a doprovod dopřát i jiných než-li výše uvedených pochutin.
+				 <br><br>
+				 Mapu zázemí se zvýrazněnými klíčovými body můžete nalézt <a href="chribska/chribska_propozice.html">zde</a>.
+				 <br><br>
+				 <b>Přijaté platby po 14.4. 20:00 nemusí být spárovány s přihláškou, a proto bude startovné považováno za neuhrazené. Případné nesrovnalosti budou řešeny individuálně s ředitelem závodu při prezentaci.</b>
+				 <br><br>
+				 Také pro první tři ženy v absolutním pořádí jsou přichystány peněžní odměny (1000Kč, 500Kč, 500Kč).
+				 <br><br>
+
+				 <h3>Kontakt na zástupce pořadatele</h3>
+				 TEL: +420 603 446 917
+				 E-mail: vk1973@seznam.cz
+				 <br><br>
+				 <h4>Prezentace:</h4>
+					
+					Pátek: 16:00 - 19:30<br>
+					Sobota: 8:00 - 10:00 dlouhá<br>
+						8:00-10:45 krátká<br>
+					  
+
+
+			</div>
+		</div>
+		<div class="aktualita">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Výsledkový servis 13</p>
+				<p class="datumVlozeniAktuality">07/04/16 16:40</p>
+				<p class="">
+				 Biková sezóna zahájena. V Morkovicích si naši oddíloví chrti otestovali svoji aktuální výkonnost v přímém souboji s konkurencí. Test na výbornou dopadl pro Vladimíra Kučeru vítězstvím ve své kategorii. Duo 2P ještě přemýšlelo, místo kterých přednášek budou najíždět potřebné tréninkové kilometry, aby byli obávanými soupeři elitních závodníků a tak o čučuť zaostali za očekáváním. Chřibská padesátka v novém hávu je za dveřmi a letmý pohled do seznamu přihlášených věští kvalitní složení pelotonu. Jen namátkou bych jmenoval tetu Johanu a strýca Rocca, z fotbalistova týmu Denisu s nesmazatelnou pihou krásy společně se šťastným Petrem, lokální hvězdy Žakin a Žmolda, standardně nadprůměrný orientační smysl navedl do Kroměříže i Jirku Hradila a snad se objeví i kouzelník Foja. Tak se těšte!!!
+			</div>
+		</div>
+		<div class="aktualita">
+			<img data-src="images/ch50_banner_mapa.jpg" class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Úprava krátké trasy a jejího startu</p>
+				<p class="datumVlozeniAktuality">04/04/16 00:50</p>
+				<p class="">
+				 Z důvodu zajištění maximální bezpečnosti účastníků a&nbsptaké minimalizace vzájemného ovlivňování průběhu závodu na 50 a&nbsp30 km jsme se rozhodli provést tyto změny: Start kratší trasy bude oddělen od 50 km trasy, závodníci odstartují z&nbspareálu výstaviště ve <span>12:00 hod</span>. Po startu se vydají proti dojezdu závodu a&nbsppo přejetí železnice budou směřovat na Kotojedy, kde se napojí na již dříve představenou trasu. Děkujeme za pochopení a&nbspvěříme, že tyto změny zlepší průběh závodu.
+			</div>
+		</div>
+		<div class="aktualita">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">CH50 LIVE</p>
+				<p class="datumVlozeniAktuality">31/03/16 19:18</p>
+				<p class="">
+				 Již máme k dispozici celý záznam dlouhé trasy, najdete jej <a href="http://www.bikemap.net/en/route/3462433-chribska-50-mtb-2016/#/z12/49.22275,17.36998/terrain" target="_blank">zde</a> (online Bikemap.net).
+				 <br><br>
+				 Na trase krátkého závodu byly provedeny kosmetické úpravy, které se týkají jeho finálních kilometrů. Jedná se o&nbspúsek asi 4&nbspkm od cíle v&nbspokolí Hvězdy. Důvodem změny je snaha předejít možným kolizím závodníků z&nbspdlouhé trasy se závodníky z&nbspkrátké.
+			</div>
+		</div>
+		<div class="aktualita">
+			<img data-src="images/chribska2016chystej.jpg" class="lazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">FORCE Chřibská padesátka - 16. dubna 2016</p>
+				<p class="datumVlozeniAktuality">24/01/16 23:58</p>
+				<p class="comment">
+				Už se chystej. Na nový, ale vskutku nový 14. ročník FORCE Chřibské padesátky. Nové je místo zázemí v&nbspareálu výstaviště Floria v&nbspKroměříži. Nové jsou trasy závodu a&nbspto hned dvě - dlouhá a&nbspkratší. Novinkou je i&nbspto, že dlouhá trasa je součástí seriálu závodů Maxbike Karpaty MTB tour 2016. Nový je dodavatel sportovní výživy na občerstvovačce (Kompava). A&nbspmožná nového přijde ještě více … třeba kouzelník. Něco však zůstalo nedotčené. Osvědčený tým pořadatelů! Maximální počet závodníků na dlouhé trase (500) a&nbspaprílové počasí.<br><br>
+
+				Propozice jsou <a href="http://www.cyklosportchropyne.cz/chribska/chribska_propozice.html">zde</a>. Přihlásit se můžete na <a href="http://www.cyklosportchropyne.cz/chribska/chribska_prihlaska.php">tomto</a> odkazu. Mapu můžete nalézt <a href="http://www.cyklosportchropyne.cz/chribska/chribska_mapa.html">zde</a>.
+			</div>
+		</div>
+
+		<div class="aktualita">
+			<img data-src="images/bvs2015.jpg" class="lastLazyload">
+			<div class="textAktuality">
+				<p class="nadpisAktuality">Bilanční výsledkový servis roku 2015</p>
+				<p class="datumVlozeniAktuality">16/11/15 12:14</p>
+				<p class="comment">
+				„Opět se přiblížilo období, kdy se chystá sv.&nbspMartin vypustit svého bílého koně mezi nás”. Touto větou jsem začínal loňský bilanční výsledkový přehled. Letos sv.&nbspMartin s&nbspbílou peřinou určitě nepřijede, ba co víc, prodlužuje pravověrným cyklistům sezónu další várkou dnů s&nbspnadprůměrnou teplotou, neobvyklou pro toto roční období. Tak neváhejte a&nbspjezděte. Využijte této přímluvy sv.&nbspMartina do úplného vyčerpání, než se uložíte k&nbsppo sezónnímu odpočinku od svých ke SVÝM více či méně drahým miláčkům.
+<br><br>
+Po tomto krátkém úvodu přikročme k&nbspstručnému kvantitativnímu vyhodnocení letošní sezóny.
+<br><br>
+Námi pořádaná FORCE Chřibská padesátka se letos, na rozdíl od výše citované pranostiky, neobešla bez drobné, leč nepříjemnou teplotou s&nbspvětrem doprovázené, sněhové přeháňky. Tato, našimi meteorologickými kapacitami a&nbspaplikacemi na nejchytřejších telefonních cihlách, avizovaná nepohoda pravděpodobně stála za nižší účastí čítající rovných 301 odstartovavšich otužilců. Na Dětských závodech v&nbspChropyni jsme přivítali 170 dětí, což je prozatím nejvyšší účast v&nbspdosavadní historii akce, na kterou jsme právem pyšní.
+<br><br>
+Celkově se členi oddílu v&nbspletošním roce zúčastnili 66 akcí, z&nbsptoho pěti silničních a&nbspčtyř triatlonových. V&nbspzahraničí jsme letos byli pouze na jedné slovenské akci. Dle vedené evidence to představuje 483 „osoboúčastí” (vlastní měrná jednotka) s&nbsppoklesem o&nbsp60 oú oproti loňskému roku. Na nich jsme vybojovali v&nbspcelkovém pořadí třináct prvních míst (markantní nárůst), dvě druhá a&nbsppět třetích míst. V&nbsppříslušných kategoriích to bylo 34x první, 25x druhé a 36x třetí místo včetně konečných umístění v&nbspseriálech.<br>
+Nejpilnějšími z&nbspnás byli Kateřina Nábělková a&nbspVladimír Kučera&nbspml. s&nbspúčastí na dvacetidevíti akcích jen těsně následováni Aldou Nábělkem. Naší srdcovkou se podobně jako v&nbsppředešlých letech stal holešovský Drásal s&nbsp28 aktivními účastníky (počítáno bez neméně aktivní a&nbsppočetné skupiny oddílových sympatizantů).  
+<br><br>
+Uspěli jsme i&nbspv&nbsptýmových soutěžích ve dvou nejsledovanějších tuzemských bikových seriálech, i&nbspkdyž ne tak jako v&nbsploňské sezóně. V&nbspseriálu Cyklomaraton se tým ve složení Vladimír Kučera&nbspml., Rosťa Ryplů, Martin Piruch, Jan Procházka a&nbspKateřina Nábělková umístil na třetím místě. Druhý tým ve složení Petr Koubek, Aleš Nábělek, Petr Kučera, Martin Klár a&nbspLukáš Kučera obsadil sedmou příčku. V&nbspjednotlivcích, v&nbsptomto seriálu v&nbspcelkovém hodnocení v&nbspkategorii mužů, si nejlépe vedl Vladimír Kučera&nbspml., když seriál mezi muži vyhrál. V kategoriích se nejlépe dařilo Vladimíru Kučerovi ml. ziskem prvního místa, druhá místa vybojovali Adélka Nábělková, Rosťa Ryplů a&nbspJan Procházka, třetí pak Kateřina Nábělková.<br>
+V&nbspseriálu „Kolo pro život” tým ve složení Vladimír Kučera&nbspml., Jan Peza, Petr Koubek, Martin Piruch, Jan Procházka, Jan Blažek, Michal Straka a&nbspMartin Klár sice neobhájil loňské vynikající třetí místo, ale i&nbsppáté pořadí v&nbspcelkovém hodnocení lze považovat za úspěšné počínání v&nbspkonkurenci s&nbspdalšími dvaceti pěti týmy. V&nbspcelkovém hodnocení seriálu mezi jednotlivci se Jan Procházka a&nbspMartin Piruch udrželi v&nbspelitní patnáctce třináctým a&nbspčtrnáctým místem. V&nbspkategoriích pódiové umístění s&nbspbronzovou hodnotou obhájil Petr Koubek a&nbspnově si tuto příčku vybojovala Kateřina Nábělková.		
+				
+			</div>
+		</div>
+		
+		<div class="aktualita">
+			<div class="archiv">
+				<a href="cyklooddil/s2014.html"> Předchozí roky </a>
+			</div>
+		</div>
+
+	</section>
+
+	<div class="footer" style="position:fixed;">
+
+		<div class="not-ad-at-all">
+			<div class="firstColumn">
+				<div id="f1" class="displayed">
+					<a href="http://www.ktm-bikes.at" target="_blank"><img src="images/sponsors/ktm.png"></a>
+				</div>
+				<div id="f2" class="hidden">
+					<a href="http://www.campagnolo.com/WW/en" target="_blank"><img src="images/sponsors/campagnolo.png"></a>
+				</div>
+				<div id="f3" class="hidden">
+					<a href="http://www.dema-bicycles.com" target="_blank"><img src="images/sponsors/dema.png" class="demaLogo"></a>
+				</div>
+			</div>
+			<div class="secondColumn">
+				<div id="s1" class="displayed">
+					<a href="http://www.dtswiss.com/Home" target="_blank"><img src="images/sponsors/dtswiss.png"></a>
+				</div>
+				<div id="s2" class="hidden">
+					<a href="http://www.force.cz" target="_blank"><img style="max-height:40px;" src="images/sponsors/logo-force-white.png"></a>
+				</div>
+				<div id="s3" class="hidden">
+					<a href="http://www.rockmachine.us/en/home/" target="_blank"><img src="images/sponsors/rockmachine.png"></a>
+				</div>
+			</div>
+			<div class="thirdColumn">
+				<div id="t1" class="displayed">
+					<a href="http://www.radiozlin.cz" target="_blank"><img src="images/sponsors/radio-zlin-white.png"></a>
+				</div>
+				<div id="t2" class="hidden">
+					<a href="http://www.rockmax.cz" target="_blank"><img src="images/sponsors/rockmax-white.png"></a>
+				</div>
+				<div id="t3" class="hidden">
+					<a href="http://superiorbikes.eu/cz/uvod/" target="_blank"><img src="images/sponsors/superior.png"></a>
+				</div>
+				<div id="t4" class="hidden">
+					<a href="http://www.mrxbike.com" target="_blank"><img src="images/sponsors/mrx.png"></a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		$(window).scroll(function(){
+			var topOfWindow = $(window).scrollTop();
+			var windowHeight = $(window).height();
+
+			$("img.lazyload").each(function(){
+
+				var imagePos = $(this).offset().top;
+
+				if (imagePos - 300 <= topOfWindow + windowHeight) { // && imagePos >= topOfWindow - 500
+					$(this).unveil();
+
+				}
+
+			});
+
+		});
+		$("img.lastLazyload").unveil();
+	});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".comment").shorten({
+			"showChars" : 400,
+			"moreText" : "Více",
+			"lessText" : "Méně",
+		});
+	});
+</script>
+<script type="text/javascript">
+	function doOnOrientationChange()
+  {
+    switch(window.orientation)
+    {
+      case -90:
+      case 90:
+
+        getViewport()
+        break;
+      default:
+      	getViewport()
+
+        break;
+    }
+  }
+
+  window.addEventListener('orientationchange', doOnOrientationChange);
+
+  // Initial execution if needed
+  doOnOrientationChange();
+
+	var alreadyResized = false;
+
+
+	var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+	};
+
+	function getViewport() {
+
+		 var viewPortWidth;
+		 var viewPortHeight;
+
+		 // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+		 if (typeof window.innerWidth != 'undefined') {
+		   viewPortWidth = window.innerWidth,
+		   viewPortHeight = window.innerHeight
+
+		 }
+
+			// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+		 else if (typeof document.documentElement != 'undefined'
+		 && typeof document.documentElement.clientWidth !=
+		 'undefined' && document.documentElement.clientWidth != 0) {
+		    viewPortWidth = document.documentElement.clientWidth,
+		    viewPortHeight = document.documentElement.clientHeight
+		 }
+
+			 // older versions of IE
+		 else {
+		   viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+		   viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+		 }
+			 // return [viewPortWidth, viewPortHeight];
+			 // var section = document.getElementsByTagName('section')
+			 // for (var i = 0; i < section.length; i++) {
+			 // 	section[i].style.height = parseInt(viewPortHeight) + 'px'
+			 // }
+
+		 var introSection = document.getElementById("intro")
+
+		 introSection.style.height = parseInt(viewPortHeight - 80) + 'px';
+
+	}
+
+	function getViewportOfMobile() {
+
+		if (alreadyResized) {
+			return;
+		}
+
+		alreadyResized = true;
+
+		 var viewPortWidth;
+		 var viewPortHeight;
+
+		 // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+		 if (typeof window.innerWidth != 'undefined') {
+		   viewPortWidth = window.innerWidth,
+		   viewPortHeight = window.innerHeight
+		 }
+
+		// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+		 else if (typeof document.documentElement != 'undefined'
+		 && typeof document.documentElement.clientWidth !=
+		 'undefined' && document.documentElement.clientWidth != 0) {
+		    viewPortWidth = document.documentElement.clientWidth,
+		    viewPortHeight = document.documentElement.clientHeight
+		 }
+
+		 // older versions of IE
+		 else {
+		   viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+		   viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+		 }
+		 // return [viewPortWidth, viewPortHeight];
+		 var section = document.getElementsByTagName('section')
+		 for (var i = 0; i < section.length - 1; i++) {
+		 	section[i].style.height = parseInt(viewPortHeight - 80) + 'px'
+		 }
+
+	}
+	function updateBgWidth() {
+		var viewPortWidth;
+		 var viewPortHeight;
+
+		 // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+		 if (typeof window.innerWidth != 'undefined') {
+		   viewPortWidth = window.innerWidth,
+		   viewPortHeight = window.innerHeight
+
+		 }
+
+			// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+		 else if (typeof document.documentElement != 'undefined'
+		 && typeof document.documentElement.clientWidth !=
+		 'undefined' && document.documentElement.clientWidth != 0) {
+		    viewPortWidth = document.documentElement.clientWidth,
+		    viewPortHeight = document.documentElement.clientHeight
+		 }
+
+			 // older versions of IE
+		 else {
+		   viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+		   viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+		 }
+			 // return [viewPortWidth, viewPortHeight];
+			 // var section = document.getElementsByTagName('section')
+			 // for (var i = 0; i < section.length; i++) {
+			 // 	section[i].style.height = parseInt(viewPortHeight) + 'px'
+			 // }
+
+		 var body = document.getElementsByTagName("body");
+		 // alert('už');
+		 if (viewPortWidth >= 1920) {
+		 	// alert('už');
+		 	body[0].style.backgroundSize = parseInt(viewPortWidth) + 'px auto';
+		 };
+		 if (viewPortHeight >= 1200) {
+		 	body[0].style.backgroundSize = 'auto' + parseInt(viewPortHeight) + 'px';
+		 };
+
+	}
+	window.addEventListener("resize", updateBgWidth);
+	window.addEventListener("load", updateBgWidth);
+
+	function getScreenSize() {
+
+		if (alreadyResized) {
+			return;
+		}
+
+		alreadyResized = true;
+
+		var screenWidth;
+		var screenHeight;
+
+		if (typeof screen.width != 'undefined') {
+			screenWidth = screen.width,
+			screenHeight = screen.height
+		}
+
+		var section = document.getElementsByTagName('section')
+		for (var i = 0; i < section.length; i++) {
+			if (window.matchMedia("(orientation: portrait)").matches) {
+		 		section[i].style.height = parseInt(screenHeight - 35) + 'px'
+		 	}else {
+		 		section[i].style.height = parseInt(screenWidth) + 'px'
+		 	}
+		 }
+
+	}
+
+	function rotationBackdoor() {
+		alreadyResized = false;
+	}
+
+	window.onload = getViewport();
+
+	if (isMobile.any()) {
+
+		var isiPad = navigator.userAgent.match(/iPad/i) != null;
+		if (isiPad) {
+			// window.onresize = getViewportOfMobile;
+		}else {
+			// window.onresize = getScreenSize;
+		}
+
+
+	}else {
+		window.onresize = getViewport;
+	}
+</script>
+<script type="text/javascript">
+
+// 		function hasClass( elem, klass ) {
+//      		return (" " + elem.className + " " ).indexOf( " "+klass+" " ) > -1;
+// 		}
+
+
+// 		function myFunction() {
+
+// 			// if (document.body.classList.contains('.no-touch')) {
+// 				var x = Math.floor(Math.random() * 3);
+// 		   	 	var paths = ["url('images/cyklo_masakr.jpg')", "url('images/tymova_sila.jpg')", "url('images/emoce.jpg')"];
+// 		   	 	var redMottoArray = ["Cyklo<br>masakr","Týmová<br>síla","Emoce"];
+// 		   	 	var whiteMottoArray = ["Neexistuje špatné počasí","Nebojíme se zaútočit","Baví nás to!"];
+// 		   	 	var redMotto = redMottoArray[x];
+// 		   	 	var whiteMotto = whiteMottoArray[x];
+// 		    	var path = paths[x];
+// 		    	var body = document.getElementsByTagName("body");
+// 		    	body[0].style.backgroundImage = path;
+// 		    	var redMottoDiv = document.getElementById("mottoRedId");
+// 		    	var whiteMottoDiv = document.getElementById("mottoBlackId");
+// 		    	redMottoDiv.innerHTML = redMotto;
+// 		    	whiteMottoDiv.innerHTML = whiteMotto;
+// 			// } else {
+
+// 			// 	document.getElementById('intro').innerHTML = "<img src='images/bg.jpg' style='height: 100%; position:absolute; top:0; left:0; z-index:2; overflow:hidden;'></img>";
+
+// 			// }
+// 		}
+// 		function myMobileFunction() {
+// 			var x = Math.floor(Math.random() * 3);
+// 			var paths = ["url('images/cyklo_masakr.jpg')", "url('images/tymova_sila.jpg')", "url('images/emoce.jpg')"];
+// 			var path = paths[x];
+// 		    	var mobileBg = document.getElementById("mobileBg");
+// 		    	mobileBg.style.backgroundImage = path;
+// 			var redMottoArray = ["Cyklo<br>masakr","Týmová<br>síla","Emoce"];
+// 		   	var whiteMottoArray = ["Neexistuje špatné počasí","Nebojíme se zaútočit","Baví nás to!"];
+// 		   	var redMotto = redMottoArray[x];
+// 		   	var whiteMotto = whiteMottoArray[x];
+// 		   	var redMottoDiv = document.getElementById("mottoRedId");
+// 		    var whiteMottoDiv = document.getElementById("mottoBlackId");
+// 		    redMottoDiv.innerHTML = redMotto;
+// 		    whiteMottoDiv.innerHTML = whiteMotto;
+// 		    // if (x == 2) {
+// 		    // 	mobileBg.style.backgroundPosition = "30% center";
+// 		    // };
+// 		    var phone = window.matchMedia("only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait)");
+// 		    if (phone && x == 1) {
+// 		    	mobileBg.style.backgroundPosition = "20% center";
+// 		    };
+
+// 		}
+// 		var html = document.getElementsByTagName("html");
+
+// 		if (hasClass(html[0], "no-touch")) {
+// 			window.onload = myFunction;
+// 		} else {
+// 			window.onload = myMobileFunction;
+// 		}
+	</script>
+	<script>
+	jQuery(document).ready(function($){
+		// $(".group1").colorbox({rel:'group1'});
+	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
+	var MqL = 9878;
+	//move nav element position according to window width
+	moveNavigation();
+	// $(window).on('resize', function(){
+	// 	(!window.requestAnimationFrame) ? setTimeout(moveNavigation, 300) : window.requestAnimationFrame(moveNavigation);
+	// });
+
+	//mobile - open lateral menu clicking on the menu icon
+	$('.cd-nav-trigger').on('click', function(event){
+		event.preventDefault();
+		if( $('.cd-main-content').hasClass('nav-is-visible') ) {
+			closeNav();
+			$('.cd-overlay').removeClass('is-visible');
+		} else {
+			$(this).addClass('nav-is-visible');
+			$('.cd-primary-nav').addClass('nav-is-visible');
+			// $('.cd-primary-nav').addClass('moveLeft');
+			$('.cd-main-header').addClass('nav-is-visible');
+			$('#intro').addClass('nav-is-visible');
+			$('div.footer').addClass('nav-is-visible');
+			$('.cd-main-content').addClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				$('body').addClass('overflow-hidden');
+			});
+			toggleSearch('close');
+			$('.cd-overlay').addClass('is-visible');
+		}
+	});
+
+	//open search form
+	$('.cd-search-trigger').on('click', function(event){
+		event.preventDefault();
+		toggleSearch();
+		closeNav();
+	});
+
+	//close lateral menu on mobile
+	$('.cd-overlay').on('swiperight', function(){
+		if($('.cd-primary-nav').hasClass('nav-is-visible')) {
+			closeNav();
+			$('.cd-overlay').removeClass('is-visible');
+		}
+	});
+	$('.nav-on-left .cd-overlay').on('swipeleft', function(){
+		if($('.cd-primary-nav').hasClass('nav-is-visible')) {
+			closeNav();
+			$('.cd-overlay').removeClass('is-visible');
+		}
+	});
+	$('.cd-overlay').on('click', function(){
+		closeNav();
+		toggleSearch('close')
+		$('.cd-overlay').removeClass('is-visible');
+	});
+
+
+	//prevent default clicking on direct children of .cd-primary-nav
+	$('.cd-primary-nav').children('.has-children').children('a').on('click', function(event){
+		event.preventDefault();
+	});
+	//open submenu
+	$('.has-children').children('a').on('click', function(event){
+		if( checkWindowWidth() ) event.preventDefault();
+		var selected = $(this);
+		if( selected.next('ul').hasClass('is-hidden') ) {
+			//desktop version only
+			selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+			selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+			$('.cd-overlay').addClass('is-visible');
+
+		} else {
+			selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+			$('.cd-overlay').removeClass('is-visible');
+		}
+		toggleSearch('close');
+	});
+
+	//submenu items - go back link
+	$('.go-back').on('click', function(){
+		$(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+	});
+
+	function closeNav() {
+		$('.cd-nav-trigger').removeClass('nav-is-visible');
+		$('.cd-main-header').removeClass('nav-is-visible');
+		$('.cd-primary-nav').removeClass('nav-is-visible');
+		// $('.cd-primary-nav').removeClass('moveLeft');
+		// $('.cd-primary-nav').addClass('moveRight');
+		$('.has-children ul').addClass('is-hidden');
+		$('.has-children a').removeClass('selected');
+		$('.moves-out').removeClass('moves-out');
+		$('div.footer').removeClass('nav-is-visible');
+		$('#intro').removeClass('nav-is-visible');
+		$('.cd-main-content').removeClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+			$('body').removeClass('overflow-hidden');
+		});
+	}
+
+	function toggleSearch(type) {
+		if(type=="close") {
+			//close serach
+			$('.cd-search').removeClass('is-visible');
+			$('.cd-search-trigger').removeClass('search-is-visible');
+		} else {
+			//toggle search visibility
+			$('.cd-search').toggleClass('is-visible');
+			$('.cd-search-trigger').toggleClass('search-is-visible');
+			if($(window).width() > MqL && $('.cd-search').hasClass('is-visible')) $('.cd-search').find('input[type="search"]').focus();
+			($('.cd-search').hasClass('is-visible')) ? $('.cd-overlay').addClass('is-visible') : $('.cd-overlay').removeClass('is-visible') ;
+		}
+	}
+
+	function checkWindowWidth() {
+		//check window width (scrollbar included)
+		var e = window,
+            a = 'inner';
+        if (!('innerWidth' in window )) {
+            a = 'client';
+            e = document.documentElement || document.body;
+        }
+        if ( e[ a+'Width' ] >= MqL ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	function moveNavigation(){
+		var navigation = $('.cd-nav');
+  		var desktop = checkWindowWidth();
+        if ( desktop ) {
+			navigation.detach();
+			navigation.insertBefore('.cd-header-buttons');
+		} else {
+			navigation.detach();
+			navigation.insertAfter('.cd-main-content');
+		}
+	}
+});</script>
+
+<script type="text/javascript">
+
+
+// VÁNOČNÍ PROVOZ
+
+
+if (hasClass(html[0], "no-touch")) {
+	window.onload = myFunction;
+} else {
+	window.onload = myMobileFunction;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+	<title>
+		Cyklosport Chropyně
+	</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="fonts/AvenirNext/avenirnextltpro-regular.css">
+	<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.0.min.js"></script>-->
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="script/social.js"></script>
+
+</head>
+<body>
+	<div class="container">
+
+			<!-- <div class="subContainer"> -->
+				<div class="header">
+					<div class="menuBar">
+						<div >
+						<a href="http://www.cyklosportchropyne.cz/index.html">
+							<img src="images/CChLogo-white.png" class="logo">
+						</a>
+						</div>
+						<div>
+							<a href="http://www.cyklosportchropyne.cz/index.html">
+								Aktuality
+							</a>
+						</div>
+						<div style="font-weight:bold;">
+							<a href="http://www.cyklosportchropyne.cz/radim_look/cyklooddil.html">
+								Cyklooddíl
+							</a> 
+						</div>
+						
+						<div>
+							<a href="http://www.cyklosportchropyne.cz/radim_look/chribska.html">
+								Chřibská 50 MTB
+							</a>
+						</div>
+
+						<div>
+							<a href="http://www.cyklosportchropyne.cz/radim_look/detske_zavody.html">
+								Dětské závody
+							</a>
+						</div>
+						<div>
+							<a href="https://www.flickr.com/photos/cschropyne/" target="_blank">Fotogalerie</a>
+						</div>
+						<div>
+							<a href="http://www.cyklosportchropyne.cz/radim_look/prodejna.html">
+								Prodejna
+							</a>
+						</div>
+						<div class="subMenu-cyklooddil" style="padding-right: 0px">
+						<div>
+							<a href="http://www.cyklosportchropyne.cz/radim_look/cyklooddil_clenove.html">
+								Členové
+							</a>
+						</div>
+						<div>
+							<a href="http://www.cyklosportchropyne.cz/radim_look/cyklooddil_kalendar.html">
+								Kalendář
+							</a>
+						</div>
+						
+						</div><!-- End of submenubar -->
+					</div><!-- End of menubar -->
+
+					<div class="subMenuSipka-cyklooddil" style="width:0px">
+					</div> 
+
+				</div>
+				<!-- <div class="social"></div> -->
+				<div class="overContent">
+					<div class="social">
+
+					<a href="mailto:oddil@cyklosportchropyne.cz" >
+					<img rel="tooltip1" src="images/messages.png" class="socialLogo" title="oddil@cyklosportchropyne.cz">
+					</a>
+					
+						<img rel="tooltip2" id="mailto" src="images/phone.png" class="socialLogo" title="tel.: 573 355 448, mob.: 603 446 917">
+					<a href="https://www.facebook.com/pages/CYKLOSPORT-CHROPYNĚ/108473619247419" target="_blank"> 
+						<img src="images/fb.png" class="socialLogo" title=""> 
+					</a>
+					<a href="https://www.flickr.com/photos/cschropyne/" >
+						
+						<img rel="tooltip3" src="images/flickr.png" class="socialLogo" title="Fotogalerie">
+					</a>
+					<a href="http://www.cyklosportchropyne.cz/radim_look/cyklooddil.html">
+						<img rel="tooltip4" src="images/trophy.png" class="socialLogo" title="Výsledky">
+					</a>
+						
+					<!-- <div class="socialLogo">			</div>
+
+					<div class="socialLogo">			</div>
+
+					<div class="socialLogo">			</div>
+
+					<div class="socialLogo">			</div> -->
+					</div>
+					<div class="content , stinContent">
+						<!-- <img src="images/stupinky.png" id="stupneVitezu"> -->
+						<!-- <img src="images/stupne-bg.png" id="stupneVitezu2"> -->
+						<img src="images/stupne.png" class="stupneVitezu">
+						<div class="aktualitaV">
+							<h1><span id="vysledkyTextNadpis">výsledky</span><a href="#" id="b2014" onclick='to2014()'><span id="prvni">2014</span></a>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+							<a href="#" id="b2013" onclick='to2013()'><span id="druhy">2013</span></a>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+							<a href="#" id="b2012" onclick='to2012()'><span id="treti">2012</span></a>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+							<a href="#" id="b2011" onclick='to2011()'><span id="ctvrty">2011</span></a>
+							</h1>
+							<p class="textAktuality"><br>Přehled umístění a bodových zisků v týmových soutěžích a jednotlivých závodech.</p>
+						</div>
+						<table id="vysledkyTabulka" rules="none">
+							<tr>
+								<td id="budesPrazdnyCsch">
+									<b class="nadpisVysledku"><a id="csch" href="files/csch2014.pdf">Celkový přehled umístění</a></b><br>
+									Výsledky všech aktivních členů.
+								</td>
+								<td>
+									<b class="nadpisVysledku"><a id="kpz" href="files/kpz2014.pdf">Týmová soutěž KPŽ</a></b><br>
+									Team Prestige Trophy
+								</td>
+							</tr>
+							<tr>
+								<td>
+									
+								</td>
+								<td id="budesPrazdnyCMT">
+									<b class="nadpisVysledku"><a id="cmt" href="files/cmt2014.pdf">Týmová soutěž CMT</a></b><br>
+									Team Trophy
+								</td>
+							</tr>
+						</table>
+						<div style="width: 96%; position:relative; height: 2px; background-color: #ef2c1d; margin: 0 auto; top:60px;">
+							
+						</div>
+						<div class="aktualita" style="margin-top: 100px;">
+							<h1>oddílové<b>aktuality</b></h1>
+						</div>
+						<div class="aktualita">
+							<img src="images/aktuality_photo/new_cip.png" class="obrazekAktuality">
+							<p class="nadpisAktuality">Nový web</p>
+							<p class="datumVlozeniAktuality">04/08/14 18:42</p>
+							<p class="textAktuality comment">Už nějakou dobu jsme směřovali k novým webovým stránkám a ještě delší dobu jsme je realizovali. Nakonec jsou tady a věříme, že se Vám budou líbit a budou příjemné pro užívání. Celková vzhled vychází z nového vizuálního stylu celého CYKLOSPORTU CHROPYNĚ, který se postupně zavádí a někteří z Vás se s ním mohli krátce seznámit v naší <a href="http://issuu.com/radimhoracek/docs/csch_brozura_2014_beta_2" target="_blank">„ročence“</a>. První vlaštovkou v novém grafickém pojetí byly redesignované týmové dresy pro letošní sezonu a také prezentace v rámci CHŘIBSKÉ 50MTB. <br>
+Nové stránky přináší také pár změn a inovací v porovnání s předešlou verzí. Asi nejzásadnější je návrat k horizontálnímu členění a nabídkou menu v horní části stránky. Dále zde je „rychlé“ menu s kontakty a také pro přístup k přehledu oddílových <a href="http://www.cyklosportchropyne.cz/radim_look/cyklooddil.html">výsledků a úspěchů</a>. Změněna byla také <a href="https://www.flickr.com/photos/cschropyne/" target="_blank">fotogalerie</a>, která byla pro jednoduší správu a komfort užívání převedena do rukou služby Flickr. Další změny se však chystají, především úprava a vylepšení přihlašovacího systému na CH50 a dětské závody. Tímto okamžikem však naše práce nekončí, budeme nadále pokračovat ve vylepšování naší prezentace. Velice rádi přivítáme Vaše připomínky a poznatky, o které se s námi můžete podělit třeba na naší <a href="https://www.facebook.com/pages/CYKLOSPORT-CHROPYNĚ/108473619247419" target="_blank">Facebookové stránce</a>. 
+
+<p>
+							<p class="textAktuality">
+							Na starších verzích prohlížečů se může web zobrazovat nesprávně. Za tyto problémy se omlouváme.
+							</p>
+							<!-- <p class="textAktuality" id="textArea"></p>
+							<a id="toogleButton" onclick="toogleText();" href="javascript:void(0);">See More</a>
+							</p> -->
+							</div>
+						<div class="aktualita">
+							<img src="images/aktuality_photo/dresy_2014.png" class="obrazekAktuality">
+							<p class="nadpisAktuality">Dres 2014 </p>
+							<p class="datumVlozeniAktuality">05/03/14 23:43</p>
+							<p class="textAktuality">Dresy pro novou sezónu 2014 vycházejí z loňského designu, tentokrát ve dvou variantách. Grafika doznala několik drobných změn, hlavně v části určené pro loga sponzorů našeho oddílu.</p>
+						</div>
+						
+						
+					</div> <!-- End of content -->
+
+				</div> <!-- End of overcontent -->
+				<div class="sponsors">Podporují nás:</div>
+				<div class="footer , stinFooter">
+					<div class="adBar" id="movingObject">
+						<a href="http://www.muchropyne.cz" target="_blank"><img src="images/sponsors/logo-chropyne.png" style="height: 50px; max-height:50px;"></a>
+						<a href="http://www.kr-zlinsky.cz" target="_blank"><img src="images/sponsors/zlinsky-kraj-white.png"></a>
+						<a href="http://www.enervitcz.cz" target="_blank"><img src="images/sponsors/enervit.png"></a>
+						<a href="http://www.ktm-bikes.at" target="_blank"><img src="images/sponsors/ktm.png"></a>
+						<a href="http://www.kruzik.cz" target="_blank"><img src="images/sponsors/kruzik.png"></a>
+						<a href="http://www.ethicsport.cz" target="_blank"><img src="images/sponsors/ethicsport.png"></a>
+						<a href="http://www.drimalservis.cz" target="_blank"><img src="images/sponsors/drimal-servis.png"></a>
+						<a href="http://www.elmo.cz/en/" target="_blank"><img src="images/sponsors/elmo.png"></a>
+						<a href="http://www.haly-komos.cz" target="_blank"><img src="images/sponsors/kosmos.png"></a>
+						<a href="http://multi-s.cz" target="_blank"><img src="images/sponsors/multi-s.png"></a>
+						<a href="http://www.seams.cz" target="_blank"><img src="images/sponsors/seams.png"></a>
+						<a href="http://www.stavconsult.cz" target="_blank"><img src="images/sponsors/stav-consult.gif"></a>
+						<a href="http://www.vape.cz" target="_blank"><img src="images/sponsors/vape.png"></a>
+						<a href="http://www.vokno-plastova-okna.cz" target="_blank"><img src="images/sponsors/vokno.png"></a>
+						<a href="http://www.muchropyne.cz" target="_blank"><img src="images/sponsors/logo-chropyne.png" style="height: 50px; max-height:50px;"></a>
+						<a href="http://www.kr-zlinsky.cz" target="_blank"><img src="images/sponsors/zlinsky-kraj-white.png"></a>
+						<a href="http://www.enervitcz.cz" target="_blank"><img src="images/sponsors/enervit.png"></a>
+						<a href="http://www.ktm-bikes.at" target="_blank"><img src="images/sponsors/ktm.png"></a>
+						<a href="http://www.kruzik.cz" target="_blank"><img src="images/sponsors/kruzik.png"></a>
+						<a href="http://www.ethicsport.cz" target="_blank"><img src="images/sponsors/ethicsport.png"></a>
+						<a href="http://www.drimalservis.cz" target="_blank"><img src="images/sponsors/drimal-servis.png"></a>
+						<a href="http://www.elmo.cz/en/" target="_blank"><img src="images/sponsors/elmo.png"></a>
+						<!-- <div class="ad">
+							<img src="images/ktm.png">
+						</div>
+						<div class="ad">
+							<img src="images/campagnolo.png">
+						</div>
+						<div class="ad">
+							<img src="images/dema.png">
+						</div>
+						<div class="ad">
+							<img src="images/dtswiss.png">
+						</div>
+						<div class="ad">
+							<img src="images/ethicsport.png">
+						</div>
+						<div class="ad">
+							<img src="images/mrx.png">
+						</div>
+						<div class="ad">
+							<img src="images/rockmachine.png">
+						</div>
+						<div class="ad">
+							<img src="images/shimano.png">
+						</div>
+						<div class="ad">
+							<img src="images/superior.png">
+						</div>
+
+
+						<div class="ad">
+							<img src="images/ktm.png">
+						</div>
+						<div class="ad">
+							<img src="images/campagnolo.png">
+						</div>
+						<div class="ad">
+							<img src="images/dema.png">
+						</div>
+						<div class="ad">
+							<img src="images/dtswiss.png">
+						</div> -->
+					</div>
+				</div>
+				<div class="lista">
+					<!-- <img src="images/lista.png" class="bg-lista"> -->
+					<div class="text-lista">
+						<p>© CYKLOSPORT<b>CHROPYNĚ</b> 2014 | Všechna práva vyhrazena | Web Design & Production: Mountiny <span style="float:right; padding-right:15px"><a href="https://webftp.active24.cz"><b>ADMINISTRACE</b></a></span>
+						<br>Kontakt: <a href="mailto:prodejna@cyklosportchropyne.cz"><b>prodejna@cyklosportchropyne.cz</b></a></p>
+					</div>
+				</div>
+	<!-- </div> -->
+	</div>
+
+<!-- <script type="text/javascript" src="script/jquery.slimscroll.min.js"></script> -->
+
+<script>
+// function changeStandings() {
+// 	var b2014 = document.getElementById('b2014')
+// 	var b2013 = document.getElementById('b2013')
+// 	var b2012 = document.getElementById('b2012')
+// 	var b2011 = document.getElementById('b2011')
+//}
+	function to2014() {
+		firstDate = document.getElementById('prvni');
+		secondDate = document.getElementById('druhy');
+		thirdDate = document.getElementById('treti');
+		fourthDate = document.getElementById('ctvrty');
+
+		firstDate.style.fontWeight = "700";
+		secondDate.style.fontWeight = "300";
+		thirdDate.style.fontWeight = "300";
+		fourthDate.style.fontWeight = "300";
+
+		
+		firstDate.style.color = "rgba(239, 44, 29, 1)"
+		secondDate.style.color = "rgba(239, 44, 29, 0.6)"
+		thirdDate.style.color = "rgba(239, 44, 29, 0.6)"
+		fourthDate.style.color = "rgba(239, 44, 29, 0.6)"
+
+		csch = document.getElementById('csch')
+		kpz = document.getElementById('kpz')
+		cmt = document.getElementById('cmt')
+
+		csch.href = "files/csch2014.pdf";
+		kpz.href = "files/kpz2014.pdf";
+		cmt.href = "files/cmt2014.pdf";
+
+		budePrazdnyCsch = document.getElementById('budesPrazdnyCsch');
+		budePrazdnyCsch.style.visibility = "visible";
+
+		budePrazdnyCMT = document.getElementById('budesPrazdnyCMT');
+		budePrazdnyCMT.style.visibility = "visible";
+		
+	}
+
+	function to2013() {
+		firstDate = document.getElementById('prvni');
+		secondDate = document.getElementById('druhy');
+		thirdDate = document.getElementById('treti');
+		fourthDate = document.getElementById('ctvrty');
+
+		firstDate.style.fontWeight = "300";
+	   	secondDate.style.fontWeight = "700";
+	   	thirdDate.style.fontWeight = "300";
+		fourthDate.style.fontWeight = "300";
+
+	   	
+	   	firstDate.style.color = "rgba(239, 44, 29, 0.6)"
+		secondDate.style.color = "rgba(239, 44, 29, 1)"
+		thirdDate.style.color = "rgba(239, 44, 29, 0.6)"
+		fourthDate.style.color = "rgba(239, 44, 29, 0.6)"
+
+		csch = document.getElementById('csch')
+		kpz = document.getElementById('kpz')
+		cmt = document.getElementById('cmt')
+
+		csch.href = "files/csch2013.pdf";
+		kpz.href = "files/kpz2013.pdf";
+		cmt.href = "files/cmt2013.pdf";
+
+		budePrazdnyCsch = document.getElementById('budesPrazdnyCsch');
+		budePrazdnyCsch.style.visibility = "visible";
+
+		budePrazdnyCMT = document.getElementById('budesPrazdnyCMT');
+		budePrazdnyCMT.style.visibility = "visible";
+
+	}
+
+	function to2012() {
+		firstDate = document.getElementById('prvni');
+		secondDate = document.getElementById('druhy');
+		thirdDate = document.getElementById('treti');
+		fourthDate = document.getElementById('ctvrty');
+
+		firstDate.style.fontWeight = "300";
+		secondDate.style.fontWeight = "300";
+		thirdDate.style.fontWeight = "700";
+		fourthDate.style.fontWeight = "300";
+
+		
+		firstDate.style.color = "rgba(239, 44, 29, 0.6)"
+		secondDate.style.color = "rgba(239, 44, 29, 0.6)"
+		thirdDate.style.color = "rgba(239, 44, 29, 1)"
+		fourthDate.style.color = "rgba(239, 44, 29, 0.6)"
+
+		csch = document.getElementById('csch')
+		kpz = document.getElementById('kpz')
+		cmt = document.getElementById('cmt')
+
+		csch.href = "files/csch2012.pdf";
+		kpz.href = "files/kpz2012.pdf";
+		cmt.href = "#";
+
+		budePrazdnyCsch = document.getElementById('budesPrazdnyCsch');
+		budePrazdnyCsch.style.visibility = "visible";
+
+		budePrazdnyCMT = document.getElementById('budesPrazdnyCMT');
+		budePrazdnyCMT.style.visibility = "hidden";
+		
+	}
+
+	function to2011() {
+		firstDate = document.getElementById('prvni');
+		secondDate = document.getElementById('druhy');
+		thirdDate = document.getElementById('treti');
+		fourthDate = document.getElementById('ctvrty');
+
+		firstDate.style.fontWeight = "300";
+		secondDate.style.fontWeight = "300";
+		thirdDate.style.fontWeight = "300";
+		fourthDate.style.fontWeight = "700";
+
+		
+		firstDate.style.color = "rgba(239, 44, 29, 0.6)"
+		secondDate.style.color = "rgba(239, 44, 29, 0.6)"
+		thirdDate.style.color = "rgba(239, 44, 29, 0.6)"
+		fourthDate.style.color = "rgba(239, 44, 29, 1)"
+
+		csch = document.getElementById('csch')
+		kpz = document.getElementById('kpz')
+		cmt = document.getElementById('cmt')
+
+		csch.href = "#";
+		kpz.href = "files/kpz2011.pdf";
+		cmt.href = "#";
+
+		budePrazdnyCMT = document.getElementById('budesPrazdnyCMT');
+		budePrazdnyCMT.style.visibility = "hidden";
+
+		budePrazdnyCsch = document.getElementById('budesPrazdnyCsch');
+		budePrazdnyCsch.style.visibility = "hidden";
+
+	}
+// document.getElementById("prvni").innerHTML = "Fuck";
+
+
+</script>
+
+<script type="text/javascript">
+	function moveAdBar() {
+
+				//movingObject = document.getElementById('movingObject');
+				movingObject.style.left = parseInt(movingObject.style.left)-1+'px'; // Posune se doleva o 5 px
+				if (parseInt(movingObject.style.left) == -2137) {
+					movingObject.style.left = '0px'; // set its initial position to 0px
+				};
+				
+				setTimeout(moveAdBar,20); //každých 20 ms zavola znova fci
+				
+				
+			}
+			function initMove() {
+  			movingObject = document.getElementById('movingObject'); // get the "movingObject" object
+  			movingObject.style.left = '0px'; // set its initial position to 0px
+  			moveAdBar(); // start animating
+			}
+			
+			window.onload = initMove;
+</script>
+
+<script type="text/javascript">
+//         $(document).ready(function(){
+//             $('.footer').slick({
+//                 slidesToShow: 5,
+//   				slidesToScroll: 1,
+//   				autoplay: true,
+//  				autoplaySpeed: 1000,
+
+//             });
+//         });
+//     </script>
+
+</body>
+</html>

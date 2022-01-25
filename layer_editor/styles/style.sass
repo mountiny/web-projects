@@ -1,0 +1,75 @@
+@import "reset"
+@import "mixins"
+
+*
+	box-sizing: border-box
+
+html
+	font-family: helvetica
+.main-cont
+	width: 1000px
+	height: 830px
+	position: absolute
+	top: 50%
+	left: 50%
+	background-color: red
+	+vendor-prefix("transform", "translateX(-50%) translateY(-50%)")
+	.container
+		height: calc(100% - 30px)
+		widows: 100%
+		position: relative
+	.menu
+		height: 30px
+		width: 100%
+		position: relative
+		// border: 1px solid black
+		.menu-item
+			text-decoration: none
+			text-transform: uppercase
+			line-height: 30px
+			color: white
+			display: block
+
+	.draggable
+		width: 200px
+		height: 100px
+		background-color: white
+		outline: 1px solid black
+		// border: 1px solid black
+		position: absolute
+		top: 0px
+		left: 0px
+		+display(flex)
+		+flex-direction(column)
+		.div-head
+			// +flex(1)
+			width: 100%
+			border-bottom: 1px solid black
+			position: relative
+			+display(flex)
+			+justify-content(space-between)
+		.div-head-item
+			height: 100%
+			line-height: 20px
+			text-decoration: none
+			text-transform: uppercase
+			color: black
+			// +flex(1)
+		.div-cont
+			width: 100%
+			height: calc(100% - 20px)
+			+flex(1 1 auto)
+			+display(flex)
+			+align-items(center)
+			+justify-content(center)
+			.handle
+				width: 80%
+				height: 80%
+				background-color: gray
+				cursor: pointer
+				+justify-content(center)
+				+display(flex)
+				+align-items(center)
+				// +vendor-prefix("transform", "translateX(-50%) translateY(-50%)")
+
+

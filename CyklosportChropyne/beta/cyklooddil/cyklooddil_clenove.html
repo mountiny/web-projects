@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cyklosport Chropyně</title>
+
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<link rel="stylesheet" type="text/css" href="../styles/cyklooddil.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="../script/jquery.shorten.js"></script>
+	<script src="../script/modernizr.js"></script>
+	<script type="text/javascript" src="../script/jquery.unveil.js"></script>
+	<script type="text/javascript" src="../script/background.js"></script>
+	<script type="text/javascript" src="../script/main.js"></script>
+
+</head>
+<body class="nav-is-fixed" style="background-image:url('../images/cyklo_masakr.jpg');"> <!-- nav-is-fixed -->
+	<nav class="menu cd-nav">
+		<ul id="cd-primary-nav" class="is-fixed menuFirstLayer cd-primary-nav">  <!-- is-fixed -->
+			<li class="menuAktuality">
+				<a href="../index.php">
+					Aktuality
+				</a>
+			</li>
+			<li class="menuCyklooddil has-children">
+				<a href="cyklooddil.html">
+					Cyklooddíl
+				</a> 
+				<ul class="menuSecondLayerCyklooddil hidden-submenu cd-secondary-nav is-hidden">
+					<!-- <a href="http://www.cyklosportchropyne.cz/radim_look/cyklooddil_clenove.html"> -->
+					<li class="go-back">
+						<a href="#cd-primary-nav">Zpět</a>
+					</li>
+					<li class="submenuClenove cyklooddilMob">
+						<a class="cd-nav-item" href="cyklooddil.html">
+							Výsledky
+						</a>
+					</li>
+					<li class="submenuClenove">
+						<a style="font-weight: bold" class="cd-nav-item" href="cyklooddil_clenove.html">
+							Členové
+						</a>
+					</li>
+					<!-- </a> -->
+					<li class="submenuKalendar">
+						<a class="cd-nav-item" href="cyklooddil_kalendar.html">
+							Kalendář
+						</a>
+					</li>
+					<li class="submenuArchiv">
+						<a class="cd-nav-item" href="s2014.php">
+							Archiv akt.
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menuChribska has-children">
+				<a href="../chribska/chribska_propozice.html">
+					FORCE Chřibská 50 MTB
+				</a>
+				<ul class="menuSecondLayerChribska hidden-submenu cd-secondary-nav is-hidden">
+					<li class="go-back">
+						<a href="#cd-primary-nav">Zpět</a>
+					</li>					
+					<li class="submenuPropozice">
+						<a href="../chribska/chribska_propozice.html">Propozice</a>
+					</li>
+					<li  class="submenuPrihlaska">
+						<a href="../chribska/chribska_prihlaska.php">Přihláška</a>
+					</li>
+					<li class="submenuSeznam">
+						<a href="../chribska/chribska_seznam.php">
+							Seznam přihlášených
+						</a>
+					</li>
+					<li class="submenuMapa">
+						<a href="../chribska/chribska_mapa.html">
+							Mapa
+						</a>
+					</li>
+					<li class="submenuVysledky">
+						<a href="../chribska/chribska_vysledky.html">
+							Výsledky
+						</a>
+					</li>
+					<li class="submenuFotogalerie">
+						<a href="../chribska/chribska_foto.html">
+							Fotogalerie
+						</a>
+					</li>
+					
+				</ul>
+			</li>
+			<li class="menuDetske has-children">
+				<a href="../detske_zavody/detske_zavody.html">
+								Dětské závody
+							</a>
+				<ul class="menuSecondLayerDetske hidden-submenu cd-secondary-nav is-hidden">
+					<li class="go-back">
+						<a href="#cd-primary-nav">Zpět</a>
+					</li>
+					<li class="detskeMobile">
+						<a href="../detske_zavody/detske_zavody.html">Propozice</a>
+					</li>
+					<li class="submenuPrihlaskaD">
+						<a href="../detske_zavody/detske_zavody_prihlaska.php">Přihláška</a>
+					</li>
+					<li class="submenuVysledkyD">
+						<a href="../detske_zavody/detske_zavody_vysledky.html">
+							Výsledky
+						</a>
+					</li>
+					<li class="submenuFotogalerieD">
+						<a href="https://www.flickr.com/photos/vilemeliv/albums">
+							Fotogalerie
+						</a>
+					</li>
+										
+				</ul>
+			</li>
+			<li class="menuFotogalerie">
+				<a href="https://www.flickr.com/photos/cschropyne/" target="_blank">
+								Fotogalerie
+							</a>
+			</li>
+			<li class="menuProdejna">
+				<a href="../prodejna/prodejna.html">
+							Prodejna
+							</a>
+			</li>
+		</ul>
+	</nav>
+	<nav class="trigger cd-main-header">
+		<ul class="cd-header-buttons">
+			<li>
+				<a class="cd-nav-trigger" href="#cd-primary-nav">
+					Menu
+					<span></span>
+				</a>
+				<a class="desktop-nav"  href="../index.php">
+					<div class="burger-cont">
+						<img src="../images/ramS2.png" class="ram">
+						<img src="../images/ramW.png" class="ramForeground">
+					</div>
+				</a>
+				
+			</li>
+		</ul>
+	</nav>
+	<section id="section2" class="content cd-main-content">
+	<!-- <div class="aktualita"> -->
+		<div class="aktualita">
+			<div class="textAktuality">
+			<h1>členové<b>oddílu</b></h1>
+			
+			<br />
+			Kapitán oddílu KUČERA Vladimír
+			</div>
+		</div>
+		<div class="cd-overlay"></div>	
+		<div class="aktualita">
+			<div class="textAktuality">
+				<iframe src="../files/clenskazakladna2018.pdf" style="width:900px; height:1280px;position:relative; left: 50%;" class="centerIframe" frameborder="0"></iframe>	
+				<!-- <table class="clenoveTabulka" rules="rows">
+							<thead>
+								<tr>
+									<td style="text-indent: 0px">
+										Abecední seznam registrovaných členů
+									</td>
+									<td>
+										Kategorie dle KPŽ + vlastní
+									</td>
+									<td>
+										Pozn.
+									</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										BLAŽEK Jakub
+									</td>
+									<td>
+										M23 - 29
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										BLAŽEK Jan
+									</td>
+									<td>
+										M23 - 29
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										BLAŽEK Jiří
+									</td>
+									<td> 
+
+									</td>
+									<td>
+										tsz, foto
+									</td>
+								</tr>
+								<tr>
+									<td>
+										BRÁBLÍK Vlastimil
+									</td>
+									<td>
+										
+									</td>
+									<td>
+										Road
+									</td>
+								</tr>
+								<tr>
+									<td>
+										FOJT Kamil
+									</td>
+									<td>
+										M40 - 49
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										FOJT Milič
+									</td>
+									<td>
+										M40 - 49
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										FUKSA Jaromír
+									</td>
+									<td>
+										M17 - 22
+									</td> 
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										GREGOR Radomír
+									</td>
+									<td>
+										M50 - 59
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										HORÁČEK Radim
+									</td>
+									<td>
+										M23 - 29
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										HORÁČEK Vít
+									</td>
+									<td>
+										M17 - 22
+									</td> 
+									<td>
+										MTB
+									</td>
+								</tr>
+								<tr>
+									<td>
+										HOŠEK Štěpán
+									</td>
+									<td>
+										M23 - 29
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										CHALUPA Martin
+									</td>
+									<td>
+										M30 - 39
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										CHOVANEC Filip
+									</td>
+									<td>
+										M23 - 29
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										JULINA Marek
+									</td>
+									<td>
+										M30 - 39
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										KLÁR Martin
+									</td>
+									<td>
+										M30 - 39
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										KOLÁŘ Rudolf
+									</td>
+									<td>
+										M50 - 59
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										KOUBEK Petr
+									</td>
+									<td>
+										M50 - 59
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										KOUBKOVÁ Zuzana
+									</td>
+									<td>
+										tajné
+									</td>
+									<td>
+										tsz, foto
+									</td>
+								</tr>
+								<tr>
+									<td>
+										KRUŽÍK Martin
+									</td>
+									<td>
+										M40 - 49
+									</td>
+									<td>
+										Road
+									</td>
+								</tr>
+								<tr>
+									<td>
+										KUČERA Adam
+									</td>
+									<td>
+										M12 - 13
+									</td>
+									<td>
+										MTB
+									</td>
+								</tr>
+								<tr>
+									<td>
+										KUČERA Lukáš
+									</td>
+									<td>
+										M17 - 22
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										KUČERA Petr
+									</td>
+									<td>
+										M40 - 49
+									</td>
+									<td>
+										MTB, Road, KPŽ, Running
+									</td>
+								</tr>
+								<tr>
+									<td>
+										KUČERA Vladimír ml.
+									</td>
+									<td>
+										M40 - 49
+									</td>
+									<td>
+										MTB, Road, KPŽ, Triatlon
+									</td>
+								</tr>
+								<tr>
+									<td>
+										KUČERA Vladimír nejml.
+									</td>
+									<td>
+										M14 - 15
+									</td>
+									<td>
+										
+									</td>
+								</tr>								
+								<tr>
+									<td>
+										KUČERA Vladimír st.
+									</td>
+									<td>
+										M 60+
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										KUČEROVÁ Lucie
+									</td>
+									<td>
+										tajné
+									</td>
+									<td>
+										tsz, foto
+									</td>
+								</tr>
+								<tr>
+									<td>
+										MOSAZNÝ Milan
+									</td>
+									<td>
+										M60+
+									</td>
+									<td>
+										Road
+									</td>
+								</tr>
+								<tr>
+									<td>
+										MRÁZEK Pavel
+									</td>
+									<td>
+										M40 - 49
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										NÁBĚLEK Aleš
+									</td>
+									<td>
+										M40 - 49
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										NÁBĚLKOVÁ Adéla
+									</td>
+									<td>
+										Z14 - 16
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										NÁBĚLKOVÁ Kateřina
+									</td>
+									<td>
+										Z40 - 49
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										PÁNEK Libor
+									</td>
+									<td>
+										M30 - 39
+									</td>
+									<td>
+										MTB, Road, KPŽ, Kolová, Triathlon
+									</td>
+								</tr>flo
+								<tr>
+									<td>
+										PIRUCH Martin
+									</td>
+									<td>
+										M23 - 29
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										PROCHÁZKA Jan
+									</td>
+									<td>
+										M23 - 29
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										PROCHÁZKA Petr
+									</td>
+									<td>
+										M17 - 22
+									</td>
+									<td>
+										MTB, Road, KPŽ, Triatlon
+									</td>
+								</tr>
+								<tr>
+									<td>
+										RYPL Jiří
+									</td>
+									<td>
+										M30 - 39
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										RYPL Rostislav
+									</td>
+									<td>
+										M60+
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										SCHOVANEC Zdeněk
+									</td>
+									<td>
+										
+									</td>
+									<td>
+										Road, foto
+									</td>
+								</tr>
+								<tr>
+									<td>
+										STRAKA Michal
+									</td>
+									<td>
+										M23 - 29
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										SUCHÝ Milan
+									</td>
+									<td>
+										
+									</td>
+									<td>
+										Road
+									</td>
+								</tr>
+								<tr>
+									<td>
+										ŠTERBÁK Adam
+									</td>
+									<td>
+										M23 - 29
+									</td>
+									<td>
+										MTB, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										ŠTÍPALA Milan
+									</td>
+									<td>
+										M30 - 39
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										TEUFERT Luděk
+									</td>
+									<td>
+										M50 - 59
+									</td>
+									<td>
+										MTB, Road
+									</td>
+								</tr>
+								<tr>
+									<td>
+										VONDRUŠKA Zbyněk
+									</td>
+									<td>
+										M40 - 49
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								<tr>
+									<td>
+										VONDRUŠKOVÁ Lenka
+									</td>
+									<td>
+										tajné
+									</td>
+									<td>
+										Triatlon
+									</td>
+								</tr>
+								<tr>
+									<td>
+										ZEMAN Jaroslav
+									</td>
+									<td>
+										M50 - 59
+									</td>
+									<td>
+										MTB, Road, KPŽ
+									</td>
+								</tr>
+								
+							</tbody>
+						</table> -->
+			</div>
+		</div>
+
+	</section>
+
+	<div class="footer" style="position:fixed;">
+		
+		<div class="not-ad-at-all">
+			<div class="firstColumn">
+				<div id="f1" class="displayed">
+					<a href="http://www.ktm-bikes.at" target="_blank"><img src="../images/sponsors/ktm.png"></a>
+				</div>
+				<div id="f2" class="hidden">
+					<a href="http://www.campagnolo.com/WW/en" target="_blank"><img src="../images/sponsors/campagnolo.png"></a>
+				</div>
+				<div id="f3" class="hidden">
+					<a href="http://www.dema-bicycles.com" target="_blank"><img src="../images/sponsors/dema.png" class="demaLogo"></a>
+				</div>
+			</div>
+			<div class="secondColumn">
+				<div id="s1" class="displayed">
+					<a href="http://www.dtswiss.com/Home" target="_blank"><img src="../images/sponsors/dtswiss.png"></a>
+				</div>
+				<div id="s2" class="hidden">
+					<a href="http://www.force.cz" target="_blank"><img style="max-height:40px;" src="../images/sponsors/logo-force-white.png"></a>
+				</div>
+				<div id="s3" class="hidden">
+					<a href="http://www.mrxbike.com" target="_blank"><img src="../images/sponsors/mrx.png"></a>
+				</div>
+			</div>
+			<div class="thirdColumn">
+				<div id="t1" class="displayed">
+					<a href="http://www.rockmachine.us/en/home/" target="_blank"><img src="../images/sponsors/rockmachine.png"></a>
+				</div>
+				<div id="t2" class="hidden">
+					<a href="http://cycle.shimano-eu.com" target="_blank"><img src="../images/sponsors/shimano.png"></a>
+				</div>
+				<div id="t3" class="hidden">
+					<a href="http://superiorbikes.eu/cz/uvod/" target="_blank"><img src="../images/sponsors/superior.png"></a>
+				</div>
+				<div id="t4" class="hidden">
+					<a href="http://www.enervitcz.cz" target="_blank"><img src="../images/sponsors/enervit.png"></a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		$(window).scroll(function(){
+			var topOfWindow = $(window).scrollTop();
+
+			$("img.lazyload").each(function(){
+
+				var imagePos = $(this).offset().top;
+
+				if (imagePos <= topOfWindow + 1000 && imagePos >= topOfWindow - 400) {
+
+					$(this).unveil();
+
+				}
+
+			});
+
+			
+
+
+		});
+
+
+		// $("img.lazyload").unveil(1000, function() {
+				
+		// 	$(this).load(function() {
+		// 		this.style.opacity = 1;
+		// 	});
+		// });
+	});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".comment").shorten({
+			"showChars" : 400,
+			"moreText" : "Více",
+			"lessText" : "Méně",
+		});
+	});
+</script>
+<script type="text/javascript">
+	function doOnOrientationChange()
+  {
+    switch(window.orientation) 
+    {  
+      case -90:
+      case 90:
+        
+        getViewport()
+        break; 
+      default:
+      	getViewport()
+        
+        break; 
+    }
+  }
+
+  window.addEventListener('orientationchange', doOnOrientationChange);
+
+  // Initial execution if needed
+  doOnOrientationChange();
+
+	var alreadyResized = false;
+	
+
+	var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+	};
+
+	function getViewport() {
+			
+		 var viewPortWidth;
+		 var viewPortHeight;
+
+		 // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+		 if (typeof window.innerWidth != 'undefined') {
+		   viewPortWidth = window.innerWidth,
+		   viewPortHeight = window.innerHeight
+
+		 }
+
+			// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+		 else if (typeof document.documentElement != 'undefined'
+		 && typeof document.documentElement.clientWidth !=
+		 'undefined' && document.documentElement.clientWidth != 0) {
+		    viewPortWidth = document.documentElement.clientWidth,
+		    viewPortHeight = document.documentElement.clientHeight
+		 }
+
+			 // older versions of IE
+		 else {
+		   viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+		   viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+		 }
+			 // return [viewPortWidth, viewPortHeight];
+			 // var section = document.getElementsByTagName('section')
+			 // for (var i = 0; i < section.length; i++) {
+			 // 	section[i].style.height = parseInt(viewPortHeight) + 'px'
+			 // }
+
+		 var introSection = document.getElementById("intro")
+		 
+		 introSection.style.height = parseInt(viewPortHeight - 80) + 'px';
+		 
+	}
+
+	function getViewportOfMobile() {
+
+		if (alreadyResized) {
+			return;
+		}
+
+		alreadyResized = true;
+		
+		 var viewPortWidth;
+		 var viewPortHeight;
+
+		 // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+		 if (typeof window.innerWidth != 'undefined') {
+		   viewPortWidth = window.innerWidth,
+		   viewPortHeight = window.innerHeight
+		 }
+
+		// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+		 else if (typeof document.documentElement != 'undefined'
+		 && typeof document.documentElement.clientWidth !=
+		 'undefined' && document.documentElement.clientWidth != 0) {
+		    viewPortWidth = document.documentElement.clientWidth,
+		    viewPortHeight = document.documentElement.clientHeight
+		 }
+
+		 // older versions of IE
+		 else {
+		   viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+		   viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+		 }
+		 // return [viewPortWidth, viewPortHeight];
+		 var section = document.getElementsByTagName('section')
+		 for (var i = 0; i < section.length - 1; i++) {
+		 	section[i].style.height = parseInt(viewPortHeight - 80) + 'px'
+		 }
+
+	}
+	function updateBgWidth() {
+		var viewPortWidth;
+		 var viewPortHeight;
+
+		 // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+		 if (typeof window.innerWidth != 'undefined') {
+		   viewPortWidth = window.innerWidth,
+		   viewPortHeight = window.innerHeight
+
+		 }
+
+			// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+		 else if (typeof document.documentElement != 'undefined'
+		 && typeof document.documentElement.clientWidth !=
+		 'undefined' && document.documentElement.clientWidth != 0) {
+		    viewPortWidth = document.documentElement.clientWidth,
+		    viewPortHeight = document.documentElement.clientHeight
+		 }
+
+			 // older versions of IE
+		 else {
+		   viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+		   viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+		 }
+			 // return [viewPortWidth, viewPortHeight];
+			 // var section = document.getElementsByTagName('section')
+			 // for (var i = 0; i < section.length; i++) {
+			 // 	section[i].style.height = parseInt(viewPortHeight) + 'px'
+			 // }
+
+		 var body = document.getElementsByTagName("body");
+		 // alert('už');
+		 if (viewPortWidth >= 1920) {
+		 	// alert('už');
+		 	body[0].style.backgroundSize = parseInt(viewPortWidth) + 'px auto';
+		 };
+		 if (viewPortHeight >= 1200) {
+		 	body[0].style.backgroundSize = 'auto' + parseInt(viewPortHeight) + 'px';
+		 };
+		 
+	}
+	window.addEventListener("resize", updateBgWidth);
+	window.addEventListener("load", updateBgWidth);
+
+	function getScreenSize() {
+
+		if (alreadyResized) {
+			return;
+		}
+
+		alreadyResized = true;
+
+		var screenWidth;
+		var screenHeight;
+
+		if (typeof screen.width != 'undefined') {
+			screenWidth = screen.width,
+			screenHeight = screen.height
+		}
+
+		var section = document.getElementsByTagName('section')
+		for (var i = 0; i < section.length; i++) {
+			if (window.matchMedia("(orientation: portrait)").matches) {
+		 		section[i].style.height = parseInt(screenHeight - 35) + 'px'
+		 	}else {
+		 		section[i].style.height = parseInt(screenWidth) + 'px'
+		 	}
+		 }
+
+	}
+
+	function rotationBackdoor() {
+		alreadyResized = false;
+	}
+
+	window.onload = getViewport();
+
+	if (isMobile.any()) {
+		
+		var isiPad = navigator.userAgent.match(/iPad/i) != null;
+		if (isiPad) {
+			// window.onresize = getViewportOfMobile;
+		}else {
+			// window.onresize = getScreenSize;
+		}
+		
+				
+	}else {
+		// window.onresize = getViewport;
+	}
+</script>
+
+	<script>
+	jQuery(document).ready(function($){
+	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
+	var MqL = 9878;
+	//move nav element position according to window width
+	moveNavigation();
+	// $(window).on('resize', function(){
+	// 	(!window.requestAnimationFrame) ? setTimeout(moveNavigation, 300) : window.requestAnimationFrame(moveNavigation);
+	// });
+
+	//mobile - open lateral menu clicking on the menu icon
+	$('.cd-nav-trigger').on('click', function(event){
+		event.preventDefault();
+		if( $('.cd-main-content').hasClass('nav-is-visible') ) {
+			closeNav();
+			$('.cd-overlay').removeClass('is-visible');
+		} else {
+			$(this).addClass('nav-is-visible');
+			$('.cd-primary-nav').addClass('nav-is-visible');
+			// $('.cd-primary-nav').addClass('moveLeft');
+			$('.cd-main-header').addClass('nav-is-visible');
+			$('#intro').addClass('nav-is-visible');
+			$('div.footer').addClass('nav-is-visible');
+			$('.cd-main-content').addClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				$('body').addClass('overflow-hidden');
+			});
+			toggleSearch('close');
+			$('.cd-overlay').addClass('is-visible');
+		}
+	});
+
+	//open search form
+	$('.cd-search-trigger').on('click', function(event){
+		event.preventDefault();
+		toggleSearch();
+		closeNav();
+	});
+
+	//close lateral menu on mobile 
+	$('.cd-overlay').on('swiperight', function(){
+		if($('.cd-primary-nav').hasClass('nav-is-visible')) {
+			closeNav();
+			$('.cd-overlay').removeClass('is-visible');
+		}
+	});
+	$('.nav-on-left .cd-overlay').on('swipeleft', function(){
+		if($('.cd-primary-nav').hasClass('nav-is-visible')) {
+			closeNav();
+			$('.cd-overlay').removeClass('is-visible');
+		}
+	});
+	$('.cd-overlay').on('click', function(){
+		closeNav();
+		toggleSearch('close')
+		$('.cd-overlay').removeClass('is-visible');
+	});
+
+
+	//prevent default clicking on direct children of .cd-primary-nav 
+	$('.cd-primary-nav').children('.has-children').children('a').on('click', function(event){
+		event.preventDefault();
+	});
+	//open submenu
+	$('.has-children').children('a').on('click', function(event){
+		if( checkWindowWidth() ) event.preventDefault();
+		var selected = $(this);
+		if( selected.next('ul').hasClass('is-hidden') ) {
+			//desktop version only
+			selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+			selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+			$('.cd-overlay').addClass('is-visible');
+
+		} else {
+			selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+			$('.cd-overlay').removeClass('is-visible');
+		}
+		toggleSearch('close');
+	});
+
+	//submenu items - go back link
+	$('.go-back').on('click', function(){
+		$(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+	});
+
+	function closeNav() {
+		$('.cd-nav-trigger').removeClass('nav-is-visible');
+		$('.cd-main-header').removeClass('nav-is-visible');
+		$('.cd-primary-nav').removeClass('nav-is-visible');
+		// $('.cd-primary-nav').removeClass('moveLeft');
+		// $('.cd-primary-nav').addClass('moveRight');
+		$('.has-children ul').addClass('is-hidden');
+		$('.has-children a').removeClass('selected');
+		$('.moves-out').removeClass('moves-out');
+		$('div.footer').removeClass('nav-is-visible');
+		$('#intro').removeClass('nav-is-visible');
+		$('.cd-main-content').removeClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+			$('body').removeClass('overflow-hidden');
+		});
+	}
+
+	function toggleSearch(type) {
+		if(type=="close") {
+			//close serach 
+			$('.cd-search').removeClass('is-visible');
+			$('.cd-search-trigger').removeClass('search-is-visible');
+		} else {
+			//toggle search visibility
+			$('.cd-search').toggleClass('is-visible');
+			$('.cd-search-trigger').toggleClass('search-is-visible');
+			if($(window).width() > MqL && $('.cd-search').hasClass('is-visible')) $('.cd-search').find('input[type="search"]').focus();
+			($('.cd-search').hasClass('is-visible')) ? $('.cd-overlay').addClass('is-visible') : $('.cd-overlay').removeClass('is-visible') ;
+		}
+	}
+
+	function checkWindowWidth() {
+		//check window width (scrollbar included)
+		var e = window, 
+            a = 'inner';
+        if (!('innerWidth' in window )) {
+            a = 'client';
+            e = document.documentElement || document.body;
+        }
+        if ( e[ a+'Width' ] >= MqL ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	function moveNavigation(){
+		var navigation = $('.cd-nav');
+  		var desktop = checkWindowWidth();
+        if ( desktop ) {
+			navigation.detach();
+			navigation.insertBefore('.cd-header-buttons');
+		} else {
+			navigation.detach();
+			navigation.insertAfter('.cd-main-content');
+		}
+	}
+});</script>
+
+</body>
+</html>

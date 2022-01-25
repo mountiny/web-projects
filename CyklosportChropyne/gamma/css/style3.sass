@@ -1,0 +1,1850 @@
+@import "reset"
+@import "mixins"
+
+$mid-column: 560px
+$body: 20px
+$h1: 90px
+$h2: 64px
+$h3: 50px
+$h4: 27px
+
+*
+    -ms-overflow-style: none
+    +vendor-prefix("backface-visibility", "hidden")
+    +vendor-prefix("font-smoothing","subpixel-antialiased")
+    -moz-osx-font-smoothing: grayscale
+@-moz-document url-prefix() 
+    html, body
+        overflow-x: hidden !important
+*.no-display
+    display: none !important
+
+a
+    color: inherit
+    text-decoration: none
+    
+
+html, body
+    width: 100%
+    font-family: "DIN Pro",helvetica//"Oswald", helvetica
+b
+    font-family: 'DIN Pro Medium'
+    font-weight: 700
+.main-page
+    background-color: #5ac0ce
+.oddil-page
+    background-color: white
+svg.triangle
+    position: absolute
+    top: 0
+    opacity: 0
+    left: 0
+    +vendor-prefix("transition","all ease 0.8s")
+    +vendor-prefix("transform","translateY(-30%)")
+    +vendor-prefix("transform-style", "preserve-3d")
+    // will-change: transform, opacity
+    &.show
+        opacity: 1
+        +vendor-prefix("transform","translateY(0%)")
+    polygon
+        fill: #e30e24
+        stroke: none
+div.oddil-link
+    position: absolute
+    left: -160px
+    top: 95px
+    color: white
+    text-decoration: none
+    cursor: pointer
+    display: block
+    img
+        height: 70vh
+        cursor: pointer
+        z-index: 100
+        display: block
+        opacity: 0
+        +vendor-prefix("transition","all ease 0.8s")
+        // will-change: opacity
+        &.show
+            opacity: 1
+    div.oddil-text
+        font-style: italic
+        font-size: $h2
+        font-weight: 400
+        display: block
+        position: absolute
+        text-align: center
+        top: 20%
+        left: 140px
+        z-index: 1000
+        width: 200px
+        opacity: 0
+        +vendor-prefix("transition","all ease 0.8s")
+        +vendor-prefix("transform","translateY(30%) rotate(90deg)")
+        +vendor-prefix("transform-style", "preserve-3d")
+        // will-change: transform, opacity
+        &.show
+            +vendor-prefix("transform","translateY(0%) rotate(90deg)")
+            opacity: 1
+        &:before, &:after 
+            content: ''
+            position: absolute
+            width: 0%
+            height: 3px
+            top: 50%
+            margin-top: -0.5px
+            background: #fff
+        &:before 
+            left: -2.5px
+        &:after 
+            right: 2.5px
+            background: #fff
+            transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)
+        &:hover:before 
+            background: #fff
+            width: 100%
+            transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+        &:hover:after 
+            background: transparent
+            width: 100%
+            transition: 0s
+        
+img.ch50-blur
+    z-index: 100
+    position: absolute
+    top: 50vh
+    right: 0px
+    +vendor-prefix("transform","translateY(-50%)")
+    width: 600px
+    +vendor-prefix("transition","all ease 0.8s")
+    opacity: 0
+    // will-change: opacity
+    &.show
+        opacity: 1
+div.ch50-cont
+    position: absolute
+    cursor: pointer
+    top: 50vh
+    right: 0
+    opacity: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end//center
+    text-align: right
+    font-weight: 600
+    z-index: 201
+    overflow: hidden
+    padding-bottom: 10px
+    +vendor-prefix("transition","all ease 0.8s")
+    +vendor-prefix("transform","translateX(10%) translateY(-50%)")
+    +vendor-prefix("transform-style", "preserve-3d")
+    // will-change: transform, opacity
+    &.show
+        +vendor-prefix("transform","translateX(0%) translateY(-50%)")
+        opacity: 1
+    img.force-logo
+        width: 30vw
+        max-width: 240px 
+        padding: 0px 20px
+    div.ch50-text
+        font-size: $h1
+        font-family: 'DIN Pro Medium'
+        padding: 0px 20px
+        color: black//#558F9A
+        margin-top: 36px
+        position: relative
+        
+        &:before, &:after 
+            content: ''
+            position: absolute
+            width: 0%
+            height: 5px
+            top: 50%
+            margin-top: -0.5px
+            background: black//#558F9A
+        &:before 
+            left: -10%
+        &:after 
+            right: -10%
+            background: black//#558F9A
+            transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)
+        &:hover:before 
+            background: black//#558F9A
+            width: 120%
+            transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+        &:hover:after 
+            background: transparent
+            width: 120%
+            transition: 0s
+    div.ch50-date
+        font-size: $h2
+        color: white
+        padding: 0px 20px
+        margin-top: 50px
+        letter-spacing: 6px
+        position: relative
+        
+        &:before, &:after 
+            content: ''
+            position: absolute
+            width: 0%
+            height: 5px
+            top: 50%
+            margin-top: -0.5px
+            background: #fff
+        &:before 
+            left: -10%
+        &:after 
+            right: -10%
+            background: #fff
+            transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)
+        &:hover:before 
+            background: #fff
+            width: 120%
+            transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+        &:hover:after 
+            background: transparent
+            width: 120%
+            transition: 0s
+div.main-cont
+    width: 100%
+    height: 100%
+    position: relative
+    display: flex
+    flex-direction: column
+    font-size: $body
+    line-height: $body * 2
+    span.bigger
+        font-size: $h4
+    div.intro-page
+        position: relative
+        height: 100%
+        min-height: 100vh
+        width: 100%
+        div.logo-cont
+            position: absolute
+            top: 14%
+            left: 50%
+            z-index: 1000
+            +vendor-prefix("transform","translateX(-50%)")
+            width: 80%
+            max-width: $mid-column*1.2
+            img.logo
+                width: 100%
+                opacity: 0
+                +vendor-prefix("transition","all ease 0.5s")
+                // will-change: opacity
+                &.show
+                    opacity: 1
+        div.short-info-cont
+            position: absolute
+            bottom: 50px
+            width: 100%
+            height: auto
+            display: block
+            z-index: 1000
+            opacity: 0
+            +vendor-prefix("transition","all ease 0.8s")
+            +vendor-prefix("transform","translateY(-20px)")
+            +vendor-prefix("transform-style", "preserve-3d")
+            // will-change: transform, opacity
+            &.show
+                opacity: 1
+                +vendor-prefix("transform","translateY(0px)")
+            div.short-info
+                width: 80%
+                max-width: $mid-column*0.8
+                display: block
+                position: relative
+                left: 50%
+                +vendor-prefix("transform","translateX(-50%)")
+                div.social-text
+                    padding-top: 70px
+                    div.detske-link
+                        font-size: 50px
+                        width: 100%
+                        position: absolute
+                        top: -110px
+                        line-height: 44px
+                        a
+                            text-transform: none
+                            text-decoration: none
+                            color: inherit
+                            display: block
+                            width: 100%
+                            &>span
+                                position: relative
+                                &:before, &:after 
+                                    content: ''
+                                    position: absolute
+                                    width: 0%
+                                    height: 3px
+                                    top: 50%
+                                    margin-top: -0.5px
+                                    background: #000
+                                &:before 
+                                    left: -10%
+                                &:after 
+                                    right: -10%
+                                    background: #000
+                                    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)
+                                &:hover:before 
+                                    background: #000
+                                    width: 120%
+                                    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+                                &:hover:after 
+                                    background: transparent
+                                    width: 120%
+                                    transition: 0s
+                        span.detske-black
+                            font-family: 'DIN Pro Condensed Bold'
+                            color: black
+                        span.detske-white
+                            font-family: 'DIN Pro Condensed Bold Italic'
+                            color: white
+                        span.detske-date
+                            font-family: 'DIN Pro'
+                            color: white
+                            left: 110px
+                    div.social-zavreno
+                        position: absolute
+                        top: -120px
+                        color: #EC3359
+                        +vendor-prefix("transform","translateY(-100%)")
+            div.social-intro
+                position: absolute
+                // left: -16%
+                right: 112%
+                display: flex
+                flex-direction: column
+                
+                a
+                    position: relative
+                    display: block
+                    width: 50px
+                    height: 50px
+                    &:not(:first-of-type)
+                        margin-top: 20px
+                    img
+                        width: 100%
+                        height: 100%
+    div.info-page
+        position: relative
+        width: 100%
+        padding-top: 50px
+        div.info-text
+            width: 90%
+            max-width: $mid-column*0.8
+            display: block
+            position: relative
+            left: 50%
+            +vendor-prefix("transform","translateX(-50%)")
+            
+        div.pics-cont
+            width: 90%
+            max-width: $mid-column*1.8
+            display: flex
+            position: relative
+            left: 50%
+            margin: 100px 0px 50px 0px
+            +vendor-prefix("transform","translateX(-50%)")
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-around
+            a.pic-link
+                +display(flex)
+                +justify-content(center)
+                +align-items(center)
+                // padding: 10px 0px
+                img
+                    max-width: 250px
+                    width: 120%
+                    min-width: 160px
+footer
+    font-size: $body*0.9
+    position: relative
+    color: black//#669EA8
+    text-align: center
+    font-weight: 300
+    width: 100%
+    height: 50px
+    padding-top: 50px
+    padding-bottom: 80px
+    opacity: 0
+    +display(flex)
+    +flex-direction(row)
+    +justify-content(center)
+    +align-items(center)
+    +vendor-prefix("transition","all ease 0.8s")
+    // will-change: opacity
+    &.show
+        opacity: 1
+    a
+        color: inherit
+        text-decoration: none
+        font-weight: 400
+        display: block
+        height: 50px
+    img.mountiny_logo
+        width: 50px
+        height: 50px
+        margin-left: 16px
+
+
+div.oddil-cont
+    width: 100%
+    min-height: calc(100vh - 130px)
+    position: relative
+    overflow: hidden
+    color: black
+    top: 0px
+    opacity: 0
+    +vendor-prefix("transition","all ease 0.8s")
+    +vendor-prefix("transform","translateY(20px)")
+    +vendor-prefix("transform-style", "preserve-3d")
+    // will-change: transform, opacity
+    div.pics-cont
+        width: 90%
+        max-width: $mid-column*1.8
+        display: flex
+        position: relative
+        left: 50%
+        margin: 100px 0px 50px 0px
+        padding-top: 160px
+        +vendor-prefix("transform","translateX(-50%)")
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-around
+        a.pic-link
+            +display(flex)
+            +justify-content(center)
+            +align-items(center)
+            // padding: 10px 0px
+            img
+                max-width: 161px
+                width: 120%
+                min-width: 160px
+    &.show
+        opacity: 1
+        +vendor-prefix("transform","translateY(0px)")
+    div.oddil-list
+        position: relative
+        left: 50%
+        +vendor-prefix("transform","translateX(-50%)")
+        width: 90%
+        max-width: $mid-column*1.4
+        display: flex
+        flex-direction: column
+        z-index: 1001
+        a
+            color: #EC3359
+            text-decoration: none
+        a.back_home_right
+            display: block
+            // top: 100px
+            width: 70px
+            position: absolute
+            top: 40px
+            right: 0
+            +vendor-prefix("transform","translateX(3vw)")
+            img
+                width: 100%
+                opacity: 0
+                +vendor-prefix("transition","all ease 0.8s")
+                // will-change: opacity
+                &.show
+                    opacity: 1
+        div.cat-head
+            height: 80px
+            line-height: 80px
+            position: relative
+            font-size: $h3*0.8
+            font-style: italic
+            &:first-of-type
+                margin-top: 100px
+            a
+                color: inherit
+                text-decoration: none
+                // display: block
+                &.open
+                    color: #5ac0ce
+                    span
+                        &:before, &:after 
+                            background: #5ac0ce
+                        &:after 
+                            background: #5ac0ce
+                        &:hover:before 
+                            background: #5ac0ce
+                span
+                    // display: inline
+                    // width: auto
+                    position: relative
+                    &:before, &:after 
+                        content: ''
+                        position: absolute
+                        width: 0%
+                        height: 3px
+                        top: 50%
+                        margin-top: -0.5px
+                        background: #000
+                    &:before 
+                        left: -10%
+                    &:after 
+                        right: -10%
+                        background: #000
+                        transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)
+                    &:hover:before 
+                        background: #000
+                        width: 120%
+                        transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+                    &:hover:after 
+                        background: transparent
+                        width: 120%
+                        transition: 0s
+        div.cat-body
+            font-size: $body
+            line-height: 40px
+            position: relative
+            padding-left: 40%
+            max-height: 0px
+            opacity: 0
+            +vendor-prefix("transition","0.25s all ease")
+            &.open
+                max-height: 3000px
+                opacity: 1
+
+    img.red-blur
+        position: absolute
+        right: 0px
+        top: 0px
+        width: 70vw
+    div.oddil-title
+        position: absolute
+        right: -360px
+        top: 95px
+        color: black
+        text-decoration: none
+        cursor: pointer
+        display: block
+        img
+            height: 70vh
+            cursor: pointer
+            z-index: 100
+            display: block
+        div.oddil-text
+            font-style: italic
+            font-size: $h2
+            font-weight: 400
+            display: block
+            position: absolute
+            text-align: center
+            top: 20%
+            right: 410px
+            z-index: 1000
+            width: 200px
+            &:before, &:after 
+                content: ''
+                position: absolute
+                width: 0%
+                height: 3px
+                top: 50%
+                margin-top: -0.5px
+                background: #000
+            &:before 
+                left: -2.5px
+            &:after 
+                right: 2.5px
+                background: #000
+                transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)
+            &:hover:before 
+                background: #000
+                width: 100%
+                transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+            &:hover:after 
+                background: transparent
+                width: 100%
+                transition: 0s
+            +vendor-prefix("transform","rotate(90deg)")
+            +vendor-prefix("transition","0.2s all ease")
+
+div.ch50-container
+    width: 100%
+    min-height: 100vh
+    position: relative
+    overflow: hidden
+    color: black
+    div.ch50-main
+        position: relative
+        left: 50%
+        margin-top: 40px
+        +vendor-prefix("transform","translateX(-50%)")
+        width: 90%
+        max-width: $mid-column*1.6
+        h1.prihlaska-heading
+            font-size: $h3
+            margin: 30px auto
+            top: 0px
+            opacity: 0
+            +vendor-prefix("transition","all ease 0.8s")
+            +vendor-prefix("transform","translateY(20px)")
+            +vendor-prefix("transform-style", "preserve-3d")
+            // will-change: transform, opacity
+            &.show
+                opacity: 1
+                +vendor-prefix("transform","translateY(0px)")
+        form.send_form
+            width: 100%
+            opacity: 0
+            top: 0px
+            +vendor-prefix("transition","all ease 0.8s")
+            +vendor-prefix("transform","translateY(20px)")
+            +vendor-prefix("transform-style", "preserve-3d")
+            // will-change: transform, opacity
+            &.show
+                opacity: 1
+                +vendor-prefix("transform","translateY(0px)")
+            a
+                color: #EC3359
+                text-decoration: none
+            table
+                width: 100%
+                border-collapse: separate
+                font-size: $body
+                tr
+                    td
+                        width: 50%
+                        padding: 10px 10px
+                        font-weight: 300
+                        line-height: $body*1.2
+                        input
+                            width: 80%
+                            border: none
+                            background-color: #51ACB9
+                            padding: 14px 10px
+                            font-size: $body*0.8
+                            font-weight: 300
+                            box-sizing: content-box
+                            +vendor-prefix("transition","0.2s all ease")
+                            &.bold
+                                font-weight: 500
+                            &::placeholder
+                                color: black
+                            &[type="button"]
+                                cursor: pointer
+                            &:focus
+                                outline: 1px solid black
+                        select
+                            border: none
+                            background-color: #51ACB9
+                            height: 30px
+                            font-size: $body*0.75
+                            option
+                                padding: 14px 10px
+                                border: 1px solid black
+
+        img#expand-registered
+            cursor: pointer
+            width: 40px
+            +vendor-prefix("transition","0.25s all ease")
+            &.open
+                +vendor-prefix("transform","rotate(45deg)")
+        div.list-cont
+            position: relative
+            max-height: 0px
+            opacity: 0
+            visibility: hidden
+            z-index: 10
+            margin: 20px auto
+            overflow: scroll
+            h1
+                font-size: $h4
+                font-weight: 500
+            li
+                z-index: 5
+            +vendor-prefix("transition","0.25s all ease")
+            &.open
+                max-height: 800px
+                opacity: 1
+                visibility: visible
+        table.list-prihlasenych
+            width: 100%
+            font-size: $body
+            line-height: $body*1.6
+            // border-spacing: 12px
+            border-collapse: separate
+            tr
+                &:nth-child(even)
+                    background-color: #51ACB9
+                td 
+                    padding: 8px 4px
+                    &:nth-child(1)
+                        width: 8%
+                    &:nth-child(2)
+                        width: 27%
+                    &:nth-child(3)
+                        width: 10%
+                    &:nth-child(4)
+                        width: 10%
+                    &:nth-child(5)
+                        width: 35%
+                    &:nth-child(6)
+                        width: 10%
+        table.list-prihlasenych-deti
+            width: 100%
+            font-size: $body
+            line-height: $body*1.6
+            border-collapse: separate
+            tr
+                &:nth-child(even)
+                    background-color: #51ACB9
+                td 
+                    padding: 8px 10px
+                    &:nth-child(1)
+                        width: 8%
+                    &:nth-child(2)
+                        width: 27%
+                    &:nth-child(3)
+                        width: 15%
+                    &:nth-child(4)
+                        width: 15%
+                    &:nth-child(5)
+                        width: 35%
+                    
+        a.back_home
+            display: block
+            // top: 100px
+            width: 70px
+            position: relative
+            +vendor-prefix("transform","translateX(-3vw)")
+            +vendor-prefix("transform-style", "preserve-3d")
+            img
+                width: 100%
+                opacity: 0
+                top: 0px
+                +vendor-prefix("transition","all ease 0.8s")
+                +vendor-prefix("transform","translateY(20px)")
+                +vendor-prefix("transform-style", "preserve-3d")
+                // will-change: transform, opacity
+                &.show
+                    opacity: 1
+                    +vendor-prefix("transform","translateY(0px)")
+        img.force-black
+            width: 350px
+            // top: 150px
+            margin-top: 50px
+            opacity: 0
+            position: relative
+            +vendor-prefix("transition","all ease 0.8s")
+            +vendor-prefix("transform","translateY(20px)")
+            +vendor-prefix("transform-style", "preserve-3d")
+            // will-change: transform, opacity
+            &.show
+                opacity: 1
+                +vendor-prefix("transform","translateY(0px)")
+        img.ch50-bg-map
+            position: absolute
+            top: 200px
+            right: -66%
+            width: 110%
+            max-width: 1200px
+            opacity: 0
+            +vendor-prefix("transition","opacity ease 0.8s,transform ease 0.8s,width ease 0.8s")
+            +vendor-prefix("transform","translateX(50px)")
+            +vendor-prefix("transform-style", "preserve-3d")
+            // will-change: transform, opacity
+            &.dz
+                right: -42vw
+                top: 150px
+                max-width: 1400px
+                &.show
+                    +vendor-prefix("transform","translateX(0px)")
+                    width: 140%
+            &.show
+                opacity: 1
+                +vendor-prefix("transition","opacity ease 0.8s")
+                +vendor-prefix("transform","translateX(0px)")
+                width: 130%
+        div.ch50-intro
+            position: relative
+            top: 40px
+            opacity: 0
+            +vendor-prefix("transition","all ease 0.8s")
+            +vendor-prefix("transform","translateY(20px)")
+            +vendor-prefix("transform-style", "preserve-3d")
+            // will-change: transform, opacity
+            &.show
+                opacity: 1
+                +vendor-prefix("transform","translateY(0px)")
+            img.detske-head
+                width: 50vw
+                min-width: 260px
+                max-width: 700px
+            small
+                font-size: $body*0.8
+                a
+                    color: #EC3359
+                    text-decoration: none
+            div.ch50-green
+                color: #71FBB2
+                font-size: $h3*0.9
+                font-family: 'DIN Pro Medium'
+                text-transform: uppercase
+                position: absolute
+                left: 160px
+                top: 10px
+                z-index: 1000
+                line-height: $h2*1.1
+                a
+                    color: inherit
+                    text-decoration: none
+                    span
+                        display: inline-block
+                        height: $h2*1.1
+                        position: relative
+                        z-index: 100
+                        &:before, &:after 
+                            content: ''
+                            position: absolute
+                            width: 100%
+                            height: 0%
+                            top: 0px
+                            z-index: -1
+                            // margin-top: -0.5px
+                            background: #000
+                        &:before 
+                            // top: -2.5px
+                        &:after 
+                            // bottom: 2.5px
+                            left: 0px
+                            background: #000
+                            transition: height 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)
+                        &:hover:before 
+                            background: #000
+                            height: 100%
+                            width: 100%
+                            transition: height 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+                        &:hover:after 
+                            background: transparent
+                            height: 100%
+                            width: 100%
+                            left: 0px
+                            transition: 0s
+            div.ch50-green-deti
+                color: black//#71FBB2
+                font-size: $h3*0.9
+                font-family: 'DIN Pro Medium'
+                text-transform: uppercase
+                position: relative
+                margin-top: 30px
+                z-index: 1000
+                line-height: $h2*1.1
+                a
+                    color: inherit
+                    text-decoration: none
+                    span
+                        display: inline-block
+                        height: $h2*1.1
+                        position: relative
+                        z-index: 100
+                        &:before, &:after 
+                            content: ''
+                            position: absolute
+                            width: 100%
+                            height: 0%
+                            top: 0px
+                            z-index: -1
+                            // margin-top: -0.5px
+                            background: #71FBB2//#000
+                        &:before 
+                            // top: -2.5px
+                        &:after 
+                            // bottom: 2.5px
+                            left: 0px
+                            background: #71FBB2//#000
+                            transition: height 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)
+                        &:hover:before 
+                            background: #71FBB2//#000
+                            height: 100%
+                            width: 100%
+                            transition: height 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+                        &:hover:after 
+                            background: transparent
+                            height: 100%
+                            width: 100%
+                            left: 0px
+                            transition: 0s
+            
+            h1
+                position: relative
+                display: inline
+                font-size: $h1*1.6
+                font-weight: 500
+            h1.ch50-ch
+                font-family: 'DIN Pro Medium'
+                span
+                    position: relative
+                span.ch
+                    left: 0px
+                span.ch50
+                    left: 64%
+            h3.ch50-date
+                position: relative
+                display: block
+                font-size: $h2*1.2
+                font-weight: 500
+                line-height: $h1
+            h4.ch50-location
+                position: relative
+                display: block
+                font-size: $h4*1.2
+                font-weight: 500
+                line-height: $h3*1.2
+        div.ch50-info
+            position: relative
+            width: 100%
+            margin-top: 70px
+            opacity: 0
+            +vendor-prefix("transition","all ease 0.8s")
+            +vendor-prefix("transform","translateY(20px)")
+            +vendor-prefix("transform-style", "preserve-3d")
+            // will-change: transform, opacity
+            &.show
+                opacity: 1
+                +vendor-prefix("transform","translateY(0px)")
+            div.maps-cont
+                position: relative
+                display: flex
+                justify-content: flex-start
+                a.map-down
+                    display: block
+                    margin-right: 20px
+                    &.disabled
+                        cursor: not-allowed
+                        text-decoration: none
+                    img
+                        max-height: 36px
+                        max-width: 80vw
+            h3.ch50-topic
+                font-size: $h4
+                font-weight: 500
+                margin: 20px auto
+                text-transform: uppercase
+                z-index: 111
+            div.pics-cont
+                width: 100%
+                display: flex
+                position: relative
+                margin: 0px 0px 0px 0px
+                flex-direction: row
+                flex-wrap: wrap
+                justify-content: space-around
+                a.pic-link
+                    +display(flex)
+                    +justify-content(center)
+                    +align-items(center)
+                    img
+                        max-width: 161px
+                        width: 120%
+                        min-width: 160px
+
+                    // display: block
+                    // // padding: 10px 0px
+                    // max-width: 180px
+                    // img
+                    //     // max-width: 230px
+                    //     width: 110%
+                        // min-width: 160px
+            h4
+                font-size: $h4
+                margin: 20px auto
+                z-index: 110
+            div.info-grid-triple, div.info-grid-double
+                margin: 20px auto
+            div.info-grid-triple
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                justify-content: space-between
+                width: 100%
+                div
+                    width: 30%
+                    min-width: 250px
+            div.info-grid-double
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                justify-content: space-between
+                width: 100%
+                div
+                    width: 48%
+                    min-width: 400px
+            div.cat-cont
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                justify-content: space-between
+                width: 100%
+                table.table-cat
+                    width: 48%
+                    min-width: 400px
+                    // &:nth-of-type(2)
+                    margin-bottom: 30px
+                    line-height: $body*1.4
+            a
+                color: #EC3359
+                text-decoration: none
+            p
+                line-height: $body*1.3
+            b
+                color: #EC3359//#71FBB2
+            ul
+                &.ch-vysledek-ul
+                    z-index: 110
+                    *
+                        z-index: 111
+                div.hidden-li
+                    position: relative
+                    max-height: 0px
+                    opacity: 0
+                    visibility: hidden
+                    z-index: 10
+                    li
+                        z-index: 5
+                    +vendor-prefix("transition","0.25s all ease")
+                    &.open
+                        max-height: 800px
+                        opacity: 1
+                        visibility: visible
+                div.hidden-photo-li
+                    position: relative
+                    max-height: 0px
+                    opacity: 0
+                    visibility: hidden
+                    z-index: 10
+                    li
+                        z-index: 5
+                    +vendor-prefix("transition","0.25s all ease")
+                    &.open
+                        max-height: 800px
+                        opacity: 1
+                        visibility: visible
+                li
+                    line-height: $body*1.2
+                    padding-left: 10%
+                    z-index: 10
+                    &.expand-btn
+                        img
+                            width: 40px
+                            margin: 10px auto
+                            cursor: pointer
+                            +vendor-prefix("transition","0.25s all ease")
+                            &.open
+                                +vendor-prefix("transform","rotate(45deg)")
+                    h2
+                        font-size: $h4*0.9
+                        margin: 20px auto
+
+                &.seznam-photo
+                    *
+                        z-index: 100
+                    h2
+                        cursor: pointer
+                        &.open
+                            color: #EC3359
+                    ul
+                        position: relative
+                        padding-left: 10%
+                        max-height: 0px
+                        opacity: 0
+                        +vendor-prefix("transition","0.25s all ease")
+                        &.open
+                            max-height: 800px
+                            opacity: 1
+                li.ch-vysledek-li
+                    h2
+                        cursor: pointer
+                        &.open
+                            color: #EC3359
+                    ul
+                        // font-size: $body
+                        // line-height: 40px
+                        position: relative
+                        padding-left: 10%
+                        max-height: 0px
+                        opacity: 0
+                        +vendor-prefix("transition","0.25s all ease")
+                        &.open
+                            max-height: 800px
+                            opacity: 1
+table.detske-kat
+    width: 100%
+    position: relative
+    max-width: 700px
+    letter-spacing: 0.6px
+    margin-top: 20px
+    thead
+        font-weight: 600
+        line-height: $body*1.6
+    tbody
+        tr
+            &:first-child
+                td
+                    &:nth-child(4)
+                        font-size: $body*1.3
+            td
+                max-width: 25vw
+                font-weight: 300
+                line-height: $body*1.4
+                &:nth-child(2)
+                    font-weight: 600 
+                &:nth-child(4)
+                    font-weight: 600    
+                     
+$lb: #8ED2E8
+$db: #101535
+div.aktualita
+    top: 0px
+    opacity: 0
+    +vendor-prefix("transition","all ease 0.8s")
+    +vendor-prefix("transform","translateY(20px)")
+    +vendor-prefix("transform-style", "preserve-3d")
+    // will-change: transform, opacity
+    &.show
+        opacity: 1
+        +vendor-prefix("transform","translateY(0px)")
+div.message
+    width: 100%
+    padding: 10px 5px
+    margin-bottom: 30px
+h3
+    font-size: 24px
+    color: $db
+    font-weight: 700
+.form-cont
+    position: relative
+    +display(flex)
+    +flex-wrap(wrap)
+    margin: 20px 0
+.tile
+    text-align: center
+    width: 50px
+    height: 50px
+    background-color: transparent
+    color: $db
+    font-weight: 400
+    line-height: 50px
+    font-size: 32px
+    margin-right: 10px
+    margin-bottom: 10px
+    display: flex//inline-block
+    justify-content: center
+    align-content: center
+    cursor: pointer
+    +vendor-prefix("transition", "all 0.3s ease")
+
+    &:hover
+        background-color: rgba(242, 41, 6, 0.5)
+    &.selected
+        background-color: #EC3359
+    &.disabled
+        background-color: #71FBB2
+        cursor: auto
+div.success
+    background-color: #71FBB2 !important
+div.failure
+    background-color: #EC3359 !important
+div.g-recaptcha
+    margin: 20px 0px
+    clear: both
+    max-width: 90vw
+form
+    position: relative
+    clear: both
+    *
+        +vendor-prefix('box-sizing', 'border-box')
+    .form-cell
+        width: 50%
+        position: relative
+        float: left
+        display: inline-block
+        margin-top: 40px
+        &:nth-of-type(2n)
+            padding-right: 20px
+        &:nth-of-type(2n + 1)
+            padding-left: 20px
+        +screen(0px, 600px, false)
+            padding: 0px !important
+            width: 100%
+        &:last-of-type
+            margin-bottom: 50px
+    input.input-filled 
+        & ~ label
+            span
+                +vendor-prefix("transform", "translateY(-40px)")
+            &:before
+                +vendor-prefix("transform", "translateY(-5px)")
+            &:after
+                +vendor-prefix("transform", "translateY(5px)")
+
+    label.form-label
+        position: absolute      
+        width: calc(100% - 20px)
+        top: 0
+        text-align: left
+        height: 40px
+        padding: 0px 5px
+        pointer-events: none
+        +vendor-prefix("transition", "all 0.2s ease")
+
+        +screen(0px, 600px, false)
+            width: 100%
+        span
+            display: block
+            position: relative
+            // padding: 1.6em 0px
+            line-height: 40px
+            width: 100%
+            margin: 0px 20px
+            +vendor-prefix("transition", "all 0.2s ease")
+
+        &:before
+            top: 0
+        &:after
+            bottom: 0
+        &:after, &:before
+            content: ''
+            +vendor-prefix("transition", "all 0.2s ease")
+            position: absolute
+            left: 0
+            height: 2px
+            background-color: black //#EC3359
+            width: 100%
+            +vendor-prefix("transform", "translateY(0px)")
+    input[type=text]
+        -webkit-appearance: none
+        cursor: auto
+        display: block
+        font-size: 16px
+        line-height: 20px
+        width: 100%
+        z-index: 1000
+        padding: 5px
+        height: 40px
+        box-sizing: border-box
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        background-color: transparent
+        border: none 
+iframe
+    max-width: 90vw !important
+
+@media screen and (min-width:800px) and (max-height: 920px)
+    div.main-cont
+        font-size: $body
+        line-height: $body * 1.8
+        span.bigger
+            font-size: $h4*0.8
+        div.intro-page
+            div.logo-cont
+                position: absolute
+                top: 50px
+                left: 50%
+                width: 40%
+                max-width: 40%
+
++screen(0px, 800px)
+    div.oddil-link
+        img
+            height: 60vh
+        div.oddil-text
+            font-size: $h3
+            top: 50%
+            left: 100px
+    div.ch50-cont
+        top: 45vh
+        img.force-logo
+            width: 30vw
+            max-width: 170px 
+        div.ch50-text
+            font-size: $h3
+            margin-top: 20px
+            position: relative
+        div.ch50-date
+            font-size: $h2
+            margin-top: 20px
+            letter-spacing: 5px
+            position: relative
+    div.main-cont
+        font-size: $body
+        line-height: $body * 2
+        span.bigger
+            font-size: $h4*0.8
+        div.intro-page
+            div.logo-cont
+                position: absolute
+                top: 50px
+                left: 50%
+                width: 80%
+                max-width: $mid-column*1.2
+            div.short-info-cont
+                position: absolute
+                bottom: 50px
+                width: 100%
+                height: auto
+                display: block
+                div.short-info
+                    width: 86%
+                    max-width: $mid-column*0.8
+                    display: block
+                    position: relative
+                    left: 50%
+                    padding-left: 15%
+                    +vendor-prefix("transform","translateX(-50%)")
+                    div.social-text
+                        // padding-top: 0px
+                        div.detske-link
+                            font-size: 42px
+                            top: -110px
+                            line-height: 44px
+                            span.detske-date
+                                left: 90px
+                        div.social-zavreno
+                            // position: relative
+                            // top: auto
+                            max-width: 250px
+                div.social-intro
+                    position: absolute
+                    right: 90%
+                    display: flex
+                    flex-direction: column
+                    a
+                        position: relative
+                        display: block
+                        width: 40px
+                        height: 40px
+                        &:not(:first-of-type)
+                            margin-top: 20px
+                        img
+                            width: 100%
+                            height: 100%
+        
+        div.info-page
+            position: relative
+            width: 100%
+            padding-top: 50px
+            div.pics-cont
+                margin: 50px 0px 30px 0px
+                a.pic-link
+                    // +display(flex)
+                    // +justify-content(center)
+                    // +align-items(center)
+                    padding: 0px 6px
+                    img
+                        min-width: 100px
+                        width: 40vw
+                        // max-width: 250px
+            div.info-text
+                width: 86%
+                max-width: $mid-column*0.8
+                display: block
+                position: relative
+                left: 50%
+                padding-left: 0%
+                +vendor-prefix("transform","translateX(-50%)")
+        
+
++screen(0px, 540px)
+    table.detske-kat
+        width: 100%
+        tbody
+            font-weight: 500
+        thead
+            font-size: 14px
+        tr
+            td
+                min-width: 20vw
+                max-width: 23vw
+                line-height: $body*1.2 
+                &:nth-child(2)
+                    font-weight: 500  
+                &:nth-child(4)
+                    text-align: right
+    div.oddil-link
+        img
+            height: 60vh
+        div.oddil-text
+            font-size: $h3
+            top: 50%
+            left: 100px
+    img.ch50-blur
+        width: 400px
+    div.ch50-cont
+        top: 45vh
+        img.force-logo
+            width: 40vw
+            max-width: 230px 
+        div.ch50-text
+            font-size: $h3
+            margin-top: 20px
+            position: relative
+        div.ch50-date
+            font-size: $h3
+            margin-top: 20px
+            letter-spacing: 5px
+            position: relative
+    div.main-cont
+        font-size: $body
+        line-height: $body * 1.8
+        span.bigger
+            font-size: $h4*0.8
+        div.intro-page
+            div.logo-cont
+                position: absolute
+                top: 50px
+                left: 50%
+                width: 80%
+                max-width: $mid-column*1.2
+            div.short-info-cont
+                // bottom: 60px
+                bottom: auto
+                top: calc(100vh - 180px)
+                display: block
+                &.zavreno
+                    top: calc(100vh - 60px)
+                div.short-info
+                    width: 86%
+                    max-width: $mid-column*0.8
+                    display: block
+                    position: relative
+                    left: 50%
+                    padding-left: 15%
+                    +vendor-prefix("transform","translateX(-50%)")
+                    div.social-text
+                        padding-top: 190px
+                        // top: -60px
+                        div.detske-link
+                            font-size: 42px
+                            top: -5px
+                            line-height: 38px
+                            width: auto
+                            // a
+                            //     display: inline
+                            //     width: auto
+                            span.detske-date
+                                left: 30px
+                        &.zavreno
+                            padding-top: 85px
+                        div.social-zavreno
+                            // top: -59px
+                div.social-intro
+                    position: absolute
+                    right: 90%
+                    display: flex
+                    flex-direction: column
+                    a
+                        position: relative
+                        display: block
+                        &:not(:first-of-type)
+                            margin-top: 20px
+                        img
+                            width: 100%
+                            height: 100%
+        div.info-page
+            padding-top: 240px
+            &.zavreno
+                padding-top: 240px
+            div.info-text
+                width: 86%
+                max-width: $mid-column*0.8
+                display: block
+                position: relative
+                left: 50%
+                padding-left: 0%
+                +vendor-prefix("transform","translateX(-50%)")
+                span.bigger
+                    font-size: 18px
+    div.oddil-cont
+        div.oddil-list
+            div.cat-head
+            div.cat-body
+                padding-left: 10%
+        div.oddil-title
+            position: absolute
+            right: -180px
+            top: 95px
+            color: black
+            text-decoration: none
+            cursor: pointer
+            display: block
+            img
+                height: 70vh
+                cursor: pointer
+                z-index: 100
+                display: block
+            div.oddil-text
+                font-style: italic
+                font-size: $h2
+                font-weight: 400
+                display: block
+                position: absolute
+                text-align: center
+                top: 20%
+                right: 120px
+                z-index: 1000
+                width: 200px
+    div.ch50-container
+        width: 100%
+        min-height: 100vh
+        position: relative
+        overflow: hidden
+        color: black
+        div.ch50-main
+            position: relative
+            left: 50%
+            margin-top: 40px
+            +vendor-prefix("transform","translateX(-50%)")
+            width: 90%
+            max-width: $mid-column*1.6
+            h1.prihlaska-heading
+                font-size: $h3
+                margin: 30px auto
+                
+            form.send_form
+                width: 100%
+                a
+                    color: #EC3359
+                    text-decoration: none
+                table
+                    width: 100%
+                    border-collapse: separate
+                    font-size: $body
+                    tr
+                        td
+                            width: 50%
+                            max-width: 40vw
+                            padding: 10px 10px
+                            font-weight: 300
+                            line-height: $body*1.2
+                            input
+                                width: 80%
+                                border: none
+                                background-color: #51ACB9
+                                padding: 14px 10px
+                                font-size: $body*0.8
+                                &::placeholder
+                                    font-weight: 500
+                                    color: black
+                                &[type="button"]
+                                    cursor: pointer
+                            select
+                                border: none
+                                background-color: #51ACB9
+                                height: 30px
+                                font-size: $body*0.75
+                                max-width: 40vw
+                                option
+                                    padding: 14px 10px
+                                    border: 1px solid black
+
+            img#expand-registered
+                cursor: pointer
+                width: 40px
+                +vendor-prefix("transition","0.25s all ease")
+                &.open
+                    +vendor-prefix("transform","rotate(45deg)")
+            div.list-cont
+                position: relative
+                max-height: 0px
+                opacity: 0
+                visibility: hidden
+                z-index: 10
+                margin: 20px auto
+                overflow: scroll
+                h1
+                    font-size: $h4
+                    font-weight: 500
+                li
+                    z-index: 5
+                +vendor-prefix("transition","0.25s all ease")
+                &.open
+                    max-height: 800px
+                    opacity: 1
+                    visibility: visible
+            table.list-prihlasenych
+                width: 100%
+                font-size: $body
+                line-height: $body*1.6
+                // border-spacing: 12px
+                border-collapse: separate
+                tr
+                    &:nth-child(even)
+                        background-color: #51ACB9
+                    td 
+                        padding: 8px 4px
+                        &:nth-child(1)
+                            width: 8%
+                        &:nth-child(2)
+                            width: 27%
+                        &:nth-child(3)
+                            width: 10%
+                        &:nth-child(4)
+                            width: 10%
+                        &:nth-child(5)
+                            width: 35%
+                        &:nth-child(6)
+                            width: 10%
+            a.back_home
+                display: block
+                // top: 100px
+                width: 70px
+                position: relative
+                +vendor-prefix("transform","translateX(-3vw)")
+                img
+                    width: 100%
+            img.force-black
+                width: 350px
+                max-width: 90vw
+                // top: 150px
+                margin-top: 50px
+                position: relative
+            img.ch50-bg-map
+                position: absolute
+                top: 200px
+                right: -66%
+                width: 140%
+                max-width: 1200px
+                &.dz
+                    top: 120px
+            div.ch50-intro
+                position: relative
+                top: 40px
+                small
+                    font-size: $body*0.8
+                    a
+                        color: #EC3359
+                        text-decoration: none
+                div.ch50-green-deti
+                    font-size: $h3*0.7
+                    line-height: $h2
+                div.ch50-green
+                    color: #71FBB2
+                    font-size: $h4*0.9
+                    font-weight: 600
+                    text-transform: uppercase
+                    position: relative
+                    left: 0px
+                    top: 70px
+                    z-index: 1000
+                    line-height: $h2*1.1
+                    a
+                        color: inherit
+                        text-decoration: none
+                        span
+                            display: inline-block
+                            height: $h2*1.1
+                            position: relative
+                            z-index: 100
+                            &:before, &:after 
+                                content: ''
+                                position: absolute
+                                width: 100%
+                                height: 0%
+                                top: 0px
+                                z-index: -1
+                                // margin-top: -0.5px
+                                background: #000
+                            &:before 
+                                // top: -2.5px
+                            &:after 
+                                // bottom: 2.5px
+                                left: 0px
+                                background: #000
+                                transition: height 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)
+                            &:hover:before 
+                                background: #000
+                                height: 100%
+                                width: 100%
+                                transition: height 0.5s cubic-bezier(0.22, 0.61, 0.36, 1)
+                            &:hover:after 
+                                background: transparent
+                                height: 100%
+                                width: 100%
+                                left: 0px
+                                transition: 0s
+                h1
+                    position: relative
+                    display: inline
+                    font-size: 100px//$h1*1.5
+                    font-weight: 500
+                h1.ch50-ch
+                    span
+                        position: relative
+                    span.ch
+                        left: 0px
+                    span.ch50
+                        left: 34%
+                h3.ch50-date
+                    position: relative
+                    display: block
+                    font-size: $h2*1.1
+                    font-weight: 500
+                    line-height: $h1
+                h4.ch50-location
+                    position: relative
+                    display: block
+                    font-size: $h4*1.2
+                    font-weight: 500
+                    line-height: $h3*1.2
+            div.ch50-info
+                position: relative
+                width: 100%
+                margin-top: 100px
+                h3.ch50-topic
+                    font-size: $h4
+                    font-weight: 500
+                    margin: 20px auto
+                    text-transform: uppercase
+                    z-index: 111
+                div.pics-cont
+                    width: 100%
+                    display: flex
+                    position: relative
+                    margin: 0px 0px 0px 0px
+                    flex-direction: row
+                    flex-wrap: wrap
+                    justify-content: space-around
+                    a.pic-link
+                        // display: block
+                        padding: 0px 6px
+                        img
+                            min-width: 100px
+                            width: 40vw
+                        // display: block
+                        // // padding: 10px 0px
+                        // img
+                        //     max-width: 250px
+                        //     width: auto
+                        //     min-width: 160px
+                h4
+                    font-size: $h4
+                    margin: 20px auto
+                    z-index: 110
+                div.info-grid-triple, div.info-grid-double
+                    margin: 20px auto
+                div.info-grid-triple
+                    display: flex
+                    flex-direction: row
+                    flex-wrap: wrap
+                    justify-content: space-between
+                    width: 100%
+                    div
+                        width: 30%
+                        min-width: 250px
+                div.info-grid-double
+                    display: flex
+                    flex-direction: row
+                    flex-wrap: wrap
+                    justify-content: space-between
+                    width: 100%
+                    div
+                        width: 48%
+                        min-width: 300px
+                div.cat-cont
+                    display: flex
+                    flex-direction: row
+                    flex-wrap: wrap
+                    justify-content: space-between
+                    width: 100%
+                    table.table-cat
+                        width: 48%
+                        min-width: 300px
+                        // &:nth-of-type(2)
+                        margin-bottom: 30px
+                        line-height: $body*1.4
+                a
+                    color: #EC3359
+                    text-decoration: none
+                p
+                    line-height: $body*1.3
+                b
+                    color: #EC3359//#71FBB2
+                ul
+                    &.ch-vysledek-ul
+                        z-index: 110
+                        *
+                            z-index: 111
+                    div.hidden-li
+                        position: relative
+                        max-height: 0px
+                        opacity: 0
+                        visibility: hidden
+                        z-index: 10
+                        li
+                            z-index: 5
+                        +vendor-prefix("transition","0.25s all ease")
+                        &.open
+                            max-height: 800px
+                            opacity: 1
+                            visibility: visible
+                    div.hidden-photo-li
+                        position: relative
+                        max-height: 0px
+                        opacity: 0
+                        visibility: hidden
+                        z-index: 10
+                        li
+                            z-index: 5
+                        +vendor-prefix("transition","0.25s all ease")
+                        &.open
+                            max-height: 800px
+                            opacity: 1
+                            visibility: visible
+                    li
+                        line-height: $body*1.2
+                        padding-left: 10%
+                        z-index: 10
+                        &.expand-btn
+                            img
+                                width: 40px
+                                margin: 10px auto
+                                cursor: pointer
+                                +vendor-prefix("transition","0.25s all ease")
+                                &.open
+                                    +vendor-prefix("transform","rotate(45deg)")
+                        h2
+                            font-size: $h4*0.9
+                            margin: 20px auto
+
+                    &.seznam-photo
+                        *
+                            z-index: 100
+                        h2
+                            cursor: pointer
+                            &.open
+                                color: #EC3359
+                        ul
+                            position: relative
+                            padding-left: 10%
+                            max-height: 0px
+                            opacity: 0
+                            +vendor-prefix("transition","0.25s all ease")
+                            &.open
+                                max-height: 800px
+                                opacity: 1
+                    li.ch-vysledek-li
+                        h2
+                            cursor: pointer
+                            &.open
+                                color: #EC3359
+                        ul
+                            // font-size: $body
+                            // line-height: 40px
+                            position: relative
+                            padding-left: 10%
+                            max-height: 0px
+                            opacity: 0
+                            +vendor-prefix("transition","0.25s all ease")
+                            &.open
+                                max-height: 800px
+                                opacity: 1

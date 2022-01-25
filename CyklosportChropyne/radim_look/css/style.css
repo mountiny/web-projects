@@ -1,0 +1,1473 @@
+<style>
+* {
+	padding: 0px;
+	margin: 0px; 
+	
+}
+::-webkit-scrollbar { 
+    display: none;
+    }
+html, body
+{
+	margin: 0px;
+	padding: 0px;
+	bottom: 0px;
+	height: 100%;
+	font-family: "Avenir", "AvenirNext";
+
+	min-height: 920px;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+textarea {
+	overflow: auto;
+}
+a, a:hover, a:link, a:visited, a:active
+{
+	text-decoration: none;
+	color: inherit;
+}
+a img {
+	
+	border: 0px;
+}
+@font-face {
+	font-family: Avenir;
+	src: url('Avenir.ttc');
+}
+
+/*
+@-ms-viewport {
+	width: device-width;
+}
+*/
+
+.no-fontface {
+	font-family: "AvenirNext";
+}
+.container
+{
+	width: 100%;
+	height: 100%;
+	/*overflow: auto;*/
+	overflow: hidden;
+	background-image: url(pozadi_web3.png);
+	background-size: 1920px;
+	/*900px; url(bg-gray.png) repeat-y*/
+					
+	background-repeat: no-repeat;
+						
+	background-color: #303030;
+	background-attachment:fixed;
+	background-position:center top;
+
+	/*overflow: scroll;
+	-webkit-overflow-scrolling: touch;*/
+}
+/*.subContainer
+{
+	margin: 0 auto;
+	width: 700px;
+	height: 100%;
+	overflow: hidden;
+
+}*/
+/*.socialContent
+{
+	width: 800px;
+	margin: 0 auto;
+	overflow: auto;
+	height: 70%;
+	top: 120px;
+	white-space: nowrap;
+
+}*/
+.bgImage
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0 auto;
+	width: 900px;
+	height: 100%;
+
+	/*overflow: scroll;
+	-webkit-overflow-scrolling: touch;*/
+	/*overflow: hidden;*/
+	background-image: url(bgPhoto.png);
+	background-repeat: no-repeat;
+	background-color: #303030;
+	background-attachment:fixed;
+	background-position:center top; 
+}
+.overContent
+{
+	position: relative;
+	top: 60px;
+	/*width: 830px;*/
+	width: 870px;
+	margin: 0 auto;
+	height: 67%;
+/* height: 60%;
+overflow: hidden;*/
+	overflow: auto;
+	padding-bottom: 20px;
+	z-index: 9;
+}
+
+
+.content
+{
+	/*margin: 0 auto;*/
+	/*width: 760px*/
+	width: 800px;
+		height: 100%;
+/*	height: 70%;*/
+	position: relative;
+	/*left: 5%;*/
+	right: 4.3%;
+
+	overflow: auto;
+	float: right;
+	z-index: 10;
+	/*padding-right: 10px;*/
+	-webkit-overflow-scrolling: touch;
+	/*background-color: #282828;*/
+	background: rgba(40, 40, 40, 0.8);
+
+
+
+}
+.social
+{
+	position: relative;
+	/*left: 15%;*/
+	top: 20px;
+	/*margin: 0 auto;*/
+	float:left;
+
+	width: 20px;
+	/*height: 100px;*/
+	/*padding-right: 20px;*/
+	/*margin-left: 0px;*/
+	/*background-color: yellow;*/
+	z-index: 100;
+	overflow: hidden;
+	
+
+
+}
+
+.socialLogo
+{
+	position: relative;
+	float: right;
+	margin-bottom: 15px;
+	max-width: 19px;
+	max-height: 24px;
+}
+
+.header
+{
+	margin: 0 auto;
+	width: 800px;
+ 	position: relative;
+	top: 30px;
+ 	height: 50px;
+ 	vertical-align: middle;
+
+ 	/*background-color: #282828;*/
+}
+div.menuBar div ~ *
+{
+	padding-right: 27px;
+	/*width: 50px;*/
+	vertical-align: middle;
+	display: inline-block;
+	font-family: "Avenir", "AvenirNext";
+	font-size: 13px;
+	text-align: center;
+	color: #ef2c1d;
+	
+}
+div.menuBar div:nth-child(1)
+{
+	width: 173px;
+	vertical-align: middle;
+	display: inline-block;
+}
+.logo
+{
+	width: 90%;
+	/*position: relative;
+	left: 0px;*/
+}
+/*.logo:hover
+{
+	-webkit-transform:rotateX(360deg);
+	-webkit-transition-duration: 2s;
+}*/
+.menuBar
+{
+	/*vertical-align: middle;*/
+	/*height: 49px;*/
+	margin: 0 auto;
+}
+.subMenu
+{
+	position: relative;
+	/*left: 173px;*/
+	left: 340px;
+	background: rgba(250, 250, 250, 0.5);
+
+}
+div.subMenu div ~ *
+{
+	color: gray;
+	padding-right: 16px;
+}
+div.subMenu div:nth-child(1) 
+{
+	padding-right: 66px;
+	padding-left: 4px;
+	width: 0px;
+	color: gray;
+	/*padding-right: 76px;
+	padding-left: 4px;
+	width: 0px;
+	color: gray;*/
+}
+div.subMenu div:last-child
+{
+	padding-right: 10px;
+}
+.subMenuSipka
+{
+	position: absolute;
+	top: 42px;
+	left: 340px;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 7px 12px 7px;
+	border-color: transparent transparent rgba(250, 250, 250, 0.5) transparent;
+	z-index: 100;
+}
+.sponsors
+{
+	width: 800px;
+	position: relative;
+	top:58px;
+	margin: 0 auto;
+	text-align: left;
+	font-family: "Avenir", "AvenirNext";
+	font-weight: 400;
+	font-size: 12px;
+	color: white;
+}
+.footer
+{
+	margin: 0 auto;
+	width: 800px;
+	position: relative;
+	top: 68px;
+	margin-bottom: 100px;
+
+	/*padding-top: 30px;*/
+	height: 80px;
+	/*overflow: hidden;*/
+
+	background-color: #282828;
+
+	/*overflow: auto;*/
+	overflow: hidden;
+	white-space: nowrap;
+}
+.lista
+{
+	margin: 0 auto;
+	width: 800px;
+	position: relative;
+	top: -15px;
+	border-top: 2px solid #ef2c1d;
+}
+.bg-lista
+{
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.text-lista
+{
+	position: relative;
+	top: 1px;
+	width: 790px;
+	margin: 0 auto;
+	text-align: left;
+	font-size: 11px;
+	color: white;
+}
+.adBar
+{
+	height: 100%;
+	position: relative;
+	left: 0px;
+	display: inline-block;
+	overflow: hidden;
+}
+.ad
+{
+	margin-right: 40px;
+	/*width: 100px;*/
+	height: 100%;
+	vertical-align: middle;
+	display: inline-block;
+	max-width: 150px;
+	
+	
+	/*background-color: #ef2c1d;*/
+}
+div.adBar img {
+	/*display: inline-block;*/
+	vertical-align: middle;
+	/*position: absolute;
+	top: 0px;
+	bottom: 0px;*/
+	margin-top: 20px;
+	padding-right: 20px;
+	max-height: 40px;
+	max-width: 150px;
+}
+div.adBar img:nth-child(1)
+{
+	padding-left: 20px;
+}
+div.adBar img:nth-child(3)
+{
+	max-width: 110px;
+}
+div.adBar img:nth-child(12)
+{
+	max-width: 110px;
+}
+/*.demaLogo
+{
+	max-width: 100px;
+}*/
+.stinContent
+{
+	box-shadow:              black -2px 2px 6px rgba(0,0,0,0.7); 
+	-webkit-box-shadow: 	 black -2px 2px 6px rgba(0,0,0,0.7);
+	-moz-box-shadow:     	 black -2px 2px 6px rgba(0,0,0,0.7);
+	-webkit-appearance: none;
+}
+.stinFooter
+{
+	box-shadow:              black -2px 2px 6px rgba(0,0,0,0.5); 
+	-webkit-box-shadow: 	 black -2px 2px 6px rgba(0,0,0,0.5);
+	-moz-box-shadow:     	 black -2px 2px 6px rgba(0,0,0,0.5);
+}
+.aktualita
+{
+	padding-bottom: 20px;
+	/*width: 100%;*/
+	/*padding-top: 20px;*/
+	/*background-color: yellow;*/
+	/*height: 200px;*/
+	/*border-bottom: solid #8e44ad;*/
+}
+div.aktualita h1
+{
+	font-size: 24px;
+	font-weight: 300;
+	color: #ef2c1d;
+	line-height: 0.3;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 25px 15px 15px 15px;
+}
+div.aktualita h1 b 
+{
+	font-weight: 700;
+}
+.obrazekAktuality
+{
+	width: 100%;
+	margin: 0 auto;
+
+}
+.divObrazkuAktuality {
+	width: 100%;
+	margin: 0 auto;
+	width: 800px;
+	height: 291px;
+	background-image: url('../images/aktuality_photo/33ser2014a.jpg');
+	background-size: 100% 100%;
+}
+.divObrazkuAktuality:hover {
+	width: 100%;
+	margin: 0 auto;
+	-webkit-animation: changeImage 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: changeImage 2s; /* Firefox < 16 */
+    -ms-animation: changeImage 2s; /* Internet Explorer */
+    -o-animation: changeImage 2s; /* Opera < 12.1 */
+    animation: changeImage 2s;
+	background-image: url('../images/aktuality_photo/33ser2014b.jpg');
+}
+	@keyframes changeImage {
+	    0% { opacity: 1; background-image: url('../images/aktuality_photo/33ser2014a.jpg');}
+	    50%  { opacity: 0.9;  background-image: url('../images/aktuality_photo/33ser2014b.jpg');}
+	    100% { opacity: 1; background-image: url('../images/aktuality_photo/33ser2014b.jpg');}
+	}
+
+	/* Firefox < 16 */
+	@-moz-keyframes changeImage {
+		0% { opacity: 1; background-image: url('../images/aktuality_photo/33ser2014a.jpg');}
+	    50%  { opacity: 0.9; background-image: url('../images/aktuality_photo/33ser2014b.jpg'); }
+	    100% { opacity: 1; background-image: url('../images/aktuality_photo/33ser2014b.jpg');}
+	}
+
+	/* Safari, Chrome and Opera > 12.1 */
+	@-webkit-keyframes changeImage {
+	    0% { opacity: 1; background-image: url('../images/aktuality_photo/33ser2014a.jpg');}
+	    50%  { opacity: 0.9; background-image: url('../images/aktuality_photo/33ser2014b.jpg'); }
+	    100% { opacity: 1; background-image: url('../images/aktuality_photo/33ser2014b.jpg');}
+	}
+
+	/* Internet Explorer */
+	@-ms-keyframes changeImage {
+		0% { opacity: 1; background-image: url('../images/aktuality_photo/33ser2014a.jpg');}
+	    50%  { opacity: 0.9; background-image: url('../images/aktuality_photo/33ser2014b.jpg'); }
+	    100% { opacity: 1; background-image: url('../images/aktuality_photo/33ser2014b.jpg');}
+	}
+	/* Opera < 12.1 */
+	@-o-keyframes changeImage {
+		0% { opacity: 1; background-image: url('../images/aktuality_photo/33ser2014a.jpg');}
+	    50%  { opacity: 0.9; background-image: url('../images/aktuality_photo/33ser2014b.jpg'); }
+	    100% { opacity: 1; background-image: url('../images/aktuality_photo/33ser2014b.jpg');}
+	}
+.nadpisAktuality
+{
+	font-size: 14px;
+	font-family: "Avenir", "AvenirNext";
+	color: #ef2c1d;
+	text-align: left;
+	text-transform: uppercase;
+}
+.datumVlozeniAktuality
+{
+	font-size: 10px;
+	color: white;
+	text-align: left;
+	font-family: "Avenir", "AvenirNext";
+}
+.textAktuality
+{
+	/*margin: 0px 10px 0px 10px;*/
+	font-size: 12px;
+	color: white;
+	text-align: justify;
+	font-family: "Avenir", "AvenirNext";
+
+	letter-spacing: 1px;
+	font-weight: 100;
+}
+.textAktuality strong {
+	color: #ef2c1d;
+	font-weight: 500;
+}
+
+
+
+
+
+/* Start Styly Cyklooddíl*/
+#stupneVitezu
+{
+	position: absolute;
+	top: 180px;
+	left: -5px;
+	height: 150px;
+
+}
+#stupneVitezu2
+{
+	position: absolute;
+	top: 0px;
+	left: -5px;
+	z-index: -10;
+	width: 100%;
+	overflow: hidden;
+
+}
+.stupneVitezu {
+
+	position: absolute;
+	top: 170px;
+	height: 150px;
+
+}
+.aktualitaV
+{
+	padding-bottom: 20px;
+	/*width: 100%;*/
+	/*padding-top: 20px;*/
+	/*background-color: yellow;*/
+	/*height: 200px;*/
+	/*border-bottom: solid #8e44ad;*/
+}
+div.aktualitaV h1
+{
+	font-size: 24px;
+	font-weight: 300;
+	color: rgba(239, 44, 29, 0.6);
+	line-height: 0.3;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 25px 15px 15px 15px;
+}
+div.aktualitaV h1 b 
+{
+	font-weight: 700;
+
+}
+div.aktualitaV a
+{
+	text-decoration: none;
+}
+
+#prvni,#prvniv {
+	font-weight: 700;
+	color: rgba(239, 44, 29, 1);
+}
+#druhyv,#tretiv,#ctvrtyv,#patyv,#sestyv,#sedmyv,#osmyv {
+	font-size: 16px;
+}
+#r3,#r4,#r5,#r6,#r7,#r8{
+	visibility: hidden;
+}
+#vysledkyTextNadpis
+{
+	font-weight: 300;
+	color: rgba(239, 44, 29, 1);
+}
+#vysledkyTabulka
+{
+	font-size: 12px;
+	text-align: left;
+	color: white;
+}
+#seznamVysledku
+{
+	list-style-type: circle;
+
+}
+#seznamVysledku a
+{
+	color: #ef2c1d;
+}
+#seznamFotogalerie a
+{
+	color: #ef2c1d;
+}
+#seznamVysledku a:hover
+{
+	color: black;
+	-webkit-transition-duration: 1s;
+}
+#seznamFotogalerie a:hover
+{
+	color: black;
+	-webkit-transition-duration: 1s;
+}
+#seznamFotogalerie
+{
+	list-style-type: none;
+}
+.fotoRadek h2
+{
+	font-size: 20px;
+	font-weight: 500;
+	color: #ef2c1d;
+
+}
+.podseznamFotogalerie
+{
+	list-style-type: circle;
+}
+.nadpisVysledku
+{
+	color: #ef2c1d;
+	font-size: 16px;
+	text-decoration: underline;
+	font-weight: 200;
+}
+table#vysledkyTabulka tr td:first-child
+{
+	width: 480px;
+
+}
+table#vysledkyTabulka tr td:first-child + td
+{
+	width: 250px;
+}
+table#vysledkyTabulka tr:first-child
+{
+
+}
+table#vysledkyTabulka tr:first-child + tr > td
+{
+	padding-top: 70px;
+}
+
+
+
+.clenoveTabulka
+{
+	/*border-bottom: 2px white;*/
+	color: white;
+	font-size: 13px;
+
+}
+table.clenoveTabulka thead
+{
+	font-size: 11px;
+	font-weight: 500;
+	color: #ef2c1d;
+	border-bottom: 3px #ef2c1d;
+
+}
+/*table.clenoveTabulka thead td:first-child
+{
+	text-align: left;
+}*/
+table.clenoveTabulka tbody tr
+{
+	border-bottom: 2px gray;
+}
+table.clenoveTabulka tr td:first-child /*První sloupec*/
+{
+	text-align: left;
+	text-indent: 30px;
+	width: 370px;
+	height: 30px;
+
+}
+table.clenoveTabulka tr td:first-child + td /* Druhý sloupec */
+{
+	text-align: center;
+	width: 200px;
+	height: 30px;
+
+}
+table.clenoveTabulka tr td:first-child + td + td /*Třetí sloupec */
+{
+	text-align: center;
+	width: 200px;
+	height: 30px;
+
+}
+.nadpisAktuality, .datumVlozeniAktuality, .textAktuality, .clenoveTabulka, .kalendarTabulka, #vysledkyTabulka
+{
+	margin: 5px 15px 5px 15px;
+}
+div.aktualita a
+{
+	color: #ef2c1d;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+
+.kalendarTabulka
+{
+	color: white;
+	font-size: 12px;
+	border-spacing: 3px;
+	border-collapse: collapse;
+	/*width: 97%;
+	margin: 0 auto;*/
+}
+table.kalendarTabulka thead
+{
+	font-size: 11px;
+	font-weight: 500;
+	color: #ef2c1d;
+	border-bottom: 1px solid #ef2c1d;
+	border-collapse: collapse;
+	
+}
+table.kalendarTabulka tbody tr
+{
+	border-bottom: 1px solid gray;
+}
+table.kalendarTabulka tbody tr:last-child
+{
+	border-bottom: none;
+}
+table.kalendarTabulka tr td:first-child /*První sloupec*/
+{
+	text-align: center;
+	width: 60px;
+	height: 30px;
+	border-right: 1px solid #ef2c1d;
+
+}
+table.kalendarTabulka tr td:first-child + td /* Druhý sloupec */
+{
+	text-align: center;
+	width: 45px;
+	height: 30px;
+	border-right: 1px solid gray;
+}
+table.kalendarTabulka tr td:first-child + td + td /*Třetí sloupec */
+{
+	text-align: left;
+	width: 190px;
+	height: 30px;
+	border-right: 1px solid #ef2c1d;
+	text-indent: 5px;
+}
+table.kalendarTabulka tr td:first-child + td + td + td /*čtvrty sloupec*/
+{
+	text-align: center;
+	width: 45px;
+	height: 30px;
+	border-right: 1px solid gray;
+
+}
+table.kalendarTabulka tr td:first-child + td + td + td + td/* pátý sloupec */
+{
+	text-align: left;
+	width: 190px;
+	height: 30px;
+	border-right: 1px solid #ef2c1d;
+	text-indent: 5px;
+}
+table.kalendarTabulka tr td:first-child + td + td + td + td + td/*šestý sloupec */
+{
+	text-align: center;
+	width: 45px;
+	height: 30px;
+	border-right: 1px solid gray;
+
+}
+table.kalendarTabulka tr td:first-child + td + td + td + td + td + td/*sedmý sloupec */
+{
+	text-align: left;
+	width: 190px;
+	height: 30px;
+	text-indent: 5px;
+
+}
+
+.subMenu-cyklooddil
+{
+	position: relative;
+
+	/*left: 173px;*/
+	left: 255px;
+	background: rgba(0, 0, 0, 0.6);
+
+}
+div.subMenu-cyklooddil div ~ *
+{
+	color: gray;
+	padding-right: 16px;
+	font-size: 11px;
+}
+div.subMenu-cyklooddil div:nth-child(1) 
+{
+	padding-right: 56px;
+	padding-left: 6px;
+	width: 0px;
+	color: gray;
+	font-size: 11px;
+	/*padding-right: 76px;
+	padding-left: 4px;
+	width: 0px;
+	color: gray;*/
+}
+div.subMenu-cyklooddil div:last-child
+{
+	padding-right: 10px;
+}
+.subMenuSipka-cyklooddil
+{
+	position: absolute;
+	top: 42px;
+	left: 255px;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 7px 12px 7px;
+	border-color: transparent transparent rgba(0, 0, 0, 0.6) transparent;
+	z-index: 100;
+}
+
+.cyklooddil-clenove-bg
+{
+	width: 100%;
+	position: absolute;
+	top: 1210px;
+	opacity: 0.8;
+}
+.cyklooddil-kalendar-bg
+{
+	width: 100%;
+	position: absolute;
+	top: 990px;
+	opacity: 0.8;
+}
+
+/* End Styly Cyklooddíl*/
+
+
+
+
+
+
+
+
+
+
+/* Start Styly chribska 50*/
+
+
+
+.container-white
+{
+	width: 100%;
+	height: 100%;
+	/*overflow: auto;*/
+	overflow: hidden;
+	background-image: url(pozadi_web3.png);
+	background-size: 1920px;
+	background-repeat: no-repeat;
+	background-color: white;
+	background-attachment:fixed;
+	background-position:center top; 
+	min-height: 920px;
+	-webkit-overflow-scrolling: touch;
+}
+.subMenu-white
+{
+	position: relative;
+	/*left: 173px;*/
+	left: 365px;
+	background: rgba(250, 250, 250, 0.5);
+
+}
+div.subMenu-white div ~ *
+{
+	color: gray;
+	padding-right: 16px;
+	font-size: 11px;
+}
+div.subMenu-white div:nth-child(1) 
+{
+	padding-right: 66px;
+	padding-left: 4px;
+	width: 0px;
+	color: gray;
+	font-size: 11px;
+	/*padding-right: 76px;
+	padding-left: 4px;
+	width: 0px;
+	color: gray;*/
+}
+div.subMenu-white div:last-child
+{
+	padding-right: 10px;
+}
+.subMenuSipka-white
+{
+	position: absolute;
+	top: 42px;
+	left: 365px;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 7px 12px 7px;
+	border-color: transparent transparent rgba(250, 250, 250, 0.5) transparent;
+	z-index: 100;
+}
+.content-white
+{
+	/*margin: 0 auto;*/
+	width: 800px;
+		height: 100%;
+/*	height: 70%;*/
+	position: relative;
+	/*left: 5%;*/
+	right: 4.3%;
+	/*overflow: auto;*/
+	overflow: auto;
+	float: right;
+	/*padding-right: 10px;*/
+	-webkit-overflow-scrolling: touch;
+	/*background-color: #282828;*/
+	background: rgba(250, 250, 250, 0.5);
+
+}
+.chribska-bg
+{
+	width: 100%;
+	position: absolute;
+	top: -190px;
+	/*left: -3px;*/
+}
+.chribska-mapa, .profil {
+	width: 97%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+.chribska-bg-mapa {
+/*	background-image:url(rastr.png);
+	background-size: 760px;
+	background-position: center bottom;*/
+/*	background-attachment: fixed;*/
+	position: absolute;
+ 	width: 100%;
+ 	top: 660px;
+}
+.mapaOdkaz{
+	position: absolute;
+	
+	margin-bottom: 400px;
+}
+
+.text-chribska
+{
+	position: relative;
+	margin: 0 auto;
+	width: 97%;
+	font-family: "Avenir", "AvenirNext";
+	font-size: 12px;
+	color: black; 
+	z-index: 100;
+	padding-bottom: 20px;
+}
+div.text-chribska h2
+{
+	font-size: 17px;
+	font-weight: 500;
+	color: white;
+	line-height: 0.3;
+}
+div.text-chribska h3
+{
+	font-size: 14px;
+	font-weight: 300;
+	color: white;
+
+}
+div.text-chribska h4 
+{
+	font-size: 11px;
+	color: black;
+	font-family: "Avenir", "AvenirNext";
+	font-weight: bold;
+	line-height: 0.5;
+	padding-top: 10px;
+}
+div.text-chribska a
+{
+	color: #ef2c1d;
+	font-weight: 500;
+}
+div.text-chribska p > b
+{
+	font-size: 11px;
+	color: black;
+	font-family: "Avenir", "AvenirNext";
+	font-weight: bold;
+	line-height: 0.5;
+}
+.ubytovani
+{
+	line-height: 0.5;
+}
+div.ubytovani p:nth-child(n+2):nth-child(-n+4) /* OOOOOOPPPPPP*/ 
+{
+	text-indent: 50px;
+}
+div.hlavni-sponsor img
+{
+	display: block;
+	margin: 0 auto;
+	width: 70%;
+	padding-top: 30px;
+	padding-bottom: 60px;
+}
+.mapa-rostin
+{
+	width: 100%;
+	position: relative;
+	top: 6px;
+}
+.sponsors-white
+{
+	width: 800px;
+	position: relative;
+	top:60px;
+	margin: 0 auto;
+	text-align: left;
+	font-family: "Avenir", "AvenirNext";
+	font-weight: 400;
+	font-size: 12px;
+	color: black;
+}
+.footer-white
+{
+	margin: 0 auto;
+	width: 800px;
+	position: relative;
+	top: 70px;
+	margin-bottom: 100px;
+
+	/*padding-top: 30px;*/
+	height: 80px;
+	/*overflow: hidden;*/
+
+	background-color: white;
+
+	/*overflow: auto;*/
+	overflow: hidden;
+	white-space: nowrap;
+}
+.stinContent-white
+{
+	box-shadow:              black -2px 2px 6px rgba(0,0,0,0.15); 
+	-webkit-box-shadow: 	 black -2px 2px 6px rgba(0,0,0,0.15);
+	-moz-box-shadow:     	 black -2px 2px 6px rgba(0,0,0,0.15);
+}
+.stinFooter-white
+{
+	box-shadow:              black -2px 1px 6px rgba(0,0,0,0.1); 
+	-webkit-box-shadow: 	 black -2px 1px 6px rgba(0,0,0,0.1);
+	-moz-box-shadow:     	 black -2px 1px 6px rgba(0,0,0,0.1);
+}
+
+/* End styly chribska 50 */
+
+
+
+
+
+
+
+
+
+
+
+
+/* End styly dětské závody */
+.detske-zavody-bg
+{
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	/*left: -3px;*/
+}
+.text-detske-zavody
+{
+	position: relative;
+	top: 5px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	width: 97%;
+	font-family: "Avenir", "AvenirNext";
+	font-size: 12px;
+	color: black; 
+	z-index: 100;
+}
+div.text-detske-zavody h1
+{
+	font-size: 24px;
+	font-weight: 300;
+	color: #ef2c1d;
+	line-height: 0.3;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+div.text-detske-zavody h2
+{
+	font-size: 16px;
+	font-weight: 300;
+	color: white;
+	color: #ef2c1d;
+	line-height: 0.3;
+}
+div.text-detske-zavody h3
+{
+	font-size: 14px;
+	font-weight: 300;
+	color: white;
+
+}
+div.text-detske-zavody h4 
+{
+	font-size: 11px;
+	color: black;
+	font-family: "Avenir", "AvenirNext";
+	font-weight: bold;
+	line-height: 0.5;
+}
+div.text-detske-zavody p > b
+{
+	font-size: 11px;
+	color: black;
+	font-family: "Avenir", "AvenirNext";
+	font-weight: bold;
+	line-height: 0.5;
+}
+div.text-detske-zavody a
+{
+	color: #ef2c1d;
+	font-weight: 500;
+}
+#kategorie-trate
+{
+	text-align: left;
+}
+.varovani
+{
+	color: #ef2c1d;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+}
+.lista-white
+{
+	margin: 0 auto;
+	width: 800px;
+	position: relative;
+	top: -15px;
+	border-top: 2px solid #ef2c1d;
+}
+/*.bg-lista
+{
+	width: 100%;
+	position: absolute;
+	top: 0px;
+}*/
+.text-lista-white
+{
+	position: relative;
+	top: 1px;
+	width: 800px;
+	margin: 0 auto;
+	text-align: left;
+	font-size: 11px;
+	color: #ef2c1d;
+}
+
+.subMenu-detske-zavody
+{
+	position: relative;
+	/*left: 173px;*/
+	left: 490px;
+	background: rgba(250, 250, 250, 0.5);
+
+}
+div.subMenu-detske-zavody div ~ *
+{
+	color: gray;
+	padding-right: 16px;
+	font-size: 11px;
+}
+div.subMenu-detske-zavody div:nth-child(1) 
+{
+	padding-right: 56px;
+	padding-left: 4px;
+	width: 0px;
+	color: gray;
+	font-size: 11px;
+	/*padding-right: 76px;
+	padding-left: 4px;
+	width: 0px;
+	color: gray;*/
+}
+div.subMenu-detske-zavody div:last-child
+{
+	padding-right: 10px;
+}
+.subMenuSipka-detske-zavody
+{
+	position: absolute;
+	top: 42px;
+	left: 490px;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 7px 12px 7px;
+	border-color: transparent transparent rgba(250, 250, 250, 0.5) transparent;
+	z-index: 100;
+}
+
+/* End styly dětské závody */
+
+
+
+
+
+
+
+
+
+
+
+/* Start styly prodejna*/
+.content-prodejna
+{
+	/*margin: 0 auto;*/
+	width: 800px;
+		height: 100%;
+/*	height: 70%;*/
+	position: relative;
+	/*left: 5%;*/
+	right: 4.3%;
+	overflow: auto;
+	/*overflow-x: hidden;
+	overflow-y: auto;*/
+
+	float: right;
+	/*padding-right: 10px;*/
+	-webkit-overflow-scrolling: touch;
+	/*background-color: #282828;*/
+	background: rgba(40, 40, 40, 0.8);
+
+
+
+}
+
+.bg-prodejna
+{
+	width: 100%;
+	position: absolute;
+	top: -1px;
+	/*left: -10px;*/
+	margin: 0 auto;
+	opacity: 1;
+	overflow: hidden;
+}
+.text-prodejna
+{
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+	top: 5px;
+	z-index: 10;
+	color: white;
+}
+.nadpis-prodejna
+{
+	font-size: 13px;
+	font-weight: 100;
+	letter-spacing: 1px;
+}
+.text-velkym-prodejna
+{
+	font-size: 11px;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+div.text-prodejna b
+{
+	font-weight: 500;
+}
+#provozni-doba
+{
+	position: relative;
+	left: -3px;
+	width: 270px;
+	height: 14px;
+	text-align: left;
+}
+#kontakt
+{
+	position: relative;
+	top: 110px;
+	left: -3px;
+	width: 290px;
+	text-align: left;
+	font-size: 11px;
+}
+#nabizime
+{
+	width: 450px;
+	position: relative;
+	top: 130px;
+	left: 30px;
+	font-size: 11px;
+}
+#nabizime span
+{
+	color: #ef2c1d;
+}
+#nabizime tr td
+{
+	vertical-align: text-top;
+}
+.img-prodejna
+{
+
+	position: relative;
+	top: 200px;
+	/*max-height: 200px;*/
+	max-width: 33.3%;
+	float: left;
+	/*padding-bottom: 30px;*/
+}
+.adresa
+{
+	font-size: 11px;
+	position: relative;
+	top: 112px;
+	font-weight: 100;
+	line-height: 1.5;
+}
+div.adresa span
+{
+	font-size: 11px;
+	text-transform: uppercase;
+}
+.odkazNaFotky 
+{
+	font-size: 12px;
+	position: relative;
+	font-weight: 300;
+	text-indent: 26px;
+	top: 152px;
+}
+div.odkazNaFotky a 
+{
+	color: #ef2c1d;
+}
+
+.spendlik
+{
+	position: absolute;
+	top: 150px;
+	left: 426px;
+	height: 75px;
+	width: 25px;
+	z-index: 100;
+}
+div.spendlik img
+{
+	height: 45px;
+	width: 25px;
+}
+.obrazky-prodejna
+{
+	position: relative;
+	top: 170px;
+	margin: 0 auto;
+	width: 92%;
+	height: 200px;
+	padding-bottom: 50px;
+	
+}
+.obrazek1-prodejna
+{
+	background-color: #303030;
+	height: 100%;
+	width: 32%;
+	float: left;
+	margin-left: 14px;
+}
+.obrazek2-prodejna
+{
+	background-color: #282828;
+	height: 100%;
+	width: 32%;
+	float: left;
+}
+
+
+/* End styly prodejna */
+
+
+
+
+
+
+
+
+
+
+
+.galerie
+{
+	position: relative;
+	top: 60px;
+	width: 75%;
+	max-width: 760px;
+	margin: 0 auto;
+	height: 70%;
+	overflow: auto;
+}
+
+
+
+#tooltip
+{
+    text-align: center;
+    font-family: "Avenir", "AvenirNext";
+    font-size: 12px;
+    color: #fff;
+    background: #111;
+    background: rgba(40, 40, 40, 0.9);
+    position: absolute;
+    z-index: 100;
+    padding: 15px;
+}
+ 
+    #tooltip:after /* triangle decoration */
+    {
+        width: 0;
+        height: 0;
+        border-right: 10px solid rgba(40, 40, 40, 0.9);
+        /*border-right: 10px solid transparent;*/
+        /*border-top: 10px solid rgba(40, 40, 40, 0.9); /* here is color of triangle */
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+
+        content: '';
+        position: absolute;
+        top: auto;
+        left: -10px;
+
+        /*left: 50%;
+        bottom: -10px;
+        margin-left: -10px;*/
+    }
+ 
+        #tooltip.top:after
+        {
+            border-top-color: transparent;
+            border-bottom: 10px solid #111;
+            top: -20px;
+            bottom: auto;
+        }
+ 
+        #tooltip.left:after
+        {
+            left: 10px;
+            margin: 0;
+        }
+ 
+        #tooltip.right:after
+        {
+            right: 10px;
+            left: auto;
+            margin: 0;
+        }
+</style>

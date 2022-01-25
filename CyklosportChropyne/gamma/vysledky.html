@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cyklosport Chropyně - Chřibská 50ka - Výsledky</title>
+	<meta name="Description" content="Výsledky Chřibské 50 MTB">
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#5AC0CE">
+	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#5AC0CE">
+	<link rel="stylesheet" href="din-pro/style.css">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&amp;subset=latin-ext" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+
+<body class="ch50-page" style="background-color:rgba(90,192,206, 0.8);">
+
+	<div class="ch50-container">
+		<div class="ch50-main">
+			<!-- <a href="./chribska.php" class="back_home">
+				<img src="img/back_left.png" alt="" class="back_img">
+			</a> -->
+			<!-- <a href="https://www.force.cz">
+				<img src="img/force-black.png" alt="" class="force-black">
+			</a> -->
+			<h1 class="prihlaska-heading">CH50 2021</h1>
+			<h2 class="prihlaska-heading">VÝSLEDKY</h2>
+			<!-- <form accept-charset="utf-8" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="send_form" id="prihlaska"> -->
+			<div id="divRRPublish" class="RRPublish"></div>
+
+<script type="text/javascript" src="https://my.raceresult.com/RRPublish/load.js.php?lang=cz"></script>
+<script type="text/javascript">
+
+	var rrp=new RRPublish(document.getElementById("divRRPublish"), 171314, "results");
+	rrp.ShowTimerLogo=true;
+	rrp.ShowInfoText=false;
+
+</script>
+
+		</div>
+	</div>
+
+	<footer>
+		CS<b>CH</b>&nbsp;roztočil a podporuje
+		<a href="https://www.mountiny.com" target="_blank"><img src="img/mountiny.png" alt="Mountiny"
+				class="mountiny_logo" /></a>
+	</footer>
+
+	<script type="text/javascript">
+		$(window).on("load", function () {
+			$("img.back_img").toggleClass("show");
+			$("footer").toggleClass("show");
+			$("form.send_form").toggleClass("show");
+			$(".prihlaska-heading").toggleClass("show");
+
+			$("img.force-black").toggleClass("show");
+		});
+		$(document).ready(function () {
+
+			// $("img.back_img").toggleClass("show");
+			// $("footer").toggleClass("show");
+			// $("form.send_form").toggleClass("show");
+			// $("h1.prihlaska-heading").toggleClass("show");
+			// $("img.force-black").toggleClass("show");
+
+
+			$("#vyber_trasa").change(function () {
+
+
+				var trasa = $("#vyber_trasa").val();
+				if (trasa == "dlouha") {
+
+					$("#vyber_kat option.kratka_trasa_opt").prop("disabled", true);
+					$("#vyber_kat option.dlouha_trasa_opt").prop("disabled", false);
+					$("#vyber_kat option.kratka_trasa_opt:selected").prop("selected", false);
+
+				} else if (trasa == "kratka") {
+
+					$("#vyber_kat option.dlouha_trasa_opt").prop("disabled", true);
+					$("#vyber_kat option.kratka_trasa_opt").prop("disabled", false);
+					$("#vyber_kat option.dlouha_trasa_opt:selected").prop("selected", false);
+
+				} else {
+
+				}
+			});
+
+			var realySubmit = false;
+			$("#kontrolaButton").click(function () {
+				$("#odeslatButton").trigger("click");
+			});
+			$("#prihlaska").submit(function (e) {
+
+				if (!realySubmit) {
+					e.preventDefault();
+
+					var rok = parseInt($("#rok_nar").val(), 10);
+
+					if (rok > 1900 && rok < 2017) {
+
+						var trasa = $("#vyber_trasa").val();
+						var kategorie = $("#vyber_kat").val();
+						if (kategorie === null || trasa === null) {
+
+							$("#error_info").text("Kategorie nebo trasa nebyla vybrána.");
+							$("#error_info").css("opacity", "1");
+							return;
+
+						};
+						if (kategorie.length == 3 && trasa == "kratka") {
+							realySubmit = true;
+							$("#prihlaska").submit();
+
+						} else if (kategorie.length == 2 && trasa == "dlouha") {
+							realySubmit = true;
+							$("#prihlaska").submit();
+
+						} else {
+
+							$("#error_info").text(
+								"Vámi vybraná kategorie nekoresponduje s vámi vybranou trasou.");
+							$("#error_info").css("opacity", "1");
+
+						}
+
+					} else {
+
+						$("#error_info").text(
+							"Vámi zadaný rok narození je nepravděpodobný a v přírodě neobvyklý.");
+						$("#error_info").css("opacity", "1");
+					}
+				};
+
+				$(".ch-vysledek-li h2").click(function (e) {
+					e.preventDefault();
+					$(this).toggleClass("open");
+					var target = "#" + $(this).text() + "vysledky";
+					$(target).toggleClass("open");
+				})
+
+
+
+				$("ul.seznam-photo li h2").click(function (e) {
+					e.preventDefault();
+					$(this).toggleClass("open");
+					var target = "#photo" + $(this).text();
+					$(target).toggleClass("open");
+				})
+
+
+
+				$(".photo-btn img").click(function (e) {
+					e.preventDefault();
+					$(this).toggleClass("open");
+					$("div.hidden-photo-li").toggleClass("open");
+				})
+
+
+
+				$(".vysledky-btn img").click(function (e) {
+					e.preventDefault();
+					$(this).toggleClass("open");
+					$("div.hidden-li").toggleClass("open");
+				})
+
+				$(window).on("scroll", function (e) {
+					// var offsetY = $("html").offset().top * (0)
+					screenTop = $(document).scrollTop() * -0.2;
+
+					// $('#content').css('top', screenTop);
+					$("img.ch50-bg-map").css("transform", "translate3d(" + (-0.4) * screenTop +
+						"px," +
+						screenTop + "px,0px)")
+					var dHeight = $("div.ch50-intro").height() * 2.5;
+					var alpha = (($(document).scrollTop() / dHeight));
+					$('body').css('background', 'rgba(90,192,206,' + (alpha * 2) + ')');
+				})
+
+			})
+		})
+	</script>
+
+</body>
+
+</html>

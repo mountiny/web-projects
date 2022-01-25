@@ -1,0 +1,139 @@
+<style>
+* {
+	padding: 0px;
+	margin: 0px;
+}
+html, body
+{
+	margin: 0px;
+	padding: 0px;
+	bottom: 0px;
+	height: 100%;
+
+	overflow: scroll;
+-webkit-overflow-scrolling: touch;
+}
+.container
+{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	/*background-image: url(bg.png);*/
+	padding: 0px;
+	border: 0px;
+	overflow: auto;
+}
+.header
+{
+	/*background: #FFE600;*/
+	background: black;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	margin: 0px;
+}
+.footer
+{
+	/*background: #FFE600;*/
+	background: black;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 100px;
+}
+.adContainer
+{
+	height: 80%;
+	position: relative;
+	top: 10px;
+	width: 70%;
+	margin: auto;
+	overflow: auto;
+	white-space: nowrap;
+}
+.adBar
+{
+	height: 100%;
+	position: relative;
+	left: 0px;
+	display: inline-block;
+	overflow: hidden;
+}
+div.adBar img ~ *
+{
+	vertical-align: middle;
+	padding-right: 25px;
+}
+div.adBar img:nth-child(2)
+{
+	padding-left: 25px;
+}
+div.adBar img:nth-child(1)
+{
+	vertical-align: middle;
+}
+/*div.adBar div ~ *
+{
+	vertical-align: middle;
+	padding-right: 25px;
+}
+div div:nth-child(2)
+{
+	padding-left: 25px;
+}
+div div:nth-child(1)
+{
+	vertical-align: middle;
+}*/
+.bgContent
+{
+	width: 100%;
+	height: 100%;
+	/*background-image: url(Images/red_background.png);*/
+	/*background-color: #79bd9a;*/
+	background-image: url(Images/congruent_pentagon.png);
+	overflow: auto;
+
+}
+.content
+{
+	margin: 0 auto;
+	height: 100%;
+	width: 600px;
+
+}
+.aktualita
+{
+	width: 100%;
+	padding-top: 20px;
+	border-bottom: solid #8e44ad;
+
+}
+.textAktuality
+{
+	text-align: justify;
+	width: 100%;
+	font-family: Arial;
+	font-size: 12pt;
+	/*color: #FFF00D*/
+	color: #34495e;
+
+}
+.nadpisAktuality
+{
+	font-family: Arial;
+	font-size: 20pt;
+	/*color: #FFF00D;*/
+	color: #34495e;
+}
+#menuButton
+{
+	height: 40px;
+	width: 40px;
+	position: fixed;
+	top: 5px;
+	left: 5%;
+	z-index: 10000;
+	visibility: visible;
+}
+</style>

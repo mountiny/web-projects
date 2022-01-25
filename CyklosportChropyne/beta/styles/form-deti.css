@@ -1,0 +1,232 @@
+div.message {
+  width: 100%;
+  padding: 10px 5px;
+}
+
+h3 {
+  font-size: 24px;
+  color: #101535;
+  font-weight: 700;
+}
+
+.form-cont {
+  position: relative;
+}
+
+.tile {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  color: #101535;
+  font-weight: 400;
+  line-height: 50px;
+  font-size: 32px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.tile:hover {
+  background-color: rgba(242, 41, 6, 0.5);
+}
+
+.tile.selected {
+  background-color: #ff6961;
+}
+
+.tile.disabled {
+  background-color: #bdc3c7;
+  cursor: auto;
+}
+
+div.success {
+  background-color: rgba(0, 208, 172, 0.3) !important;
+}
+
+div.failure {
+  background-color: rgba(239, 44, 29, 0.2) !important;
+}
+
+div.g-recaptcha {
+  margin: 20px 0px;
+  clear: both;
+  max-width: 90vw;
+}
+
+table.seznamPrihlasenychDeti {
+  width: 100%;
+  overflow: scroll;
+  min-width: 700px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+table.seznamPrihlasenychDeti thead {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ef2c1d;
+  border-bottom: 3px solid #ef2c1d;
+}
+
+table.seznamPrihlasenychDeti tbody tr {
+  color: black;
+  border-bottom: 2px black;
+}
+
+table.seznamPrihlasenychDeti tbody tr:nth-child(2n) {
+  border-bottom: 2px #ef2c1d;
+}
+
+table.seznamPrihlasenychDeti tr td {
+  text-align: center;
+  height: 40px;
+}
+
+table.seznamPrihlasenychDeti tr td:first-child {
+  max-width: 60px;
+}
+
+table.seznamPrihlasenychDeti tr td:first-child + td {
+  min-width: 120px;
+}
+
+table.seznamPrihlasenychDeti tr td:first-child + td + td {
+  min-width: 100px;
+}
+
+table.seznamPrihlasenychDeti tr td:first-child + td + td + td {
+  min-width: 80px;
+}
+
+table.seznamPrihlasenychDeti tr td:first-child + td + td + td + td {
+  min-width: 50px;
+}
+
+table.seznamPrihlasenychDeti tr td:first-child + td + td + td + td + td {
+  min-width: 120px;
+}
+
+form {
+  position: relative;
+  clear: both;
+}
+
+form * {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+form .form-cell {
+  width: 50%;
+  position: relative;
+  float: left;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+form .form-cell:nth-of-type(2n) {
+  padding-right: 20px;
+}
+
+form .form-cell:nth-of-type(2n + 1) {
+  padding-left: 20px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  form .form-cell {
+    padding: 0px !important;
+    width: 100%;
+  }
+  form .form-cell:last-of-type {
+    margin-bottom: 50px;
+  }
+}
+
+form .form-cell input.input-filled ~ label span {
+  -webkit-transform: translateY(-40px);
+  transform: translateY(-40px);
+}
+
+form .form-cell input.input-filled ~ label:before {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+form .form-cell input.input-filled ~ label:after {
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+}
+
+form .form-cell label.form-label {
+  position: absolute;
+  width: calc(100% - 20px);
+  top: 0;
+  text-align: left;
+  height: 40px;
+  padding: 0px 5px;
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 600px) {
+  form .form-cell label.form-label {
+    width: 100%;
+  }
+}
+
+form .form-cell label.form-label span {
+  display: block;
+  position: relative;
+  line-height: 40px;
+  width: 100%;
+  margin: 0px 20px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+form .form-cell label.form-label:before {
+  top: 0;
+}
+
+form .form-cell label.form-label:after {
+  bottom: 0;
+}
+
+form .form-cell label.form-label:after, form .form-cell label.form-label:before {
+  content: '';
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  background-color: #DE4646;
+  width: 100%;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+form .form-cell input[type=text] {
+  -webkit-appearance: none;
+  cursor: auto;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  z-index: 1000;
+  padding: 5px;
+  height: 40px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+}
+/*# sourceMappingURL=form-deti.css.map */

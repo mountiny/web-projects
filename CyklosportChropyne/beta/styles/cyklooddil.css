@@ -1,0 +1,337 @@
+.no-touch div.aktualita:first-of-type {
+
+	margin-top: 50px;
+
+}
+.no-touch .svit {
+	font-size: 10px;
+}
+.touch .svit {
+	font-size: 1.2vw;
+}
+
+table#vysledkyTabulka {
+	width: 100%;
+	color: white;
+	font-size: 14px;
+}
+table#vysledkyTabulka tr {
+	height: 120px;
+}
+.no-touch table#vysledkyTabulka tr td {
+	width: 30%;
+}
+.touch table#vysledkyTabulka tr td {
+	width: 50%;
+}
+.no-touch img#stupneVitezu {
+	/*height: 150px;*/
+	width: 365px;
+	max-width: 40vw;
+	position: absolute;
+	top: 110px;
+	left: 30px;
+}
+#budesPrazdnyCMT {
+	visibility: hidden;	
+}
+.touch img#stupneVitezu {
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	width: 300px;
+	max-width: 30vw;
+	
+}
+.touch section.content div.aktualita div.textAktuality h1 {
+	font-size: 5vw;
+	line-height: 30px;
+}
+.touch section.content div.aktualita {
+	font-size: 1.5vw;
+}
+.touch section.content table#vysledkyTabulka {
+	font-size: 3vw;
+	/*font-size: 14px;*/
+	line-height: 20px;
+}
+.touch section.content table#vysledkyTabulka .nadpisVysledku {
+	font-size: 3.5vw;
+	/*font-size: 18px;*/
+	line-height: 25px;
+}
+.touch section.content table#vysledkyTabulka tr td:first-child {
+	padding-right: 10px;
+}
+.nadpisVysledku {
+	font-size: 20px;
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.touch section.content div.aktualita div.textAktuality h1 {
+	font-size: 3.5vw;
+	line-height: 30px;
+}
+.touch section.content div.aktualita {
+	font-size: 1.5vw;
+}
+.touch section.content table#vysledkyTabulka {
+	font-size: 1.5vw;
+	line-height: 20px;
+}
+.touch section.content table#vysledkyTabulka .nadpisVysledku {
+	font-size: 2vw;
+	line-height: 25px;
+}
+	}
+table.clenoveTabulka {
+	width: 100%;
+	font-size: 14px;
+	color: white;
+
+}
+table.clenoveTabulka thead {
+	font-size: 16px;
+	font-weight: 500;
+	color: #ef2c1d;
+	border-bottom: 3px #ef2c1d;
+}
+table.clenoveTabulka tbody tr
+{
+	border-bottom: 2px gray;
+}
+table.clenoveTabulka tr td:first-child /*První sloupec*/
+{
+	text-align: left;
+	text-indent: 30px;
+	width: 370px;
+	height: 30px;
+
+}
+table.clenoveTabulka tr td:first-child + td /* Druhý sloupec */
+{
+	text-align: center;
+	width: 200px;
+	height: 30px;
+
+}
+table.clenoveTabulka tr td:first-child + td + td /*Třetí sloupec */
+{
+	text-align: center;
+	width: 200px;
+	height: 30px;
+
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { /*iPad*/
+	.touch table.clenoveTabulka {
+		max-width: 97vw;
+		font-size: 1.2vw;
+		color: white;
+
+	}
+	.touch table.clenoveTabulka thead {
+		font-size: 1.5vw;
+		font-weight: 500;
+		color: #ef2c1d;
+		border-bottom: 3px #ef2c1d;
+	}
+}
+@media only screen  and (max-device-width : 767px)  {
+	.touch table.clenoveTabulka {
+		max-width: 97vw;
+		font-size: 2.5vw;
+		color: white;
+
+	}
+	.touch table.clenoveTabulka thead {
+		font-size: 2.7vw;
+		font-weight: 500;
+		color: #ef2c1d;
+		border-bottom: 3px #ef2c1d;
+	}
+	.touch table.clenoveTabulka tbody tr
+	{
+		border-bottom: 2px gray;
+	}
+	.touch table.clenoveTabulka tr td:first-child /*První sloupec*/
+	{
+		text-align: left;
+		text-indent: 0.2vw;
+		/*width: 370px;*/
+		/*height: 30px;*/
+
+	}
+	.touch table.clenoveTabulka tr td:first-child + td /* Druhý sloupec */
+	{
+		text-align: center;
+		/*width: 200px;*/
+		/*height: 30px;*/
+
+	}
+	.touch table.clenoveTabulka tr td:first-child + td + td /*Třetí sloupec */
+	{
+		text-align: center;
+		/*width: 200px;*/
+		/*height: 30px;*/
+
+	}
+}
+.cyklooddil-clenove-bg {
+	width: 100%;
+	position: absolute;
+	top: 1210px;
+}
+table.kalendarTabulka {
+	color: white;
+	font-size: 14px;
+	width: 100%;
+	border-spacing: 3px;
+	border-collapse: collapse;
+}
+table.kalendarTabulka thead {
+	font-size: 16px;
+	font-weight: 500;
+	color: #ef2c1d;
+	border-bottom: 1px solid #ef2c1d;
+	border-collapse: collapse;
+}
+table.kalendarTabulka tbody tr
+{
+	border-bottom: 1px solid gray;
+}
+table.kalendarTabulka tbody tr:last-child
+{
+	border-bottom: none;
+}
+table.kalendarTabulka tr td:first-child /*První sloupec*/
+{
+	text-align: center;
+	width: 60px;
+	height: 30px;
+	border-right: 1px solid #ef2c1d;
+
+}
+table.kalendarTabulka tr td:first-child + td /* Druhý sloupec */
+{
+	text-align: center;
+	width: 48px;
+	height: 30px;
+	border-right: 1px solid gray;
+}
+table.kalendarTabulka tr td:first-child + td + td /*Třetí sloupec */
+{
+	text-align: left;
+	width: 165px;
+	height: 30px;
+	border-right: 1px solid #ef2c1d;
+	text-indent: 5px;
+}
+table.kalendarTabulka tr td:first-child + td + td + td /*čtvrty sloupec*/
+{
+	text-align: center;
+	width: 48px;
+	height: 30px;
+	border-right: 1px solid gray;
+
+}
+table.kalendarTabulka tr td:first-child + td + td + td + td/* pátý sloupec */
+{
+	text-align: left;
+	width: 185px;
+	height: 30px;
+	border-right: 1px solid #ef2c1d;
+	text-indent: 5px;
+}
+table.kalendarTabulka tr td:first-child + td + td + td + td + td/*šestý sloupec */
+{
+	text-align: center;
+	width: 48px;
+	height: 30px;
+	border-right: 1px solid gray;
+
+}
+table.kalendarTabulka tr td:first-child + td + td + td + td + td + td/*sedmý sloupec */
+{
+	text-align: left;
+	width: 220px;
+	height: 30px;
+	text-indent: 5px;
+
+}
+
+.touch table.kalendarTabulka {
+	color: white;
+	font-size: 1.2vw;
+	max-width: 97vw;
+	border-spacing: 3px;
+	border-collapse: collapse;
+}
+.touch table.kalendarTabulka thead {
+	font-size: 1.4vw;
+	font-weight: 500;
+	color: #ef2c1d;
+	border-bottom: 1px solid #ef2c1d;
+	border-collapse: collapse;
+}
+.touch table.kalendarTabulka tbody tr
+{
+	border-bottom: 1px solid gray;
+}
+.touch table.kalendarTabulka tbody tr:last-child
+{
+	border-bottom: none;
+}
+.touch table.kalendarTabulka tr td:first-child /*První sloupec*/
+{
+	text-align: center;
+	/*width: 60px;*/
+	/*height: 30px;*/
+	border-right: 1px solid #ef2c1d;
+
+}
+.touch table.kalendarTabulka tr td:first-child + td /* Druhý sloupec */
+{
+	text-align: center;
+	/*width: 45px;*/
+	/*height: 30px;*/
+	border-right: 1px solid gray;
+}
+.touch table.kalendarTabulka tr td:first-child + td + td /*Třetí sloupec */
+{
+	text-align: left;
+	/*width: 190px;*/
+	/*height: 30px;*/
+	border-right: 1px solid #ef2c1d;
+	text-indent: 5px;
+}
+.touch table.kalendarTabulka tr td:first-child + td + td + td /*čtvrty sloupec*/
+{
+	text-align: center;
+	/*width: 45px;*/
+	/*height: 30px;*/
+	border-right: 1px solid gray;
+
+}
+.touch table.kalendarTabulka tr td:first-child + td + td + td + td/* pátý sloupec */
+{
+	text-align: left;
+	/*width: 190px;*/
+	/*height: 30px;*/
+	border-right: 1px solid #ef2c1d;
+	text-indent: 5px;
+}
+.touch table.kalendarTabulka tr td:first-child + td + td + td + td + td/*šestý sloupec */
+{
+	text-align: center;
+	/*width: 45px;*/
+	/*height: 30px;*/
+	border-right: 1px solid gray;
+
+}
+.touch table.kalendarTabulka tr td:first-child + td + td + td + td + td + td/*sedmý sloupec */
+{
+	text-align: left;
+	/*width: 190px;*/
+	/*height: 30px;*/
+	text-indent: 5px;
+
+}

@@ -1,0 +1,596 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline 
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
+  display: block 
+
+body 
+  line-height: 1 
+
+ol, ul 
+  list-style: none 
+
+blockquote, q 
+  quotes: none 
+
+blockquote 
+  &:before, &:after 
+    content: ''
+    content: none  
+
+q 
+  &:before, &:after 
+    content: ''
+    content: none  
+
+table 
+  border-collapse: collapse
+  border-spacing: 0
+=vendor-prefix($name, $value) 
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') 
+    #{$vendor}#{$name}: #{$value}
+=more-vendor-prefix($name, $value1, $value2) 
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') 
+    #{$vendor}#{$name}: #{$value1}, #{$value2} 
+@mixin display($value) 
+  // flex | inline-flex
+  @if $value == "flex" 
+    // 2009
+    display: -webkit-box
+    display: -moz-box
+    display: box
+
+    // 2012
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flexbox // 2011 (IE 10)
+    display: flex
+  @else if $value == "inline-flex" 
+    display: -webkit-inline-box
+    display: -moz-inline-box
+    display: inline-box
+
+    display: -webkit-inline-flex
+    display: -moz-inline-flex
+    display: -ms-inline-flexbox
+    display: inline-flex
+  @else
+    display: $value
+
+// 2011 - flex-item-align (auto | start | end | center | baseline | stretch)
+// 2012 - align-self (auto | flex-start | flex-end | center | baseline | stretch)
+@mixin align-self($value: auto) 
+
+  $value-2011: $value
+  @if $value == "flex-start" 
+    $value-2011: start
+  @else if $value == "flex-end" 
+    $value-2011: end
+  
+
+  // 2012
+  @include prefixer(align-self, $value, webkit moz spec)
+
+  // 2011 (IE 10)
+  -ms-flex-item-align: $value-2011
+
+
+// 2009 - box-align (start | end | center | baseline | stretch)
+// 2011 - flex-align (start | end | center | baseline | stretch)
+// 2012 - align-items (flex-start | flex-end | center | baseline | stretch)
+@mixin align-items($value: stretch) 
+
+  $alt-value: $value
+
+  @if $value == "flex-start" 
+    $alt-value: start
+  @else if $value == "flex-end" 
+    $alt-value: end
+  
+
+  // 2009
+  @include prefixer(box-align, $alt-value, webkit moz spec)
+
+  // 2012
+  @include prefixer(align-items, $value, webkit moz ms o spec)
+
+  // 2011 (IE 10)
+  -ms-flex-align: $alt-value
+
+
+@mixin flex-direction($value: row) 
+
+  // Alt values.
+  $value-2009: $value
+  $value-2011: $value
+  $direction: normal
+
+  @if $value == row 
+    $value-2009: horizontal
+  @else if $value == "row-reverse" 
+    $value-2009: horizontal
+    $direction: reverse
+  @else if $value == column 
+    $value-2009: vertical
+  @else if $value == "column-reverse" 
+    $value-2009: vertical
+    $direction: reverse
+  
+
+  // 2009
+  @include prefixer(box-orient, $value-2009, webkit moz spec)
+  @include prefixer(box-direction, $direction, webkit moz spec)
+
+  // 2012
+  @include prefixer(flex-direction, $value, webkit moz spec)
+
+  // 2011 (IE 10)
+  -ms-flex-direction: $value
+
+
+
+=flex($values) 
+  -webkit-box-flex: $values
+  -moz-box-flex:  $values
+  -webkit-flex:  $values
+  -ms-flex:  $values
+  flex:  $values
+
+
+=order($val) 
+  -webkit-box-ordinal-group: $val 
+  -moz-box-ordinal-group: $val    
+  -ms-flex-order: $val     
+  -webkit-order: $val  
+  order: $val
+
+// use of keyframes mixin
+// +keyframes(bgcolor)
+// 	0%
+// 		background-color: #ffccf2
+// 	50%
+// 		background-color: #ccffcc
+// 	100%
+// 		background-color: #ccffff
+// * 
+//   +vendor-prefix('box-sizing', 'border-box')
+
+// -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+//        -moz-transition: background-color 0.3s linear, color 0.3s linear;
+//          -o-transition: background-color 0.3s linear, color 0.3s linear;
+//             transition: background-color 0.3s linear, color 0.3s linear;
+
+// use of keyframes mixin
+// 2009 - box-lines (single | multiple)
+// 2011 - flex-wrap (nowrap | wrap | wrap-reverse)
+// 2012 - flex-wrap (nowrap | wrap | wrap-reverse)
+@mixin flex-wrap($value: nowrap) 
+  // Alt values
+  $alt-value: $value
+  @if $value == nowrap 
+    $alt-value: single
+  @else if $value == wrap 
+    $alt-value: multiple
+  @else if $value == "wrap-reverse" 
+    $alt-value: multiple
+  
+
+  @include prefixer(box-lines, $alt-value, webkit moz spec)
+  @include prefixer(flex-wrap, $value, webkit moz ms spec)
+
+// 2009 - box-pack (start | end | center | justify)
+// 2011 - flex-pack (start | end | center | justify)
+// 2012 - justify-content (flex-start | flex-end | center | space-between | space-around)
+@mixin justify-content($value: flex-start) 
+
+  // Alt values.
+  $alt-value: $value
+  @if $value == "flex-start" 
+    $alt-value: start
+  @else if $value == "flex-end"
+    $alt-value: end
+  @else if $value == "space-between" 
+    $alt-value: justify
+  @else if $value == "space-around" 
+    $alt-value: distribute
+  
+
+  // 2009
+  @include prefixer(box-pack, $alt-value, webkit moz spec)
+
+  // 2012
+  @include prefixer(justify-content, $value, webkit moz ms o spec)
+
+  // 2011 (IE 10)
+  -ms-flex-pack: $alt-value
+
+
+// 2011 - flex-line-pack (start | end | center | justify | distribute | stretch)
+// 2012 - align-content (flex-start | flex-end | center | space-between | space-around | stretch)
+@mixin align-content($value: stretch) 
+
+  $value-2011: $value
+  @if $value == "flex-start" 
+    $value-2011: start
+  @else if $value == "flex-end" 
+    $value-2011: end
+  @else if $value == "space-between" 
+    $value-2011: justify
+  @else if $value == "space-around" 
+    $value-2011: distribute
+  
+
+  // 2012
+  @include prefixer(align-content, $value, webkit moz spec)
+
+  // 2011 (IE 10)
+  -ms-flex-line-pack: $value-2011
+
+// 2009 - box-ordinal-group (integer)
+// 2011 - flex-order (integer)
+// 2012 - order (integer)
+@mixin order($int: 0) 
+  // 2009
+  @include prefixer(box-ordinal-group, $int, webkit moz spec)
+
+  // 2012
+  @include prefixer(order, $int, webkit moz spec)
+
+  // 2011 (IE 10)
+  -ms-flex-order: $int
+
+$prefix-for-webkit:    true !default
+$prefix-for-mozilla:   true !default
+$prefix-for-microsoft: true !default
+$prefix-for-opera:     true !default
+$prefix-for-spec:      true !default
+
+=prefixer($property, $value, $prefixes) 
+  @each $prefix in $prefixes 
+    @if $prefix == webkit 
+      @if $prefix-for-webkit 
+        -webkit-#{$property}: $value
+      
+    @else if $prefix == moz 
+      @if $prefix-for-mozilla 
+        -moz-#{$property}: $value
+      
+    @else if $prefix == ms 
+      @if $prefix-for-microsoft 
+        -ms-#{$property}: $value
+      
+    @else if $prefix == o 
+      @if $prefix-for-opera 
+        -o-#{$property}: $value
+      
+    @else if $prefix == spec 
+      @if $prefix-for-spec 
+        #{$property}: $value
+      
+    @else  
+      @warn "Unrecognized prefix: #{$prefix}"
+@mixin screen($res-min, $res-max, $orientation: false) 
+  @if $orientation 
+    @media only screen and (min-width: $res-min) and (max-width: $res-max) and (orientation:#{$orientation}) 
+      @content
+  @else 
+    @media only screen and (min-width: $res-min) and (max-width: $res-max) 
+      @content
+@mixin desktop($min-device-width)
+  @media only screen and (min-device-width: $min-device-width)
+    @content
+
+@mixin mobile($max-device-width)
+  @media only screen and (max-device-width: $max-device-width)
+    @content
+
+@mixin _orientation($orientation) 
+  @media screen and (orientation: $orientation) 
+    @content
+
+@mixin portrait() 
+  @include _orientation(portrait) 
+    @content
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
++keyframes(blur)
+  0%
+    display: visible
+  1%
+    display: none
+  100%
+    display: none
++keyframes(unblur)
+  0%
+    display: none
+  99%
+    display: visible
+  100%
+    display: visible
+
+html, body
+  width: 100vw
+  font-family: 'Open Sans', sans-serif
+a
+  text-decoration: none
+  color: inherit
+  +vendor-prefix("transition", "color 0.3s linear")
+  &:hover
+    color: #919191
+
+section.container
+  margin-bottom: 55px
+  background-color: #F2F2F2
+  width: 100%
+  height: 100%
+  display: block
+  div.content-container
+    .desktop-text
+      display: inline
+    .mobile-text
+      display: none
+    width: 90%
+    max-width: 1240px
+
+    height: 100%
+    position: relative
+    display: block
+    top: 0
+    margin: 0 auto
+    font-family: 'Open Sans', sans-serif
+    img.stamp, img.fb
+      position: absolute
+      right: 35px
+      width: 65px
+    img.stamp
+      top: 0
+    img.fb
+      bottom: 0
+    img.heading-logo
+      position: absolute
+      left: 0
+      top: 35px
+      height: 60px
+    div.nadpis
+      position: relative
+      display: block
+      padding-top: 160px
+      width: auto
+      height: auto
+    h1
+      text-transform: uppercase
+      font-weight: 100
+      font-size: 42px
+      color: white
+      padding: 5px 3px
+      letter-spacing: 1px
+      &.otevirame
+        padding-bottom: 16px
+      span
+        background-color: black
+        font-weight: 300
+        padding: 1px 20px 0px 5px
+    h2
+      text-transform: uppercase
+      font-weight: 100
+      font-size: 28px
+      color: white
+      padding: 0px 3px
+      span
+        background-color: black
+        padding: 1px 30px 1px 5px
+        font-weight: 100
+      &.kdy span
+        padding: 2px 20px 2px 10px
+        line-height: 48px
+    b
+      font-weight: 600
+    div.rects
+      position: relative
+
+      margin-top: 55px
+      margin-bottom: 80px
+      width: 100%
+      +display(flex)
+      +justify-content(space-between)
+      +flex-wrap(wrap)
+
+      article.rect
+        height: 370px
+        
+        // position: absolute
+        // +flex(1 1 308px)
+        width: 308px
+        top: 0px
+        max-height: 50vh
+        div.heading
+          position: relative
+          margin-bottom: 10px
+          line-height: 30px
+          width: auto
+        div.content
+          width: 100%
+          height: 100%
+          position: relative
+          background-color: rgba(255,255,255,0)
+          border-width: 6px
+          border-style: solid
+          border-color: white
+          color: #919191
+          table
+            position: absolute
+            top: 30px
+            left: 50%
+            +vendor-prefix("transform", "translateX(-50%)")
+            width: 95%
+            font-size: 26px
+            font-weight: 300
+            letter-spacing: 1.5px
+            text-transform: uppercase
+            td
+              padding: 5px 5px
+              height: 30px
+            tr:first-child
+              height: 40px
+            tr:first-child + tr
+              height: 80px
+          p.kontakt-text
+            position: relative
+            top: 30px
+            span
+              line-height: 40px
+
+          +more-vendor-prefix("transition", "background-color 0.3s linear", "color 0.3s linear")
+          &:hover
+            background-color: rgba(255,255,255,1)
+            color: black
+          p
+            padding: 8px 8px
+            font-size: 20px
+            font-weight: 300
+            line-height: 24px
+    div.prohlidka-cont
+      width: 100%
+      position: relative
+      margin-top: 100px
+      margin-bottom: 60px
+      div.my-gallery
+        padding-top: 50px
+        width: 100%
+        opacity: 0
+        +vendor-prefix("transition", "opacity 0.3s ease-out")
+        +display(flex)
+        +flex-direction(row)
+        +flex-wrap(wrap)
+        img
+          width: auto
+          height: 100%
+          // width: 100%
+          // height: auto
+          position:relative
+          margin: auto
+          // position: absolute
+        figure
+          +flex(1 1 25%)
+          max-width: 25%
+          // height: 0
+          // padding-bottom: 100%
+          // height: 25vw
+          // max-height: 310px
+          overflow: hidden
+      h2
+        position: relative
+      iframe.prohlidka
+        position: relative
+        margin-top: 40px
+        width: 100%
+
++screen(0px, 840px, false)
+  section.container
+    width: 100%
+    *
+      +vendor-prefix('box-sizing', 'border-box')
+    div.content-container
+      width: 300px
+      .desktop-text
+        display: none
+      .mobile-text
+        display: inline
+      h1
+        font-size: 28px
+        line-height: 42px
+        span
+          padding: 1px 14px 0px 5px
+      h2
+        line-height: 42px
+      img.stamp, img.fb
+        right: 0
+        width: 50px
+      img.heading-logo
+        position: relative
+        left: 0
+        top: 30px
+        height: 50px
+        padding-bottom: 70px
+      div.nadpis
+        position: relative
+        top: 10%
+        // line-height: 42px
+        padding-top: 0px
+      div.rects
+
+        margin-top: 15px
+        margin-bottom: 15px
+        article.rect
+          +flex(1 1 100%)
+          width: 100%
+          min-width: 100%
+          height: 370px
+          margin-bottom: 50px
+          padding: 20px 0px
+          max-height: none
+          div.content
+            p
+              font-size: 19px
+              line-height: 23px
+            table
+              font-size: 24px
+      div.prohlidka-cont
+        margin-top: 20px
+        div.my-gallery
+          padding-top: 20px
+          figure
+            +flex(1 1 100%)
+            max-width: 100%
+            overflow: hidden
+
++screen(841px, 1030px, false)
+  section.container
+    div.content-container
+      // h1
+      //   font-size: 28px
+      //   span
+      //     padding: 1px 14px 0px 5px
+      // img.stamp, img.fb
+      //   right: 0
+      //   width: 50px
+      // img.heading-logo
+      //   position: relative
+      //   left: 0
+      //   top: 30px
+      //   height: 50px
+      //   padding-bottom: 70px
+      
+      div.rects
+
+        article.rect
+          width: 240px
+          div.content
+            p
+              font-size: 16px
+              line-height: 24px
+            table
+              font-size: 18px
+      div.prohlidka-cont
+        div.my-gallery
+          figure
+            +flex(1 1 33%)
+            max-width: 33%
+            overflow: hidden
+
+  
+

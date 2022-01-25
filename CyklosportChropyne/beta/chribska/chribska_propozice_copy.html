@@ -1,0 +1,1154 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cyklosport Chropyně</title>
+
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<link rel="stylesheet" type="text/css" href="../styles/chribska.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="../script/jquery.shorten.js"></script>
+	<script src="../script/modernizr.js"></script>
+	<script type="text/javascript" src="../script/jquery.unveil.js"></script>
+	<script type="text/javascript" src="../script/background.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+	$("nav.trigger ul li div img.ramForeground").hover(function() {
+		$("nav.trigger ul li div img.ram").css("opacity", "0.5");
+	}, function() {
+		$("nav.trigger ul li div img.ram").css("opacity", "0.8");
+	});
+
+	function smoothScroll(target) {
+        $('body,html').animate(
+        	{'scrollTop':target.offset().top},
+        	600
+        );
+	}
+
+	$('.arrowDown').on('click', function(event){
+        event.preventDefault();
+        smoothScroll($(this.hash));
+    });
+
+});
+	
+var lastScrollTop = 0, delta = 200;
+
+   $(window).scroll(function(event){
+       var st = $(this).scrollTop();
+       var nav = $(".no-touch nav.menu");
+       var navT = $("nav.trigger");
+       var scrolled = false;
+       
+       if(Math.abs(lastScrollTop - st) <= delta)
+          return;
+       
+       if (st > lastScrollTop){
+           // downscroll code
+           // console.log('scroll down');
+           if (scrolled) {
+           	nav.removeClass("fallDown");
+           }
+           nav.addClass("fallUp"); 
+           nav.css("top", "-50");         
+       } else {
+	          // upscroll code
+	          // console.log('scroll up');
+	          nav.removeClass("fallUp");
+	          nav.addClass("fallDown");
+	          scrolled = true;
+	          nav.css("top", "0");
+       }
+      	 lastScrollTop = st;
+   });
+$(document).ready(function() {
+	$("nav.trigger").hover(function(){
+		var nav = $(".no-touch nav.menu");
+        var navT = $("nav.trigger");
+        nav.removeClass("fallUp");
+        nav.addClass("fallDown");
+        nav.css("top", "0");
+	});
+});
+$(window).load(function(){
+	function showUpLogo() {
+		$(".logo").addClass("fadeIn");
+		$(".logo").css("opacity", "1");
+		$(".logoMob").addClass("fadeIn");
+		$(".logoMob").css("opacity", "1");
+		$(".no-touch nav.menu").addClass("fallDown");
+		$(".no-touch nav.menu").css("top", "0");
+		$("nav.trigger").addClass("fallDown");
+		$("nav.trigger").css("top", "0");
+	}
+	setTimeout(showUpLogo, 200); 
+	var f1 = $('#f1');
+	var f2 = $('#f2');
+	var f3 = $('#f3');
+	var s1 = $('#s1');
+	var s2 = $('#s2');
+	var s3 = $('#s3');
+	var t1 = $('#t1');
+	var t2 = $('#t2');
+	var t3 = $('#t3');
+var t4 = $('#t4');
+
+	var neuplnaVlna = false; //Zda-li je na řadě neuplna vlna
+
+	var ahojVar = $('section.content');
+
+	function ahoj() {
+		$('section.content').css("background-color", "yellow");
+	}
+	function rotateFirstAds() {
+
+		f1.animate({
+
+			opacity: 0,
+
+		}, 500, function() {
+			f1.removeClass("displayed");
+			f1.addClass("hidden");
+			f1.css("opacity", "1");
+
+			f2.removeClass("hidden");
+			f2.addClass("displayed");
+			f2.css("opacity", "0");
+			f2.animate({
+			opacity: 1,
+			}, 500, function() {
+				setTimeout(rotateSecondAds, 2000);
+			})
+		});
+
+		s1.animate({
+
+			opacity: 0,
+
+		}, 500, function() {
+			s1.removeClass("displayed");
+			s1.addClass("hidden");
+			s1.css("opacity", "1");
+
+			s2.removeClass("hidden");
+			s2.addClass("displayed");
+			s2.css("opacity", "0");
+
+			s2.animate({
+				opacity: 1,
+			}, 500 )
+		});
+
+		t1.animate({
+
+			opacity: 0,
+
+		}, 500, function() {
+			t1.removeClass("displayed");
+			t1.addClass("hidden");
+			t1.css("opacity", "1");
+
+			t2.removeClass("hidden");
+			t2.addClass("displayed");
+			t2.css("opacity", "0");
+
+			t2.animate({
+				opacity: 1,
+			}, 500 )
+		});
+
+	}
+	function rotateSecondAds() {
+		if(!neuplnaVlna) {
+			f2.animate({
+
+				opacity: 0,
+
+			}, 500, function() {
+				f2.removeClass("displayed");
+				f2.addClass("hidden");
+				f2.css("opacity", "1");
+
+				f1.removeClass("hidden");
+				f1.addClass("displayed");
+				f1.css("opacity", "0");
+
+				f1.animate({
+					opacity: 1,
+				}, 500, function() {
+					setTimeout(rotateFirstAds, 2000);
+				})
+			});
+
+			s2.animate({
+
+				opacity: 0,
+
+			}, 500, function() {
+				s2.removeClass("displayed");
+				s2.addClass("hidden");
+				s2.css("opacity", "1");
+
+				s1.removeClass("hidden");
+				s1.addClass("displayed");
+				s1.css("opacity", "0");
+
+				s1.animate({
+					opacity: 1,
+				}, 500 )
+			});
+
+			t2.animate({
+
+				opacity: 0,
+
+			}, 500, function() {
+				t2.removeClass("displayed");
+				t2.addClass("hidden");
+				t2.css("opacity", "1");
+
+				t1.removeClass("hidden");
+				t1.addClass("displayed");
+				t1.css("opacity", "0");
+
+				t1.animate({
+					opacity: 1,
+				}, 500 )
+			});
+		} else {
+			f2.animate({
+
+				opacity: 0,
+
+			}, 500, function() {
+				f2.removeClass("displayed");
+				f2.addClass("hidden");
+				f2.css("opacity", "1");
+
+				f3.removeClass("hidden");
+				f3.addClass("displayed");
+				f3.css("opacity", "0");
+
+				f3.animate({
+					opacity: 1,
+				}, 500, function() {
+					setTimeout(rotateThirdAds, 2000);
+				})
+			});
+
+			s2.animate({
+
+				opacity: 0,
+
+			}, 500, function() {
+				s2.removeClass("displayed");
+				s2.addClass("hidden");
+				s2.css("opacity", "1");
+
+				s3.removeClass("hidden");
+				s3.addClass("displayed");
+				s3.css("opacity", "0");
+
+				s3.animate({
+					opacity: 1,
+				}, 500 )
+			});
+
+			t2.animate({
+
+				opacity: 0,
+
+			}, 500, function() {
+				t2.removeClass("displayed");
+				t2.addClass("hidden");
+				t2.css("opacity", "1");
+
+				t4.removeClass("hidden");
+				t4.addClass("displayed");
+				t4.css("opacity", "0");
+
+				t4.animate({
+					opacity: 1,
+				}, 500 )
+			});
+		}
+
+	}
+
+	rotateFirstAds()
+})
+</script>
+
+</head>
+<body class="nav-is-fixed chribska" style=""> <!-- nav-is-fixed  background-image:url('../images/cyklo_masakr.jpg');-->
+	<nav class="menu cd-nav">
+		<ul id="cd-primary-nav" class="is-fixed menuFirstLayer cd-primary-nav">  <!-- is-fixed -->
+			<li class="menuAktuality">
+				<a href="../index.php">
+					Aktuality
+				</a>
+			</li>
+			<li class="menuCyklooddil has-children">
+				<a href="../cyklooddil/cyklooddil.html">
+					Cyklooddíl
+				</a> 
+				<ul class="menuSecondLayerCyklooddil hidden-submenu cd-secondary-nav is-hidden">
+					<!-- <a href="http://www.cyklosportchropyne.cz/radim_look/cyklooddil_clenove.html"> -->
+					<li class="go-back">
+						<a href="#cd-primary-nav">Zpět</a>
+					</li>
+					<li class="submenuClenove cyklooddilMob">
+						<a class="cd-nav-item" href="../cyklooddil/cyklooddil.html">
+							Výsledky
+						</a>
+					</li>
+					<li class="submenuClenove">
+						<a class="cd-nav-item" href="../cyklooddil/cyklooddil_clenove.html">
+							Členové
+						</a>
+					</li>
+					<!-- </a> -->
+					<li class="submenuKalendar">
+						<a class="cd-nav-item" href="../cyklooddil/cyklooddil_kalendar.html">
+							Kalendář
+						</a>
+					</li>
+					<li class="submenuArchiv">
+						<a class="cd-nav-item" href="../cyklooddil/s2014.php">
+							Archiv akt.
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menuChribska has-children">
+				<a  style="font-weight: bold" href="chribska_propozice.html">
+					FORCE Chřibská 50 MTB
+				</a>
+				<ul class="menuSecondLayerChribska hidden-submenu cd-secondary-nav is-hidden">
+					<li class="go-back">
+						<a href="#cd-primary-nav">Zpět</a>
+					</li>					
+					<li class="submenuPropozice">
+						<a  style="font-weight: bold" href="chribska_propozice.html">Propozice</a>
+					</li>
+					<li  class="submenuPrihlaska">
+						<a href="chribska_prihlaska.php">Přihláška</a>
+					</li>
+					<li class="submenuSeznam">
+						<a href="chribska_seznam.php">
+							Seznam přihlášených
+						</a>
+					</li>
+					<li class="submenuMapa">
+						<a href="chribska_mapa.html">
+							Mapa
+						</a>
+					</li>
+					<li class="submenuVysledky">
+						<a href="chribska_vysledky.html">
+							Výsledky
+						</a>
+					</li>
+					<li class="submenuFotogalerie">
+						<a href="chribska_foto.html">
+							Fotogalerie
+						</a>
+					</li>
+					
+				</ul>
+			</li>
+			<li class="menuDetske has-children">
+				<a href="../detske_zavody/detske_zavody.html">
+								Dětské závody
+							</a>
+				<ul class="menuSecondLayerDetske hidden-submenu cd-secondary-nav is-hidden">
+					<li class="go-back">
+						<a href="#cd-primary-nav">Zpět</a>
+					</li>
+					<li class="detskeMobile">
+						<a href="../detske_zavody/detske_zavody.html">Propozice</a>
+					</li>
+					<li class="submenuPrihlaskaD">
+						<a href="../detske_zavody/detske_zavody_prihlaska.php">Přihláška</a>
+					</li>
+					<li class="submenuVysledkyD">
+						<a href="../detske_zavody/detske_zavody_vysledky.html">
+							Výsledky
+						</a>
+					</li>
+					<li class="submenuFotogalerieD">
+						<a href="https://www.flickr.com/photos/vilemeliv/albums">
+							Fotogalerie
+						</a>
+					</li>
+										
+				</ul>
+			</li>
+			<li class="menuFotogalerie">
+				<a href="https://www.flickr.com/photos/cschropyne/" target="_blank">
+								Fotogalerie
+							</a>
+			</li>
+			<li class="menuProdejna">
+				<a href="../prodejna/prodejna.html">
+							Prodejna
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<nav class="trigger cd-main-header">
+		<ul class="cd-header-buttons">
+			<li>
+				<a class="cd-nav-trigger" href="#cd-primary-nav">
+					Menu
+					<span></span>
+				</a>
+				<a class="desktop-nav"  href="../index.php">
+					<div class="burger-cont" >
+						<img src="../images/ramS2.png" class="ram">
+						<img src="../images/ramW.png" class="ramForeground">
+					</div>
+				</a>
+				
+			</li>
+		</ul>
+	</nav>
+	<section id="section2" class="content cd-main-content">
+	<!-- <div class="aktualita"> -->
+		<div class="aktualita propozice">
+			
+
+			<div class="textPropozic">
+
+			<a href="http://www.force.cz" target="_blank">
+			<img class="obrazekAktuality force" src="../images/sponsors/logo-force.png" style="padding-bottom: 0px;">
+			</a>
+			
+			<h2>XVI. ročník </h2>
+			<h4>populárního závodu horských kol</h4>
+			<h2>FORCE CHŘIBSKÁ 50/30 MTB 2019</h2>
+			<!-- <br> -->
+		
+			</div>
+			<div class="textPropozic">
+			
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/SX8u5SGQ9DU" frameborder="0" allowfullscreen></iframe> -->
+			
+			<h4>Termín:</h4>
+			<h3>SOBOTA 8. ČERVNA 2019</h3>
+
+			<h4 style="padding-top: 20px; border-top: 2px solid #ef2c1d;">Pod záštitou:</h4>
+			<div class="reklamy" style="text-align:center;border-bottom: 2px solid #ef2c1d; padding: 20px 0px;">
+				<a href="http://www.mesto-kromeriz.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/sponsors/km-black.png"></a>
+				
+				<a href="http://www.lesycr.cz/Stranky/default.aspx" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/lesycr_neg.png"></a>
+
+				<a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwjihbaw483cAhVC66QKHVpeAJEQFjAAegQIAhAC&url=https%3A%2F%2Fwww.kr-zlinsky.cz%2F&usg=AOvVaw15eTfpOLNqIxAkV3N56Cb-" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/zl_kraj_Logo_Neg.png"></a>
+			</div>
+			
+			<h4>Mediální partneři:</h4>
+				<div class="reklamy" style="text-align:center; padding: 20px 0px;border-bottom: 2px solid #ef2c1d;">
+			
+	
+					<a href="http://www.radiozlin.cz" target="_blank">
+						<img class="obrazky-sponzori" src="../images/sponsors/radio-zlin-black.png"></a>
+					<a href="http://www.rockmax.cz" target="_blank">
+						<img class="obrazky-sponzori" src="../images/sponsors/rockmax-black.png"></a>
+				</div>
+			<h4>Sponsoři:</h4>
+			<div class="reklamy" style="text-align:center; padding: 20px 0px;">
+	
+			<a href="http://www.kruzik.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/kruzik_neg.png" style="padding: 27px 30px;"></a>
+			<!-- <a href="http://www.shop.lawi.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/lawi_black.png"></a>
+			<a href="http://www.kmotr.cz/cs" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/kmotr_logo_black.png"></a>
+			<a href="http://www.krahulik.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/sponsors/krahulik-black.png"></a>
+			<a href="http://www.ktm-bikes.at" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ktm_black.png"></a>
+			<a href="http://www.bottico.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/dtswiss.png" style="max-width: 280px;"></a>
+	
+			<a href="http://www.onza.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/sponsors/onza_black.png"></a>
+			<a href="https://www.dressme.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/sponsors/dressMe_black.png"></a>
+			<a href="http://www.kmotr.cz/cs" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/kmotr_logo_black.png"></a>
+			<a href="http://www.kompavacz.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/kompava.png"></a>
+			<a href="https://www.krahulik.cz" target="_blank">
+				<img style="max-height:120px;" class="obrazky-sponzori" src="../images/sponsors/krahulik-black.png"></a> -->
+			<a href="http://www.vystavistefloria.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/sponsors/floria-black.png"></a>
+			<a href="http://www.optikafenix.cz/index.html" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/fenix_neg.png" style="padding: 10px 30px;"></a>
+			<a href="http://www.suskm.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/SUS_Km_logo_black.png"></a>
+			<a href="http://www.velo-cafe.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/velocafe_neg.png"></a>
+			<a href="http://www.zubr.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/zubr.png"></a>
+			<a href="http://www.fg-forte.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/fg-forte.png"></a>
+			<a href="https://www.aev.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/aev.png"></a>
+			<a href="http://www.ibesip.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/besip.png"></a>
+			<a href="http://www.cervenykrizkm.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/cck.png"></a>
+			<a href="http://www.multi-s.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/multi-s.png"></a>
+			<a href="http://www.stavconsult.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/stav_consult.png"></a>
+			<a href="http://www.magneton.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/magneton.png"></a>
+			<a href="https://www.firmy.cz/detail/309236-ferometal-kromeriz-1.html" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ferometal.png"></a>
+			<a href="http://www.emhulin.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/elektromont.png"></a>
+			<a href="https://www.eastwander.com" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ew.png"></a>
+			<a href="https://www.dressme.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ch50_2017_sponzori__dressme.png"></a>
+			<a href="https://www.sportvyziva.cz/www-sportvyziva-cz/eshop/7-1-Sortiment-dle-vyrobce/10-2-Science-In-Sport-SiS" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/sis.png"></a>
+			<a href="http://www.eimexpress.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/eim.png"></a>
+			<!-- <a href="http://www.kompavacz.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/kompava.png" style="max-width: 280px;"></a>
+			<a href="http://www.ethic-sport.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/sponsors/ethicsport_neg.png"></a>
+				
+				<a href="https://www.dressme.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ch50_2017_sponzori__dressme.png"></a>
+
+				<a href="http://www.izomat.cz/cs/" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ch50_2017_sponzori__izomat.png"></a>
+
+				<a href="http://www.naradikromeriz.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ch50_2017_sponzori__kroma.png"></a>
+
+				<a href="http://www.magneton.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ch50_2017_sponzori__magneton.png"></a>
+
+				<a href="https://www.montkovo.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ch50_2017_sponzori__montkovo.png"></a>
+
+				<a href="http://www.plastika.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ch50_2017_sponzori__plastika.png"></a>
+
+				<a href="https://www.ptacek.cz/kontakty/detail/pobocky/171-kromeriz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ch50_2017_sponzori__ptacek.png"></a>
+
+				<a href="http://www.stavconsult.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ch50_2017_sponzori__stav_consult.png"></a>
+
+				<a href="http://www.sufanek.cz" target="_blank">
+				<img class="obrazky-sponzori" src="../images/loga/ch50_2017_sponzori__sufanek.png"></a> -->
+
+
+				</div> 
+			
+<h4 style="padding-top: 20px; border-top: 2px solid #ef2c1d;">Videopozvánka:</h4>
+			<p>
+			<iframe width="420" height="315"
+src="https://www.youtube.com/embed/WhJHf59Qhns" frameborder="0" allowfullscreen>
+</iframe>
+			</p>
+			<h4 style="padding-top: 20px; border-top: 2px solid #ef2c1d;">Pořadatel:</h4>
+			<p>
+			Cyklistický oddíl CYKLOSPORT CHROPYNĚ<br>
+			Komenského 348<br>
+			768 11 Chropyně
+			</p>
+
+			<h4>Místo konání, start a cíl:</h4>
+			<p>
+				výstaviště <a href="http://www.vystavistefloria.cz" target="_blank">Floria</a>, Kroměříž. (<a href="https://www.google.cz/maps/place/49°16'59.6%22N+17°23'32.2%22E/@49.2831004,17.3908934,16.54z/data=!4m2!3m1!1s0x0:0x0?hl=cs" target="_blank" >49.2832325N, 17.3922756E</a>)<br><br>
+				<b style="color:#ef2c1d;">V den startu bude vstup na výstaviště <a href="http://www.vystavistefloria.cz" target="_blank">Floria</a> ZDARMA!</b><br><br>
+				Stravování závodníků bude zajištěné v rámci výstaviště Floria.
+			</p>
+			<!-- <h3>CH50 LIVE</h3>
+			<p>
+				Závodníci na krákou trasu se mohou prezentovat do 10:45.<br><br>
+
+				Ve středu 13. dubna o půlnoci bude ukončena možnost se přihlašovat online.<br><br>
+			Jelikož se trať line přes železnici, vybízíme k obezřetnosti a upozorňujeme, že závodníci, kteří přes koleje přejedou po spuštění výstražných zařízení, budou <b>diskvalifikování</b>.<br><br>
+
+				 Na výstavišti můžete očekávat atrakce pro děti mj. skákací hrad. <b>Avšak dětské závody zde nejsou pořádány.</b> Ty se budou jako každý rok konat na konci května (29.5.) v Chropyni v okolí tamějšího zámku. <a href="../detske_zavody/detske_zavody.html">Jste srdečně zváni</a>.
+				 <br><br>
+				 <h3>Stravování</h3>
+				 Na stravenku si závodníci budou moci vybrat:
+				 <ul>
+				 	<li>Těstoviny s grilovanou zeleninou v tomatové omáčce</li>
+				 	<li>Boloňské těstoviny</li>
+				 	<li>Rizoto s kuřecím masem, zeleninou a sýrem</li>
+				 	<li>Hovězí guláš, pečivo</li>
+				 	<li>Pivo alko a nealko / s příchutí</li>
+				 	<li>Neperlivá / jemně perlivá voda</li>
+				 </ul>
+				 Ve stejné restauraci, kde bude jídlo připraveno pro závodníky, si bude moci psychická podpora a doprovod dopřát i jiných než-li výše uvedených pochutin.
+				 <br><br>
+				 <b>Přijaté platby po 14.4. 20:00 nemusí být spárovány s přihláškou, a proto bude startovné považováno za neuhrazené. Případné nesrovnalosti budou řešeny individuálně s ředitelem závodu při prezentaci.</b>
+				 <br><br>
+				 <h3>Kontakt na zástupce pořadatele</h3>
+				 TEL: +420 603 446 917
+				 E-mail: vk1973@seznam.cz
+
+
+			</p>
+			<img src="../images/ch50_mapa_areal_2016.jpg" style="width: 100%;"> -->
+			<!-- <p>rekreační areál Kamínka u obce Roštín, 12 km od Kroměříže, směr Kyjov. Jedná se o rekreační areál s kompletním zázemím pro závodníky. K dispozici jsou sociální zařízení, sprchy, možnost mytí kol (bude přistavena cisterna s vodou).</p> -->
+			
+			<!-- h4>Prezentace:</h4>
+					<p>
+						pátek 17. dubna 2015 od 17:00 do 20:00 hod<br>
+						sobota 18. dubna 2015 od 8:00 do 10:00 hod<br>
+						<b>(maximální povolený počet závodníků je 500)</b>
+					</p> -->
+
+			<h4>Trasy:</h4>
+			<p>
+			dlouhá <b>T50</b>: cca 50 km, převýšení 920 m (maximální počet účastníků je 500)<br>
+			krátká <b>T30</b>: cca 30 km, převýšení 580 m <br><br>
+
+			<!-- <b>Na trase T30 se bude poprvé konat rovněž závod <span style="color:red;">běžecký</span>, jenž bude startovat 5 minut po startu krátké trasy. Více detailů připravujeme, registrace i na běžecké klání bude v nejbližší době spuštěna.</b> -->
+
+			</p>
+			<p>Trasa T50 v roce 2018 ještě nemá finální podobu, leč nepředpokládáme zásadní změny oproti roku 2017. Loňskou mapu můžete nalézt <a href="chribska_mapa.html">zde</a>. <!-- Místo oficiálního startu stejně jako finální podoba trati bude zveřejněna v nejbližší době. -->
+</p>
+			<p>
+				<h4><b>Trasa T50 je zařazena jako druhý závod do série závodů <a href="http://www.karpatymtbtour.com" target="_blank">GHOST Karpaty MTB Tour 2018</a>.</b></h4>
+			</p>
+			<!-- <p>délka trasy závodu je cca 50 km s převýšením přibližně 950 m převážně po zpevněných lesních cestách, občerstvovací stanice bude cca na 30. km na odbočce k rekreačnímu areálu Kamínka pod Bunčem. Trasa bude podobná s ročníkem 2014.</p> -->
+			<h3>
+				Soutěž firemních týmů
+			</h3>
+			<p>Pro letošní rok jsme si pro Vás připravili novinku v podobě <span style="color:red;">soutěže firemních týmů</span> (nejedná se o klasickou týmovou soutěž). <br>
+			Každý firemní tým se skládá ze tří členů jedoucích na stejné trati. Týmy se mohou přihlašovat jak na T50 tak i na T30.<br>
+			Výsledný čas týmu je součtem časů jednotlivých závodníků, přičemž jsou závodnící stále hodnoceni i v jednotlivých kategoriích dané trati.<br>
+			Firemní tým může získat možnost propagace v prostoru startu a cíle rovněž jako i na webových stránkách.<br>
+			Pro zájemce: více informací získáte u pořadatele na e-mailu: <a href="mailto:oddil@cyklosportchropyne.cz">oddil@cyklosportchropyne.cz</a> případně telefonicky na: <span style="color:red;">603446917</span>.</p>
+			<h4>Prezentace:</h4>
+			<p>
+			Pátek:   16:00 - 19:30<br>
+			Sobota: 8:00  - 10:00 T50<br>
+			             8:00  - 10:45 T30<br>
+			</p>
+			<h4>Start:</h4>
+			<p>
+				11:00 T50<br>
+				<span style="font-weight: 700; color:#ef2c1d;">12:00 T30</span>
+			</p>
+			<h4>Limit pro dojetí tras:</h4>
+			<p>
+				16:00
+			</p>
+			<h4>Vyhlášení výsledků:</h4>
+			<p>
+				mezi 15:00 a 16:00
+			</p>
+			<h4>Startovné:</h4>
+			<p>
+				- zahrnuje startovní číslo, časomíru, občerstvení na trati (partner pitného režimu <a href="http://www.kompavacz.cz">KOMPAVA</a>) i po závodě (stravenky), sprchy a mytí kol.<br>
+				<b>
+				T50 - 390 Kč<br>
+				T30 - 350 Kč<br>
+				</b>
+				<br>
+				- uhrazené do 30. 3. 2018 (ne včetně) (ve startovném je zahrnut pár originálních cyklistických ponožek)<br>
+				- uhrazené do 6. 4. 2018 (ne včetně) (bez nároku na cyklistické ponožky)
+				<!-- uhrazené do 1. 4. 2016 (ve startovném je zahrnut pár originálních cyklistických ponožek) <br> -->
+				<br><br>
+				<b>Přijaté platby po 12.4. 20:00 nemusí být spárovány s přihláškou, a proto bude startovné považováno za neuhrazené. Případné nesrovnalosti budou řešeny individuálně s ředitelem závodu při prezentaci.</b><br>
+				Startovné je možno uhradit i při prezentaci v pátek 13. 4. a v sobotu 14. 4. a to ve výši <b>450 Kč</b> (bez nároku na cyklistické ponožky)
+				<br>
+				Ve čtvrtek 12. dubna ve 17:00 bude ukončena možnost se přihlašovat online. Platby, které příjdou v pátek se neprojeví v seznamu přihlášených a nebudou spárovány.
+				<!-- Přihlásit se a zaplatit startovné je také možno v kavárně <a href="http://www.velo-cafe.cz" target="_blank"><b>veloCAFÉ</b></a> (Velké náměstí 46/37, Kroměříž). -->
+				<!-- <br><br>
+				<b>CH50 LIVE</b>
+				<br><br>
+				Závodníci na krákou trasu se mohou prezentovat do 10:45.<br>
+
+				Ve středu 13. dubna o půlnoci bude ukončena možnost se přihlašovat online. -->
+			</p>
+
+			<p>
+				<b>!!Uhrazené startovné se v případě neúčasti na závodě nevrací!!</b> Do 6. 4. 2018 (ne včetně) je možný převod uhrazeného startovného na jiného účastníka s&nbsppromítnutím změny do startovní listiny.
+			</p>
+			<h4>Způsob platby startovného:</h4>
+			<p>
+				hotovostní úhrada v prodejně CYKLOSPORT CHROPYNĚ<br>
+				hotovostní úhrada v den startu při prezentaci<br>
+				bezhotovostní úhrada na účet číslo <span style="color:#ef2c1d">5193378319/0800</span> variabilní symbol Vám bude zaslán na emailovou adresu Vámi uvedenou při přihlašování.<br><br>
+				Zahraniční účastníci platí startovné na místě v Kč, u přihlášky do 30.3. 2018 (ne včetně) platí zvýhodněné podmínky.
+			</p>
+			<p>
+				Pořadatelé si vyhrazují právo přidělit startovní čísla 1-100, pro nasazení na startu, dle následujícího klíče:<br>
+				1. účastníci XV. ročníku závodu s umístěním do 100. místa s uhrazeným startovným do 31. 3. 2018 (ne včetně)<br>
+				2. dle rozhodnutí pořadatelů
+			</p>
+			<h4>Tombola:</h4>
+			<p>
+				Těšit se můžete na mnohé cyklodoplňky či poukazy jako například poukaz na nákup v <a href="http://www.mixie.cz">MIXIE</a>.<br>
+				Více bude zveřejněno v nejbližším možném termínu.
+				<!-- První cenou v tombole bude poukázka v hodnotě 10 000 Kč na nákup libovolných zapletených kol značky <a href="http://www.bottico.cz">DT SWISS</a>. -->
+			</p>
+			<h4>Přihlášky:</h4>
+			<p>
+				Bude zveřejněno v nejbližším možném termínu.
+				<!-- 1. ON-LINE - <a href="chribska_prihlaska.php">přihláška</a><br>
+				2. OSOBNĚ - v prodejně CYKLOSPORT CHROPYNĚ - <a href="../files/ch50_prihlaska_2017.pdf">Formulář ke stažení</a><br>
+				3. OSOBNĚ - v kavárně <a href="http://www.velo-cafe.cz">veloCAFÉ</a> v Kroměříži<br>
+				4. OSOBNĚ - v den startu při prezentaci -->
+			</p>
+			<h4>Kategorie:</h4>
+			<table id="kategorie-trate">
+						<tr>
+							<td style="font-weight: 800;" colspan=100%>T50 - Dlouhá trať</td>
+						</tr>
+						<tr>
+							<td >
+								<b>M1&nbsp&nbsp&nbsp</b><br>
+								<b>M2&nbsp&nbsp&nbsp</b><br>
+								<b>M3&nbsp&nbsp&nbsp</b><br>
+								<b>M4&nbsp&nbsp&nbsp</b><br>
+								<b>M5&nbsp&nbsp&nbsp</b><br>
+								<b>M6&nbsp&nbsp&nbsp</b><br>
+								<b>Ž1&nbsp&nbsp&nbsp</b><br>
+								<b>Ž2&nbsp&nbsp&nbsp</b><br>
+
+							</td>
+							<td style="padding-left:10px;">
+								junioři do 19 let (1999 a ml.) nutný souhlas zákonného zástupce (do 18 let)<br>
+								muži 20 - 29 let (1998 - 1989)<br>
+								muži 30 - 39 let (1988 - 1979)<br>
+								muži 40 - 49 let (1978 - 1969)<br>
+								muži 50 - 59 let (1968 - 1959)<br>
+								muži nad 60 let (1958 a st.)<br>
+								ženy (1983 a ml.)<br>
+								ženy (1982 a st.)<br>
+							</td>
+							
+						</tr>
+						<tr>
+							<td style="padding-top:30px;font-weight: 800;" colspan=100%>T30 - Krátká trať</td>
+						</tr>
+						<tr>
+							<td >
+								<b>Mk1&nbsp&nbsp</b><br>
+								<b>Mk2&nbsp&nbsp</b><br>						
+								<b>Žk1&nbsp&nbsp</b><br>
+								<b>Žk2&nbsp&nbsp</b><br>
+
+							</td>
+							<td style="padding-left:10px;">
+								muži do 19 let (1999 a ml.) nutný souhlas zákonného zástupce (do 18 let)<br>
+								muži nad 19 let (1998 a st.)<br>					
+								ženy do 19 let (1999 a ml.) nutný souhlas zákonného zástupce (do 18 let)<br>
+								ženy nad 19 let (1998 a st.)<br>
+							</td>
+							
+						</tr>
+			</table>			
+			
+			<p>
+				Pro zařazení do kategorie je rozhodující rok narození.
+			</p>
+			<h4>Ceny:</h4>
+			<p>
+				Bude zveřejněno v nejbližším možném termínu.
+				Věcné ceny pro první tři v jednotlivých kategoriích, finanční ceny pro první tři v absolutním pořadí (2000Kč, 1000Kč, 500Kč) dlouhé trasy. Pro první tři ženy v absolutním pořádí jsou také přichystány peněžní odměny (1000Kč, 500Kč, 500Kč).  
+			</p>
+			<p style="color: #ef2c1d; font-weight: bold;" class="varovani">
+				!!!Závod se koná za plného silničního provozu, účastníci startují na vlastní nebezpečí, cyklistická přilba je povinnou podmínkou!!!
+			</p>
+			<!-- <p>
+				Záštitu na Chřibskou 50MTB převzalo město Kroměříž. Konání závodu umožnil podnik Lesy České republiky, s. p.
+			</p> -->
+
+			<!-- <h4>Dodavatel sportovní výživy:</h4>
+			<b><a href="http://www.kompavacz.cz" target="_blank">KOMPAVA</a></b> -->
+			<h4>Hlavní sponsor:</h4>
+			<br>
+			<a href="http://www.force.cz" target="_blank">
+			<img class="obrazekAktuality force" src="../images/sponsors/logo-force.png" style="margin: 0 auto; width:70%; ">
+			</a>
+				
+			<br>
+			<br>
+			<!-- <h4>Dostupnost obce Roštín a orientační vzdálenost:</h4>
+			<br>
+			<img class="obrazekAktuality" src="../images/mapa_rostin.png"> -->
+			</div>
+		</div>
+			
+		<div class="cd-overlay"></div>
+		
+		
+
+	</section>
+
+	<div class="footer" style="position:fixed;">
+		<div class="reklamy chribskaSponzori" style="text-align:center; position:absolute; top:0;left:0; width:100%; height:100%;">
+			<a id="f1" href="http://www.mesto-kromeriz.cz" class="displayed" target="_blank">
+				<img class="obrazky-sponzori levaobrazky-sponzori" src="../images/sponsors/km-white.png"></a>
+			<a id="s1" href="http://www.force.cz" class="displayed" target="_blank">
+				<img class="obrazky-sponzori stredníobrazky-sponzori" src="../images/sponsors/logo-force-white.png" style="max-width:25%;"></a>
+			<a id="t1" href="http://www.elmo.cz/en/" class="displayed" target="_blank">
+				<img class="obrazky-sponzori pravaobrazky-sponzori" src="../images/loga/elmo_Logo.png" class="demaLogo"></a>
+			<a id="f2" href="http://www.kruzik.cz" class="hidden" target="_blank">
+				<img class="obrazky-sponzori levaobrazky-sponzori" src="../images/loga/kruzik_Logo.png"></a>
+			<a id="s2" href="http://www.force.cz" class="hidden" target="_blank">
+				<img class="obrazky-sponzori stredniobrazky-sponzori" src="../images/sponsors/logo-force-white.png" style="max-width:25%;"></a>	
+			<a id="t2" href="http://www.kr-zlinsky.cz" class="hidden" target="_blank">
+				<img class="obrazky-sponzori pravaobrazky-sponzori" src="../images/loga/zl_kraj_Logo.png"></a>
+			
+				</div>
+
+	</div>
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		$(window).scroll(function(){
+			var topOfWindow = $(window).scrollTop();
+
+			$("img.lazyload").each(function(){
+
+				var imagePos = $(this).offset().top;
+
+				if (imagePos <= topOfWindow + 1000 && imagePos >= topOfWindow - 400) {
+
+					$(this).unveil();
+
+				}
+
+			});
+
+			
+
+
+		});
+
+	});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".comment").shorten({
+			"showChars" : 400,
+			"moreText" : "Více",
+			"lessText" : "Méně",
+		});
+	});
+</script>
+<script type="text/javascript">
+
+	var alreadyResized = false;
+	
+
+	var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+	};
+
+	function getViewportOfMobile() {
+
+		if (alreadyResized) {
+			return;
+		}
+
+		alreadyResized = true;
+		
+		 var viewPortWidth;
+		 var viewPortHeight;
+
+		 // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+		 if (typeof window.innerWidth != 'undefined') {
+		   viewPortWidth = window.innerWidth,
+		   viewPortHeight = window.innerHeight
+		 }
+
+		// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+		 else if (typeof document.documentElement != 'undefined'
+		 && typeof document.documentElement.clientWidth !=
+		 'undefined' && document.documentElement.clientWidth != 0) {
+		    viewPortWidth = document.documentElement.clientWidth,
+		    viewPortHeight = document.documentElement.clientHeight
+		 }
+
+		 // older versions of IE
+		 else {
+		   viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+		   viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+		 }
+		 // return [viewPortWidth, viewPortHeight];
+		 var section = document.getElementsByTagName('section')
+		 for (var i = 0; i < section.length - 1; i++) {
+		 	section[i].style.height = parseInt(viewPortHeight - 80) + 'px'
+		 }
+
+	}
+	function updateBgWidth() {
+		var viewPortWidth;
+		 var viewPortHeight;
+
+		 // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+		 if (typeof window.innerWidth != 'undefined') {
+		   viewPortWidth = window.innerWidth,
+		   viewPortHeight = window.innerHeight
+
+		 }
+
+			// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+		 else if (typeof document.documentElement != 'undefined'
+		 && typeof document.documentElement.clientWidth !=
+		 'undefined' && document.documentElement.clientWidth != 0) {
+		    viewPortWidth = document.documentElement.clientWidth,
+		    viewPortHeight = document.documentElement.clientHeight
+		 }
+
+			 // older versions of IE
+		 else {
+		   viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+		   viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+		 }
+			 // return [viewPortWidth, viewPortHeight];
+			 // var section = document.getElementsByTagName('section')
+			 // for (var i = 0; i < section.length; i++) {
+			 // 	section[i].style.height = parseInt(viewPortHeight) + 'px'
+			 // }
+
+		 var body = document.getElementsByTagName("body");
+		 // alert('už');
+		 if (viewPortWidth >= 1920) {
+		 	// alert('už');
+		 	body[0].style.backgroundSize = parseInt(viewPortWidth) + 'px auto';
+		 };
+		 if (viewPortHeight >= 1200) {
+		 	body[0].style.backgroundSize = 'auto' + parseInt(viewPortHeight) + 'px';
+		 };
+		 
+	}
+	window.addEventListener("resize", updateBgWidth);
+	window.addEventListener("load", updateBgWidth);
+
+	function getScreenSize() {
+
+		if (alreadyResized) {
+			return;
+		}
+
+		alreadyResized = true;
+
+		var screenWidth;
+		var screenHeight;
+
+		if (typeof screen.width != 'undefined') {
+			screenWidth = screen.width,
+			screenHeight = screen.height
+		}
+
+		var section = document.getElementsByTagName('section')
+		for (var i = 0; i < section.length; i++) {
+			if (window.matchMedia("(orientation: portrait)").matches) {
+		 		section[i].style.height = parseInt(screenHeight - 35) + 'px'
+		 	}else {
+		 		section[i].style.height = parseInt(screenWidth) + 'px'
+		 	}
+		 }
+
+	}
+
+	function rotationBackdoor() {
+		alreadyResized = false;
+	}
+
+	if (isMobile.any()) {
+		
+		var isiPad = navigator.userAgent.match(/iPad/i) != null;
+		if (isiPad) {
+			// window.onresize = getViewportOfMobile;
+		}else {
+			// window.onresize = getScreenSize;
+		}
+		
+				
+	}else {
+		// window.onresize = getViewport;
+	}
+</script>
+
+	<script>
+	jQuery(document).ready(function($){
+		// $(".group1").colorbox({rel:'group1'});
+	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
+	var MqL = 9878;
+	//move nav element position according to window width
+	moveNavigation();
+	// $(window).on('resize', function(){
+	// 	(!window.requestAnimationFrame) ? setTimeout(moveNavigation, 300) : window.requestAnimationFrame(moveNavigation);
+	// });
+
+	//mobile - open lateral menu clicking on the menu icon
+	$('.cd-nav-trigger').on('click', function(event){
+		event.preventDefault();
+		if( $('.cd-main-content').hasClass('nav-is-visible') ) {
+			closeNav();
+			$('.cd-overlay').removeClass('is-visible');
+		} else {
+			$(this).addClass('nav-is-visible');
+			$('.cd-primary-nav').addClass('nav-is-visible');
+			// $('.cd-primary-nav').addClass('moveLeft');
+			$('.cd-main-header').addClass('nav-is-visible');
+			$('#intro').addClass('nav-is-visible');
+			$('div.footer').addClass('nav-is-visible');
+			$('.cd-main-content').addClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				$('body').addClass('overflow-hidden');
+			});
+			toggleSearch('close');
+			$('.cd-overlay').addClass('is-visible');
+		}
+	});
+
+	//open search form
+	$('.cd-search-trigger').on('click', function(event){
+		event.preventDefault();
+		toggleSearch();
+		closeNav();
+	});
+
+	//close lateral menu on mobile 
+	$('.cd-overlay').on('swiperight', function(){
+		if($('.cd-primary-nav').hasClass('nav-is-visible')) {
+			closeNav();
+			$('.cd-overlay').removeClass('is-visible');
+		}
+	});
+	$('.nav-on-left .cd-overlay').on('swipeleft', function(){
+		if($('.cd-primary-nav').hasClass('nav-is-visible')) {
+			closeNav();
+			$('.cd-overlay').removeClass('is-visible');
+		}
+	});
+	$('.cd-overlay').on('click', function(){
+		closeNav();
+		toggleSearch('close')
+		$('.cd-overlay').removeClass('is-visible');
+	});
+
+
+	//prevent default clicking on direct children of .cd-primary-nav 
+	$('.cd-primary-nav').children('.has-children').children('a').on('click', function(event){
+		event.preventDefault();
+	});
+	//open submenu
+	$('.has-children').children('a').on('click', function(event){
+		if( checkWindowWidth() ) event.preventDefault();
+		var selected = $(this);
+		if( selected.next('ul').hasClass('is-hidden') ) {
+			//desktop version only
+			selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+			selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+			$('.cd-overlay').addClass('is-visible');
+
+		} else {
+			selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+			$('.cd-overlay').removeClass('is-visible');
+		}
+		toggleSearch('close');
+	});
+
+	//submenu items - go back link
+	$('.go-back').on('click', function(){
+		$(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+	});
+
+	function closeNav() {
+		$('.cd-nav-trigger').removeClass('nav-is-visible');
+		$('.cd-main-header').removeClass('nav-is-visible');
+		$('.cd-primary-nav').removeClass('nav-is-visible');
+		// $('.cd-primary-nav').removeClass('moveLeft');
+		// $('.cd-primary-nav').addClass('moveRight');
+		$('.has-children ul').addClass('is-hidden');
+		$('.has-children a').removeClass('selected');
+		$('.moves-out').removeClass('moves-out');
+		$('div.footer').removeClass('nav-is-visible');
+		$('#intro').removeClass('nav-is-visible');
+		$('.cd-main-content').removeClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+			$('body').removeClass('overflow-hidden');
+		});
+	}
+
+	function toggleSearch(type) {
+		if(type=="close") {
+			//close serach 
+			$('.cd-search').removeClass('is-visible');
+			$('.cd-search-trigger').removeClass('search-is-visible');
+		} else {
+			//toggle search visibility
+			$('.cd-search').toggleClass('is-visible');
+			$('.cd-search-trigger').toggleClass('search-is-visible');
+			if($(window).width() > MqL && $('.cd-search').hasClass('is-visible')) $('.cd-search').find('input[type="search"]').focus();
+			($('.cd-search').hasClass('is-visible')) ? $('.cd-overlay').addClass('is-visible') : $('.cd-overlay').removeClass('is-visible') ;
+		}
+	}
+
+	function checkWindowWidth() {
+		//check window width (scrollbar included)
+		var e = window, 
+            a = 'inner';
+        if (!('innerWidth' in window )) {
+            a = 'client';
+            e = document.documentElement || document.body;
+        }
+        if ( e[ a+'Width' ] >= MqL ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	function moveNavigation(){
+		var navigation = $('.cd-nav');
+  		var desktop = checkWindowWidth();
+        if ( desktop ) {
+			navigation.detach();
+			navigation.insertBefore('.cd-header-buttons');
+		} else {
+			navigation.detach();
+			navigation.insertAfter('.cd-main-content');
+		}
+	}
+});</script>
+
+
+</body>
+</html>
