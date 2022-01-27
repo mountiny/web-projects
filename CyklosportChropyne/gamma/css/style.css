@@ -986,7 +986,7 @@ div.main-cont div.intro-page .ch-link-cont {
   z-index: 500;
   -webkit-transform: translateX(-50%) translateY(30px);
   transform: translateX(-50%) translateY(30px);
-  margin-top: 5vh;
+  margin-top: 8vh;
   max-width: 800px;
   width: 70%;
   opacity: 0;
@@ -1035,7 +1035,7 @@ div.main-cont div.intro-page div.logo-cont img.logo.show {
 
 div.main-cont div.intro-page div.short-info-cont {
   position: relative;
-  margin-top: 300px;
+  margin-top: 50vh;
   width: 100%;
   height: auto;
   display: block;

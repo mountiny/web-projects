@@ -140,6 +140,9 @@ $connection->close();
             <a href="https://www.psg.cz" target="_blank" class="pic-link">
               <img src="img/oddil/partner_22_psg.svg" alt="PSG" />
             </a>
+            <a href="https://www.mechanix.com/us-en/" target="_blank" class="pic-link">
+              <img src="img/oddil/partner_22_mechanix.svg" alt="Mechanix" />
+            </a>
             <a href="https://www.muchropyne.cz" target="_blank" class="pic-link">
               <img src="img/oddil/partner_22_m_chropyne.svg" alt="Město Chropyně" />
             </a>
@@ -151,9 +154,6 @@ $connection->close();
             </a>
             <a href="https://www.elmo.cz" target="_blank" class="pic-link">
               <img src="img/oddil/partner_22_elmo.svg" alt="Elmo" />
-            </a>
-            <a href="https://www.mechanix.com/us-en/" target="_blank" class="pic-link">
-              <img src="img/oddil/partner_22_mechanix.svg" alt="Mechanix" />
             </a>
             <a href="https://www.elins.cz" target="_blank" class="pic-link">
               <img src="img/oddil/partner_22_elins.svg" alt="Elins" />
