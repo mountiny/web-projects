@@ -104,7 +104,7 @@ $connection->close();
             <!-- kalendář -->
             <div class="cat-head" id="kalendar-head">
                 <!-- <img src="img/plus.png" alt=""> -->
-                <a href="files/csch_terminovka_2021.pdf" target="_blank">
+                <a href="files/csch_terminovka_2023.pdf" target="_blank">
                     <span>Kalendář</span></a>
             </div>
             <!-- <div class="cat-body" id="kalendar-body" style="padding-left:0px;">
@@ -116,14 +116,12 @@ $connection->close();
             <div class="cat-head" id="vysledky-head">
                 <!-- <img src="img/plus.png" alt=""> -->
                 <span>Výsledky</span>:<br>
-                &nbsp;&nbsp;&nbsp;<a href="../files/csch2021.pdf" target="_blank">
+                &nbsp;&nbsp;&nbsp;<a href="../files/csch2023.pdf" target="_blank">
                     <span>Veškeré</span></a><br>
-                    &nbsp;&nbsp;&nbsp;<a href="../files/nc2021.pdf" target="_blank">
+                    &nbsp;&nbsp;&nbsp;<a href="../files/nc2023.pdf" target="_blank">
                     <span>Prima Cup</span></a><br>
-                    &nbsp;&nbsp;&nbsp;<a href="../files/kpz2021.pdf" target="_blank">
+                    &nbsp;&nbsp;&nbsp;<a href="../files/kpz2023.pdf" target="_blank">
                     <span>KPŽ</span></a><br>
-                    &nbsp;&nbsp;&nbsp;<a href="../files/kpzhobby2021.pdf" target="_blank">
-                    <span>KPŽ hobby</span></a>
             </div>
             <!-- <div class="cat-body" id="vysledky-body" style="padding-left:0px;">
             <a href="../files/csch2018.pdf" target="_blank">Výsledky ze všech závodů ve formátu PDF</a><br><br>

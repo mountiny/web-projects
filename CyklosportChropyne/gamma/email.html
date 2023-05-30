@@ -4,7 +4,7 @@
 
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Chřibská 50MTB CUP - Cyklosport Chropyně</title>
+    <title>Chřibská 50MTB - Cyklosport Chropyně</title>
 
     <style>
         body {
@@ -37,19 +37,6 @@
         a:hover {
             color: black;
         }
-        a.strava-link {
-            color: #fc4c02;
-            font-size: 18px;
-            line-height: 28px;
-            font-weight: 700;
-        }
-
-        .highlighted {
-            color: #fc4c02;
-            font-size: 18px;
-            line-height: 28px;
-            font-weight: 700;
-        }
 
         .main-container {
             width: calc(100% - 80px);
@@ -57,6 +44,7 @@
             position: relative;
             background-color: white;
             margin: 0 auto;
+            height: 100vh;
         }
 
 
@@ -74,9 +62,31 @@
             height: auto;
         }
 
-        .main-container .register_btn {
+        .banner {
             position: absolute;
-            bottom: -25px;
+            /* bottom: -25px; */
+            bottom: -60px;
+            left: 50%;
+            z-index: 100;
+            text-align: center;
+            text-decoration: none;
+            height: 50px;
+            line-height: 50px;
+            width: 400px;
+            max-width: 70vw;
+            font-size: 26px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: white;
+            background-color: #6c5ce7;
+            transform: translateX(-50%);
+            letter-spacing: 1px;
+        }
+
+        .register_btn {
+            position: absolute;
+            /* bottom: -25px; */
+            bottom: -60px;
             left: 50%;
             z-index: 100;
             text-align: center;
@@ -97,37 +107,12 @@
         .register_btn:hover {
             color: white;
         }
-        .main-container .register_btn_content {
-            position: relative;
-            left: 50%;
-            display: inline-block;
-            z-index: 100;
-            text-align: center;
-            text-decoration: none;
-            height: 50px;
-            line-height: 50px;
-            width: auto;
-            padding-left: 20px;
-            padding-right: 20px;
-            max-width: 70vw;
-            font-size: 26px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: white;
-            background-color: #6c5ce7;
-            transform: translateX(-50%);
-            margin-bottom: 30px;
-            letter-spacing: 1px;
-        }
-
-        .register_btn_content:hover {
-            color: white;
-        }
 
         .content-block {
             position: relative;
             width: calc(100% - 40px);
-            margin: 60px auto 20px auto; /*  margin: 80px auto 20px auto; */
+            margin-top: 100px;
+            margin: 80px auto 20px auto;
 
         }
 
@@ -206,6 +191,10 @@
 
         }
 
+        .box {
+            padding-top: 32px;
+        }
+
         @media screen and (max-device-width: 767px),
         screen and (max-width: 767px) {
             .main-container {
@@ -221,8 +210,9 @@
             .register_btn {
                 font-size: 22px;
             }
-            .register_btn_content {
-                font-size: 22px;
+
+            .banner {
+                font-size: 16px;
             }
         }
     </style>
@@ -231,61 +221,146 @@
 
 <body>
     <div style="display: none; max-height: 0px; overflow: hidden;">
-        Chřibská 50MTB CUP - Vyhlášení vítězů.
+        Přihlaš se již nyní!
     </div>
 
-    <!-- Insert &zwnj;&nbsp; hack after hidden preview text -->
+    <!-- Insert ‌  hack after hidden preview text -->
     <div style="display: none; max-height: 0px; overflow: hidden;">
-        &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+         ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ 
     </div>
 
     <div class="main-container">
 
         <div class="top-block">
 
-            <img class='top_bg' src='https://www.cyklosportchropyne.cz/img/ch50_cup_mailing_results.png' />
+            <img class='top_bg' src='https://www.cyklosportchropyne.cz/img/mail_confirm_top2023_2.jpeg' />
 
-
+            <!-- <a href='https://my.raceresult.com/230876/registration?mode=1&contest=-1' class='register_btn'>jdu do toho!</a> -->
+            <div class="banner">CHŘIBSKÁ 50/30 MTB V CÍLI</div>
         </div>
 
         <div class="content-block">
 
-            <h3 style="text-transform: uppercase;">CH50 CUP 2020 - VÍTĚZOVÉ</h3>
-            <br />
-            <p>Virtuální souboj na trati Chřibské 50ky se odehrával nikoliv během jednoho dne, ale přes celé léto. Děkujeme všem, kteří se na trať vydali a&nbsp;zapojili se tak do naší soutěže o&nbsp;volné startovné na přístí ročník!</p>
+            <!-- <h3>Těšíme se na Tebe v sobotu!</h3> -->
 
-            <h3 style="color: #6c5ce7;">ŠŤASTNÍ VYLOSOVANÍ:</h3>
+            <p class="box">
+                Jubilejní 20. ročník Chřibské 50 MTB je úspěšně za námi. Trochu jako nechtěný dárek jsme si díky počasí naděli „novou trasu - MOKROU VARIANTU“ závodu.
+            </p>
 
-            <span class="highlighted">1/ Ján Štefaník</span>
-            <br />
-            <span class="highlighted">2/ Petra Pláničková</span>
-            <br />
-            <span class="highlighted">3/ Tomáš Petříček</span>
-            <br />
+            <img src='https://www.cyklosportchropyne.cz/img/230420_malling_1.jpeg' />
 
-            <h1 style="color: #6c5ce7;">CH50 2021</h1>
-            <p>Už nyní vyhlížíme novou sezónu a&nbsp;věříme, že se na jaře 2021 společně setkáme na startu Chřibské 50ky.</p>
+            <!-- <h2>HLAVNÍ TRASY T50 A T30</h2> -->
 
-            <p>Naše úsilí směřujeme k&nbsp;uskutečnění dalšího ročníku závodu, který se bude jako tradičně konat třetí dubnovou sobotu -&nbsp;17.&nbsp;4.&nbsp;2021!</p>
+            <p class="box">
+                Předpověď počasí v týdnu před závodem nebyla ideální a vyplnila se. Děkujeme VÁM VŠEM, kteří jste se s námi opět vydali na tratě Chřibské 50MTB, ikdyž částečně pozměnené. Věříme, že jste si sobotní závod i za daných okolností užili.
+            </p>
 
-            <p>Vyhlížejte novinky z&nbsp;příprav!</p>
-            <br />
-            <img src="https://www.cyklosportchropyne.cz/img/ch50_cup_mailing_map.png" alt="Mapa segmentů">
-            <br />
-            <h3>GRATULUJEME VÍTĚZŮM A&nbsp;TĚŠÍME SE NA PŘÍŠTÍ ROK!</h3>
+            <p>
+                Rádi bychom Vás touto cestou také požádali o vyplnění <a href="https://forms.gle/tEqUKUSkdsMPQQpK6">krátkého dotazníku</a>, čímž nám tak dáte cennou zpětnou na nejen uplynulý ročník CH50.
+            </p>
+            
+            <img src='https://www.cyklosportchropyne.cz/img/230420_malling_2.jpeg' />
 
-            <p>Organizační tým PSG CYKLOSPORTU CHROPYNĚ</p>
+            <p class="box">
+                Děkujeme!
+
+                Organizační tým PSG MECHANIX
+            </p>
+<!--                 
+            <h2>DĚTSKÉ ZÁVODY</h2>
+
+            <p>
+                Dětské závody budou situované v prostoru startu a cíle hlavních závodů.<br /><br />
+
+Trasy budou v rozmezí 300 m–6 km podle věkových kategorií.<br /><br />
+
+<b>Prezentace</b> bude otevřena od 8:00–10:00. <b>Start</b> první kategorie proběhne 9:00 (budeme závodit od nejstarší po nejmladší kategorii). Jednotlivé starty budou probíhat přímo v areálu závodu.<br />
+            </p>
+
+            <p>
+                Pro děti do 5 let (včetně) je <b>startovné zdarma</b>.<br /><br />
+<b>Startovné</b> pro starší děti je <b>100Kč</b>.
+            </p>
+
+            <p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="text-align:left;"><b>Kategorie</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Odrážedla kluci/holky</td>
+                            <td style="padding-left:1rem;">0–5 let (2023–18)</td>
+                        </tr>
+                        <tr>
+                            <td>Kluci/holky</td>
+                            <td style="padding-left:1rem;">0–5 let (2023–18)</td>
+                        </tr>
+                        <tr>
+                            <td>Kluci/holky</td>
+                            <td style="padding-left:1rem;">6–7 let (2017–16)</td>
+                        </tr>
+                        <tr>
+                            <td>Kluci/holky</td>
+                            <td style="padding-left:1rem;">8–9 let (2015–14)</td>
+                        </tr>
+                        <tr>
+                            <td>Kluci/holky</td>
+                            <td style="padding-left:1rem;">10–11 let (2013–12)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+
+            <p>
+                Starší děti si mohou také zazávodit, a to v rámci kratší trasy T30.
+            </p>
+
+            <img src='https://www.cyklosportchropyne.cz/img/230317_mail_promo-3.jpeg' />
+
+            <h2>
+                AKTIVITY PRO DĚTI
+            </h2>
+            
+            <p>
+                Pro děti toho máme také plno nachystáno! Malování na obličej, balónky s heliem nebo skákací atrakce. Zábavě se meze nekladou. Vše pod taktovkou <a href='https://www.bambinoparty.cz/'>Bambinoparty.cz</a> 🧒👧
+            </p>
+
+           
+            <h2>REGISTRACE</h2>
+
+            <p>
+                Online registrace probíhá na stejném místě jako trasy T50 a T30. Samotný 
+formulář Vám nabídne odpovídající kategorii/trasu. <a href='https://my.raceresult.com/230876/registration?mode=1&contest=-1'>PŘIHLÁSIT SE!</a>.
+            </p>
+
+            <p>Všechny potřebné informace naleznete na jednom místě
+                v rámci upravených <a href="https://www.cyklosportchropyne.cz">stránek závodu.</a></p>
+
+            <p>Máte-li dotaz neváhejte nás kontaktovat jakoukoliv formou - <a
+                    href="mailto:oddil@cyklosportchropyne.cz">mail</a>, <a
+                    href="https://www.cyklosportchropyne.cz">web</a>, <a
+                    href="https://cs-cz.facebook.com/cyklosportchropyne/">FB</a>, <a
+                    href="https://www.instagram.com/cyklosportchropyne/">IG</a>.</p>
+
+            <p>Rádi Vám vše zodpovíme.</p>
+
+            <h3>Těšíme se na vás!</h3>
+
+            <p>Organizační tým PSG MECHANIX</p> -->
 
         </div>
 
         <div class="bottom_block">
 
             <a href="https://www.cyklosportchropyne.cz" class="bottom_link"><img
-                    src="https://www.cyklosportchropyne.cz/img/ch50_cup_mailing_lista.png" class="bottom_image"
+                    src="https://www.cyklosportchropyne.cz/img/mail_lista2023.png" class="bottom_image"
                     alt="Sponzoři závodu"></a>
         </div>
         <div class="unsubscribe_block">
-            <a href="">nepřeji si</a> nadále odebírat CH50 newsletter.
+            <a href="{{ unsubscribe }}">Nepřeji si</a> nadále odebírat CH50 newsletter.
         </div>
 
     </div>
